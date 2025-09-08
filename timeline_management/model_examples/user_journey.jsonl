@@ -1,0 +1,36 @@
+{
+  "journeyId": "user123_journey456",
+  "userId": "user123",
+  "templateId": "F1_USA_INDIA_2025",
+  "status": "IN_PROGRESS", // e.g., PLANNING, IN_PROGRESS, COMPLETED, ON_HOLD
+  "createdAt": "2025-09-15T10:00:00Z",
+  "journeyStartDate": "2025-09-15T00:00:00Z", // Could be the date of university acceptance
+  "steps": [
+    {
+      "stepKey": "RECEIVE_I20",
+      "status": "COMPLETED",
+      "estimatedStartDate": "2025-09-15",
+      "estimatedEndDate": "2025-09-29",
+      "actualEndDate": "2025-09-25",
+      "notes": "University of Southern California sent it via express mail.",
+      "evidence": ["dataPointId_abc", "dataPointId_def"] // Links to the GroundedData model
+    },
+    {
+      "stepKey": "PAY_SEVIS_FEE",
+      "status": "COMPLETED",
+      "estimatedStartDate": "2025-09-29",
+      "estimatedEndDate": "2025-09-30",
+      "actualEndDate": "2025-09-26",
+      "evidence": []
+    },
+    {
+      "stepKey": "SCHEDULE_VISA_INTERVIEW",
+      "status": "IN_PROGRESS",
+      "estimatedStartDate": "2025-10-01",
+      "estimatedEndDate": "2025-12-30", // Calculated by the coordinator
+      "actualStartDate": null,
+      "notes": "Current wait time for Mumbai consulate is high.",
+      "evidence": ["dataPointId_ghi", "dataPointId_jkl", "dataPointId_mno"]
+    }
+  ]
+}
