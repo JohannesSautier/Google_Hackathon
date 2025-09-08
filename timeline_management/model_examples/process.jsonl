@@ -1,0 +1,43 @@
+{
+  "templateId": "F1_USA_INDIA_2025",
+  "name": "F-1 Student Visa to USA from India",
+  "description": "Standard timeline for Indian students applying for an F-1 visa after university acceptance.",
+  "version": "1.0",
+  "destinationCountry": "USA",
+  "appliesToOrigin": ["IND"],
+  "processType": "EDUCATION",
+  "steps": [
+    {
+      "stepKey": "RECEIVE_I20",
+      "name": "Receive I-20 Form",
+      "description": "The university sends the I-20 form, which is required for the visa application.",
+      "dependencies": ["UNIVERSITY_ACCEPTANCE"], // A logical dependency, not another step
+      "typicalDurationDays": 14, // A fallback/default value
+      "outputs": ["I-20 Document"]
+    },
+    {
+      "stepKey": "PAY_SEVIS_FEE",
+      "name": "Pay I-901 SEVIS Fee",
+      "description": "A mandatory fee for all F-1 students.",
+      "dependencies": ["RECEIVE_I20"],
+      "typicalDurationDays": 1,
+      "outputs": ["SEVIS Fee Receipt"]
+    },
+    {
+      "stepKey": "COMPLETE_DS160",
+      "name": "Complete DS-160 Form",
+      "description": "The online nonimmigrant visa application form.",
+      "dependencies": ["PAY_SEVIS_FEE"],
+      "typicalDurationDays": 2,
+      "outputs": ["DS-160 Confirmation Number"]
+    },
+    {
+      "stepKey": "SCHEDULE_VISA_INTERVIEW",
+      "name": "Schedule Visa Interview & Biometrics",
+      "description": "Book appointments at the consulate. Wait times can vary significantly.",
+      "dependencies": ["COMPLETE_DS160"],
+      "typicalDurationDays": 90, // This will be heavily influenced by grounded data
+      "outputs": ["Appointment Confirmation"]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "dataPoints": [
+    {
+      "dataPointId": "dataPointId_pqr",
+      "dataType": "INFORMATIONAL",
+      "sourceType": "NEWS_API",
+      "sourceAgent": "cron_immigration_news_germany",
+      "sourceURI": "https://www.example-news.de/politics/new-skilled-worker-rules",
+      "retrievedAt": "2025-09-16T09:00:00Z",
+      "relevantFor": {
+        "processType": "WORK",
+        "stepKey": "VISA_APPLICATION_SUBMIT",
+        "country": "DEU"
+      },
+      "rawContent": "The German Bundestag today passed a new law aimed at accelerating the visa process for skilled workers, with officials hoping to reduce average processing times by up to 25% starting next quarter.",
+      "processedData": {
+        "processor": "gemini-2.5-flash-preview-05-20",
+        "analysisType": "IMPACT_ANALYSIS",
+        "isValid": true,
+        "summary": "A new German law may reduce visa processing times for skilled workers by approximately 25% in the near future.",
+        "confidenceScore": 0.85
+      }
+    },
+    {
+      "dataPointId": "dataPointId_stu",
+      "dataType": "PROPOSAL",
+      "sourceType": "EMAIL_PARSER",
+      "sourceAgent": "agent_email_user123",
+      "sourceURI": "gmail_message_id_12345",
+      "retrievedAt": "2025-09-17T11:25:00Z",
+      "relevantFor": {
+        "processType": "EDUCATION",
+        "stepKey": "SCHEDULE_VISA_INTERVIEW",
+        "country": "USA",
+        "userId": "user123"
+      },
+      "rawContent": "Subject: Your I-20 Form Has Shipped! Tracking Number: 1Z9999W99999999999. Dear [User Name], We are pleased to inform you that your Form I-20 has been shipped via UPS Next Day Air and is scheduled to arrive tomorrow, September 18th.",
+      "processedData": {
+        "processor": "gemini-2.5-flash-preview-05-20",
+        "analysisType": "EVENT_DETECTION_AND_PROPOSAL",
+        "isValid": true,
+        "summary": "User's I-20 form is arriving much earlier than the typical 14-day estimate.",
+        "confidenceScore": 0.99
+      },
+      "proposal": {
+        "targetJourneyId": "user123_journey456",
+        "targetStepKey": "RECEIVE_I20",
+        "action": "UPDATE_STEP_STATUS",
+        "payload": {
+          "newStatus": "COMPLETED",
+          "newActualEndDate": "2025-09-18"
+        },
+        "reason": "Email confirmation with a tracking number indicates the I-20 will be received tomorrow, completing this step 10 days ahead of schedule.",
+        "downstreamImpact": [
+          {
+            "targetStepKey": "PAY_SEVIS_FEE",
+            "action": "SHIFT_START_DATE",
+            "payload": {
+              "shiftDays": -10
+            },
+            "reason": "Can be started as soon as I-20 is received."
+          },
+          {
+            "targetStepKey": "COMPLETE_DS160",
+            "action": "SHIFT_START_DATE",
+            "payload": {
+              "shiftDays": -10
+            },
+            "reason": "Timeline can be moved up due to early completion of a dependency."
+          }
+        ]
+      }
+    }
+  ]
+}

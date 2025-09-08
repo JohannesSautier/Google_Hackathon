@@ -1,0 +1,109 @@
+{
+  "timelineId": "timeline_user123_journey456_v1",
+  "userId": "user123",
+  "journeyId": "user123_journey456",
+  "title": "My F-1 Visa Journey to the USA",
+  "lastUpdatedAt": "2025-09-17T11:30:00Z",
+  "events": [
+    {
+      "eventId": "RECEIVE_I20_duration",
+      "stepKey": "RECEIVE_I20",
+      "title": "Receive I-20 Form from University",
+      "description": "Your university will send your I-20 form. This document is critical for the next steps.",
+      "type": "DURATION",
+      "startDate": "2025-09-15",
+      "endDate": "2025-09-18",
+      "status": "COMPLETED",
+      "resources": [],
+      "notifications": {
+        "enabled": false
+      }
+    },
+    {
+      "eventId": "PAY_SEVIS_FEE_task",
+      "stepKey": "PAY_SEVIS_FEE",
+      "title": "Pay I-901 SEVIS Fee",
+      "description": "Pay the mandatory fee required for all F-1 students. Keep the receipt.",
+      "type": "TASK",
+      "startDate": "2025-09-19",
+      "endDate": "2025-09-19",
+      "status": "UPCOMING",
+      "resources": [
+        {
+          "link": "https://www.fmjfee.com/i901fee/",
+          "linkType": "PAYMENT_PORTAL",
+          "description": "Official SEVIS Fee Payment Website"
+        }
+      ],
+      "notifications": {
+        "enabled": true,
+        "reminders": [
+          { "daysBefore": 1, "channel": "EMAIL" }
+        ]
+      }
+    },
+    {
+      "eventId": "COMPLETE_DS160_task",
+      "stepKey": "COMPLETE_DS160",
+      "title": "Complete and Submit DS-160 Form",
+      "description": "Fill out the online nonimmigrant visa application. This is a long form, so allocate enough time. You will need your passport and I-20.",
+      "type": "TASK",
+      "startDate": "2025-09-20",
+      "endDate": "2025-09-21",
+      "status": "UPCOMING",
+      "resources": [
+        {
+          "link": "https://ceac.state.gov/GenNIV/",
+          "linkType": "FORM",
+          "description": "Official DS-160 Application Portal"
+        }
+      ],
+      "notifications": {
+        "enabled": true,
+        "reminders": [
+          { "daysBefore": 2, "channel": "EMAIL" },
+          { "daysBefore": 1, "channel": "PUSH" }
+        ]
+      }
+    },
+    {
+      "eventId": "SCHEDULE_VISA_INTERVIEW_duration",
+      "stepKey": "SCHEDULE_VISA_INTERVIEW",
+      "title": "Book & Wait for Visa Interview",
+      "description": "Book your visa interview and biometrics appointment. Wait times can be long and are subject to change.",
+      "type": "DURATION",
+      "startDate": "2025-09-22",
+      "endDate": "2025-12-26",
+      "status": "UPCOMING",
+      "resources": [
+        {
+          "link": "https://www.ustraveldocs.com/in/",
+          "linkType": "APPOINTMENT_PORTAL",
+          "description": "Visa Appointment Service for India"
+        }
+      ],
+      "notifications": {
+        "enabled": true,
+        "reminders": []
+      }
+    },
+     {
+      "eventId": "VISA_INTERVIEW_appointment",
+      "stepKey": "SCHEDULE_VISA_INTERVIEW",
+      "title": "Visa Interview Appointment",
+      "description": "Attend your scheduled visa interview at the consulate.",
+      "type": "APPOINTMENT",
+      "startDate": "2025-12-27",
+      "endDate": "2025-12-27",
+      "status": "TENTATIVE",
+      "resources": [],
+      "notifications": {
+        "enabled": true,
+        "reminders": [
+           { "daysBefore": 7, "channel": "EMAIL" },
+           { "daysBefore": 1, "channel": "EMAIL" }
+        ]
+      }
+    }
+  ]
+}

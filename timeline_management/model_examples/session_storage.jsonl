@@ -1,0 +1,146 @@
+{
+  "sessionId": "session_xyz_789",
+  "userId": "user123",
+  "createdAt": "2025-09-15T09:30:00Z",
+  "lastUpdatedAt": "2025-09-15T09:45:10Z",
+  "processingStatus": {
+    "overall": "COMPLETED",
+    "phases": {
+      "INTENT_ANALYSIS": "COMPLETED",
+      "GROUNDED_SEARCH": "COMPLETED",
+      "DOCUMENT_PARSING": "COMPLETED",
+      "JOURNEY_CREATION": "COMPLETED"
+    }
+  },
+  "initialQuery": "I'm a student from India and got accepted into a Master's program at USC in the US. The program starts in August 2026. What do I need to do to get my visa?",
+  "llmAnalysis": {
+    "detectedIntent": "F-1 Student Visa Application Process",
+    "extractedEntities": {
+      "originCountry": "IND",
+      "destinationCountry": "USA",
+      "processType": "EDUCATION",
+      "institution": "University of Southern California",
+      "programStartDate": "2026-08-15"
+    },
+    "summary": "User requires a timeline and checklist for obtaining an F-1 student visa for a Master's program at USC, starting August 2026."
+  },
+  "groundedSearchResults": [
+    {
+      "sourceURI": "https://travel.state.gov/content/travel/en/us-visas/study-exchange/student-visa.html",
+      "title": "Student Visa - U.S. Department of State",
+      "snippet": "The F-1 Visa is for academic studies. You must have a Form I-20 from your school to apply. Key steps include completing the DS-160, paying the SEVIS fee, and attending an interview.",
+      "retrievedAt": "2025-09-15T09:30:05Z"
+    },
+    {
+      "sourceURI": "https://www.ustraveldocs.com/in/en/student-visa",
+      "title": "Student Visa Information for India | Official U.S. Visa Information",
+      "snippet": "Applicants must schedule two separate appointments: one for biometrics (OFC) and one for the visa interview. Wait times for appointments can be significant.",
+      "retrievedAt": "2025-09-15T09:30:06Z"
+    }
+  ],
+  "parsedDocuments": [
+    {
+      "documentId": "doc_parsed_001",
+      "sourceURI": "https://travel.state.gov/content/travel/en/us-visas/study-exchange/student-visa.html",
+      "documentType": "OFFICIAL_VISA_GUIDE",
+      "llmSummary": "This is the primary U.S. Department of State guide for student visas. It outlines the F-1 visa category, defines eligibility, and lists the core application steps. It emphasizes the importance of the I-20 form as a prerequisite for the entire process.",
+      "extractedChecklistItems": [
+        "Be accepted by a SEVP-approved school",
+        "Receive Form I-20 from the school",
+        "Pay the I-901 SEVIS Fee",
+        "Complete the Online Visa Application (DS-160)",
+        "Schedule a visa interview and biometrics appointment",
+        "Attend the interview"
+      ],
+      "extractedMilestones": [
+        {
+          "milestoneKey": "I20_RECEIVED",
+          "name": "I-20 Form Received",
+          "description": "Marks the official start of the visa application process."
+        },
+        {
+          "milestoneKey": "VISA_INTERVIEW_COMPLETED",
+          "name": "Visa Interview Completed",
+          "description": "The final interactive step in the application process."
+        }
+      ],
+      "extractedTimelines": [
+        {
+          "timelineKey": "I20_ISSUANCE_WINDOW",
+          "description": "Students can receive their I-20 up to 365 days before the program start date.",
+          "value": 365,
+          "unit": "days_before_start"
+        },
+        {
+          "timelineKey": "VISA_APPLICATION_WINDOW",
+          "description": "You may apply for your visa as soon as you receive your Form I-20.",
+          "value": null,
+          "unit": null
+        }
+      ]
+    }
+  ],
+  "plannedTimeline": {
+    "journeyId": "user123_journey456",
+    "keyDates": {
+      "programStartDate": "2026-08-15",
+      "earliestEntryDate": "2026-07-16",
+      "estimatedVisaInterviewDate": "2026-04-20",
+      "idealFlightBookingWindowStart": "2026-05-15",
+      "idealFlightBookingWindowEnd": "2026-06-15"
+    },
+    "summary": "The user should aim to have their visa interview around April 2026 to allow sufficient time for processing before their program starts. The ideal window to book flights would be between mid-May and mid-June 2026."
+  },
+  "agentTasks": [
+    {
+      "taskId": "task_001",
+      "agentId": "agent_intent_analyzer",
+      "status": "COMPLETED",
+      "startedAt": "2025-09-15T09:30:01Z",
+      "completedAt": "2025-09-15T09:30:04Z",
+      "output": "Successfully detected intent and extracted entities.",
+      "nextTask": {
+        "agentId": "agent_grounded_searcher",
+        "trigger": "ON_COMPLETION"
+      }
+    },
+    {
+      "taskId": "task_002",
+      "agentId": "agent_grounded_searcher",
+      "status": "COMPLETED",
+      "startedAt": "2025-09-15T09:30:04Z",
+      "completedAt": "2025-09-15T09:30:08Z",
+      "output": "Found 2 relevant government sources.",
+      "nextTask": {
+        "agentId": "agent_document_parser",
+        "trigger": "ON_COMPLETION"
+      }
+    },
+    {
+      "taskId": "task_003",
+      "agentId": "agent_document_parser",
+      "status": "COMPLETED",
+      "startedAt": "2025-09-15T09:30:08Z",
+      "completedAt": "2025-09-15T09:45:00Z",
+      "output": "Parsed 1 document, extracted 6 checklist items and 2 timelines.",
+      "nextTask": {
+        "agentId": "agent_journey_coordinator",
+        "trigger": "ON_COMPLETION"
+      }
+    },
+    {
+      "taskId": "task_004",
+      "agentId": "agent_journey_coordinator",
+      "status": "COMPLETED",
+      "startedAt": "2025-09-15T09:45:01Z",
+      "completedAt": "2025-09-15T09:45:10Z",
+      "output": "Successfully created UserJourney 'user123_journey456' and populated the plannedTimeline object.",
+      "nextTask": null
+    }
+  ],
+  "agentAnnotations": {
+    "proposedTemplateId": "F1_USA_INDIA_2026",
+    "requiresManualReview": false,
+    "notes": "Standard F-1 visa process. High confidence in extracted entities. Recommend immediate creation of UserJourney."
+  }
+}
