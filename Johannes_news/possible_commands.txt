@@ -1,0 +1,16 @@
+python main.py \
+  --origin "India" \
+  --destination "Germany" \
+  --since_days 3 \
+  --use_llm false \
+  --out_file alerts.json
+
+
+
+python main.py \
+  --origin "India" \
+  --destination "Germany" \
+  --since_days 7 \
+  --use_llm true \
+  --model "gemini-1.5-pro" \
+  --out_file alerts.json

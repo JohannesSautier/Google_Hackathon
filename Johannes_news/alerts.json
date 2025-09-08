@@ -1,0 +1,976 @@
+{
+  "version": "v1",
+  "run_id": "23ec2ac0-5bd3-4710-bdb0-7039393a055f",
+  "generated_at": "2025-09-08T15:25:03.427015+00:00",
+  "origin_country": "India",
+  "destination_country": "Germany",
+  "since_utc": "2025-09-01T15:24:58.596968+00:00",
+  "alerts": [
+    {
+      "id": "657db54f-f041-4e94-b8e1-55ab53867f83",
+      "detected_at": "2025-09-08T15:25:03.426226+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "low",
+      "summary": "US visa rule changed: Interviews restricted to country of citizenship; move to impact Indians - India TV News",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "monitor",
+          "days_delta": 0,
+          "rationale": "Relevant but no clear immediate risk."
+        }
+      ],
+      "sources": [
+        {
+          "title": "US visa rule changed: Interviews restricted to country of citizenship; move to impact Indians - India TV News",
+          "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOUFplZUZjYk0tQ0ZjTE1UaFRwODh3eGR0b1ZaTHZRcEhjX3RFSm5iRGZxMWpEZWtNRHlQQXk5VjhSLTduYURrZkF1cU5ZdTdUcW1sWkw5ZnpVRzg0NnVtWVNOWDluQWZSeTNlV1B5LVlkMjl4a0NVUmc1Z3N3MThKQVhlTkRWTWtDRXpIdkU4UFNBUnFmMEtoVExWQ01OWHU2U2FJWnB1ajhtTlpVOTBqZEFnblFCcE42TlRMRHZUa09PbklaaVpqTXl4SHJmdkFRc216cVFEUTRsQ3l1QUtCeERFZ9IB6AFBVV95cUxQQURsVFFVOUM5eVVkcUltajh2MVpRZWgweTlDb2ZNNjROYlpTSWc2UVFfb094c3JXaUlsZzJnY083VV9yNTlFTnBSeXpDbnNSZGIyNDNBV1R1ME9IdXFrU040RF9RRUNGWmJSNk5fYzlrbDNsUGtSd0Q2aXJFYkt5NXMxNXVKUnJlblNNaDNTeXF3ZzR3Z1VXWDZhQ3dUR2pzNXB3RVJhMEJSUUJ4X05vZE1XR1IzR1RjXzdTblMtVzQ0aFJwWVl1WVBQQzBNNTVhcFNpSUhONG5POXJUNXoxU2RXZDFHU0tB?oc=5",
+          "published_at": "Mon, 08 Sep 2025 15:07:50 GMT",
+          "publisher": "India TV News"
+        }
+      ]
+    },
+    {
+      "id": "ea8d418e-68f8-4d72-ab97-9fcb56b1a65c",
+      "detected_at": "2025-09-08T15:25:03.426289+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "\"No Plans to Lift TikTok Ban in India, Says IT Minister Ashwini Vaishnaw | N18S - News18",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "\"No Plans to Lift TikTok Ban in India, Says IT Minister Ashwini Vaishnaw | N18S - News18",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNWkVMLUt1U0pFeE5WZURsOFFwTHJBT3JtZUVQUFAweHFRV1pBT1hGVHVza2I2OHVWYUFOWUZwYzM0SEM1MHNxTVhrRXRETVUzem4xRlBST2dhbXFvaHB2M2tuZzl4MjhvYjk5RHZEaGpvZnFKZGZuQ21XblpjVlM5VFV6ZFdsWW50aGVRa0VLV0N1d0k2a1lvdzZMdUdnTlBKRU5laVV6bmpUVmp3ZEFCTFRiY0Vndm9CQWlkLTQ5WXZSSWdBZDhGa1h1SFQxQQ?oc=5",
+          "published_at": "Mon, 08 Sep 2025 14:12:21 GMT",
+          "publisher": "News18"
+        }
+      ]
+    },
+    {
+      "id": "c6859ad8-89c0-4f7f-b4d0-97211670f133",
+      "detected_at": "2025-09-08T15:25:03.426324+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "low",
+      "summary": "Online Gaming Act, 2025: Game over for RMG? - Law.asia",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "monitor",
+          "days_delta": 0,
+          "rationale": "Relevant but no clear immediate risk."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Online Gaming Act, 2025: Game over for RMG? - Law.asia",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9maXBzVTBsUkc1UkNLN3VNOW1Bdnl2WVBQaWRqNnNfdTY5ZFR4RURETTBnQTZLMlhxOU5MemZBbFlnQmpPVFpSTmI5NkFEOXFRdExJ?oc=5",
+          "published_at": "Mon, 08 Sep 2025 14:11:47 GMT",
+          "publisher": "Law.asia"
+        }
+      ]
+    },
+    {
+      "id": "7426ea39-f8a4-4f7d-bdd6-7d3b20932b85",
+      "detected_at": "2025-09-08T15:25:03.426348+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "low",
+      "summary": "US tightens Visa rules on interview appointments, likely to hurt Indians. Details here | Latest News India - Hindustan Times",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "monitor",
+          "days_delta": 0,
+          "rationale": "Relevant but no clear immediate risk."
+        }
+      ],
+      "sources": [
+        {
+          "title": "US tightens Visa rules on interview appointments, likely to hurt Indians. Details here | Latest News India - Hindustan Times",
+          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQcW1WaloyUjJnM3pCSWlNYjNRdGYyWGEwclNhcDZWZHBEbjhKYy0zZC1tZ1FkQVNSanc1TTlGVkwxQi1PbC1TQWNvYllxS0lTUkNSdm9DR3p1TTRQTHJkSVlINDJ0WHh0T3dlb3o0S2Q1TjVmWDM2NXF5TWtLTTNYSElldjg5bzk0TFJzUHJPU2JUOTBXdF8wb3ZUQ3NzSG9GMHhhNkItX214ek9OOGh4b2hhVlVQMnN0dzJQREtwOFFaQjJOWTdudHJtSUs3MU5sc1RpTHlPVGVkSlVZQTcya9IB5gFBVV95cUxPYWhlN2RYNVRlSGo5SGFFMTd2M05Kc21BejNWcXhvS1dBb25nZ1pZTGM5Y1lnSnpQNUR2OE9wYVl2SjVPVTRaTHhLMXFNSXByQmtPZHV1VVEzSWM5dklVTHRxSlZ6aG81UU9wTHZFOGNLRkx3Tmswc0tXbVlkdUxoS1BuSXlEVy0ydzQzMGU2VWRReHpPWkVQdTFBSHZ1RUgtYTdULXBCTFR3SEtWeXV0NkdMaFhoQXRhVnFSeXJva3FYNEVfaGl6WThuZTN0THRPNVNMZUJMS0NteUs1cWE1bkdfSnNhZw?oc=5",
+          "published_at": "Mon, 08 Sep 2025 14:05:57 GMT",
+          "publisher": "Hindustan Times"
+        }
+      ]
+    },
+    {
+      "id": "96ef78cf-abd4-46b8-a6d4-9031fad018b5",
+      "detected_at": "2025-09-08T15:25:03.426369+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Nepal social media ban protest: How many people use Facebook, Instagram and X in Nepal? Numbers will shock yo - India.Com",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nepal social media ban protest: How many people use Facebook, Instagram and X in Nepal? Numbers will shock yo - India.Com",
+          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNSUR3WGZjU1BtU1BkbHlUamdWa0NBWlV2TjVxMWMzMnRpMm1Hc1dxN3NjYTVYdTJFbmZoTTVqM2F3dzZFV1FnTERLMzNnbG1nd3JONXhtdEtQWjVGTFZHTzNuVnl1ZkZuQ25aUDEzUHBycll1Ym5BZlMyQl8xRjN5cW5Rb3kxNFNnUHdPSkVYZHFjSUNHWmNYZWliOGNEMG1sRDk1b3BuOW5FTEU0cGN1Y3FJUXk2eEFYWnNqczlOc1l0bm1YREMtV2trRWJ2N0pEdTUxWWVQcmp6aG9aZVZodldqQTBSX1JvaDV1eThzSEhLZ9IB9wFBVV95cUxQWGFzMVhkdndaaHpTbERLQlNveXNlbU9EWVc4TFNXWnF1X1h2YlNEZV9oT0FVdVlpWldhNFNxNXJoTXJkajgwa0ViWThaa243ZXljS3QzY3VZR3pBNV9MNTJrcm1TMUd2NjRocGlma3VfRXFLN0txczBmX2hxZjRfcDJTZ3plWE9vYUtjSHpkQjVhZXJTY1VRSGpmNXNoQmV1Q19fSmVaRm03bHB2Rk9xX0U2aXZTbTBoMVFwa2JoSnJ2YklzMkdQTWZ0ekFWSmJ1TG5WV2FFMHpFNG1tQXV6T2VQOXI4a3IxWFJ4SHZvejZ4MjM0eWRV?oc=5",
+          "published_at": "Mon, 08 Sep 2025 14:01:12 GMT",
+          "publisher": "India.Com"
+        }
+      ]
+    },
+    {
+      "id": "7fbdcf38-1319-4597-ab01-dcf44d107bf6",
+      "detected_at": "2025-09-08T15:25:03.426393+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Nepal Protests: Why Did Govt Ban 26 Social Media Platforms - Heres What We Know From The Gen Z-Led Unrest - Zee News",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nepal Protests: Why Did Govt Ban 26 Social Media Platforms - Heres What We Know From The Gen Z-Led Unrest - Zee News",
+          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPaXVvRU1TQ0NNMUljdkE5bXMzWjFRd2R5b1BDX2duczZPemNSMEFEdlUwMWZhQ2tCbFRmWXVBZ3d1TWI5ZG5YZUY4YmpuM2hGQVZpRzRuVVNYekljVC1NYzJ0d0FqVzBPRjVTNE84aWJBTWJXZEZkdkF0NXJyR1NLRGVkMHZaWHQ5ZG45VWFDSlY5eDN1X0VGWjNaWUtSRXZ3bGhmcjhxMFZVQjRka2xpNHJkNjNFaHNIY2JvTFgzZVVmZWtLSFdNblFDOWdrQm1GSmJZbkpQeUlTdnR4cUU5VtIB5gFBVV95cUxQaGdNWFY4bjV0ekVzTTRsQ1NPUFVIZzBlbjJkVkZKTzJIR2N5SUg4UWlNdmY4d3ZDbnN1ZDVramhEWE93OGkwTTlSVHZDQ29mUU5fYzlxeS1zUUw5SjBDX1d1ZFN1bTBwcnFVYllBUGZGd241al9EZXIxeFA4aFJiMkRmbUhpX25lYUJqc0tTeVdHYVBadzZDSXVQOWhyeUtyZkl5R3E2bUJVWVU2d3JZWlpsNXRvS0dQYlhNSkR2WXVfUnl4bURjQll6TVlTUFd5ZmZwZXJmOVpicHFnX2gwWDlpVlJRUQ?oc=5",
+          "published_at": "Mon, 08 Sep 2025 13:55:38 GMT",
+          "publisher": "Zee News"
+        }
+      ]
+    },
+    {
+      "id": "03532ea7-8092-43ce-9e60-af7f5e10c092",
+      "detected_at": "2025-09-08T15:25:03.426412+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "India Confirms TikTok Ban Will Stay, Says IT Minister Ashwini Vaishnaw - The Hans India",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "India Confirms TikTok Ban Will Stay, Says IT Minister Ashwini Vaishnaw - The Hans India",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQcFhKUW9LR3ByZmgxYjQwYU5iUHN4NUxIQVc2MXpiQmJ4V1ZPelZUV0lWWkc4bkNuUmdselE4WmhqRkdQRmp5RWRzMmhKZ08xM2p5ZjZ4WktmMzIza1NZb0lOc1Q0SFRTZjBGckxyT1pLY2xCM25oU2t4cDFsRXhQanRRWWdxcTh2TUo5NmYxdVJrYU4xc3V2MkRHc3JwOFcyVER3SjNPa0VDNUtjQ1RyWNIBtgFBVV95cUxPU2lSLXdmb2U4Rm1ya2N4TUVhMkg4SXpjMU4tX1c1bzlGaTBjMTloYzQybFdJZGFQQWx5TVpfNkJfcGdNVHlxbnJDS05DQVhTdC1hREZmRi1VT1lkalNYdVY5U2hjdmdvWm5hUzVJdjMyZ1p4QjdaTzNYZHd0ekNzdVZTSjBnOVozYU05TFhBVU4zMVJvdDNtaFZMTlQ5Z1NNWjFPelY5YUZ6a0UtVTdRa3RmbWRTQQ?oc=5",
+          "published_at": "Mon, 08 Sep 2025 13:22:03 GMT",
+          "publisher": "The Hans India"
+        }
+      ]
+    },
+    {
+      "id": "3df892d3-4211-44d1-8789-e433772799be",
+      "detected_at": "2025-09-08T15:25:03.426430+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Nepal bans Facebook, Instagram, YouTube and Twitter: What's behind the protests in which several people killed - The Times of India",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nepal bans Facebook, Instagram, YouTube and Twitter: What's behind the protests in which several people killed - The Times of India",
+          "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxQYjY0T1B5QWF3cDFuZlV0VlhEUExfSWhfZXR2WGpPNHU0WU1SSHZ0LU03cjA5T0dJVGx1VVRyNlo0V3A1aUx3MUwtU09nMTRaYkdjM1NuT1ctd19tQ1VoN3JiLUVnaTd6NmRWU2U1SzFVR0piRndQVzY1WnBlNXRmZG15Qy1aM2FYT2R5U2pHX2hDVFVvd2VJdXgtWDBRc3F6QnQ2akM3NGg0dDM4eUdyYzAyWXlDYW04VnB5ZlJ5dnozR3Z6QkJ6LVFrZGZHV0FIRUVzejN3MjFrYlY4TnBJMDVaV1RNOTlRazVYVjRmMm5uckFVSF9nOFd5YmZvV3M1c2pjSGtQOEdzc1lNQnpfWDUzUkVNNjhJ?oc=5",
+          "published_at": "Mon, 08 Sep 2025 13:16:00 GMT",
+          "publisher": "The Times of India"
+        }
+      ]
+    },
+    {
+      "id": "ed1d071d-0abd-4d07-bfe6-43e0ead7a38a",
+      "detected_at": "2025-09-08T15:25:03.426447+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Is TikTok Making A Comeback In India? No Plan To Lift Ban, Says Ashwini Vaishnaw - Odisha Bytes",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Is TikTok Making A Comeback In India? No Plan To Lift Ban, Says Ashwini Vaishnaw - Odisha Bytes",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOeF9tREhER1pJYldBX25leS1FT3ZEVFFCSWlSSkZZZ3hSV09Sc2Zkam05SmFYT2haY0ZYVjM0Y3ZVc1BFcmF3LTNQTGJqTFdLNVkyZ2dZQ0NHNG5XMkF4aUVUeVZidmV0S09LQVQzRkYzWGF4UmstYnpLdjJGSmk2Tnk2eUVIT3B5OTFtbEhpOEV1aGJzRl9RNzV2VVBFeTE1Yk9SSXhn0gGrAUFVX3lxTE5EcUNId3NaVzJvOWpfaHRkQ2VtT004YlNSMUtiQTU1QkFrLTJfR0VySGl5QURHS3p5R2pReWNtNldvM0tWTVJqaUFjQk1LLTFlREYyY09zNFR5MzlUQ3BBZDJGdENpX0ZhS1d3b2ZnU3BMc01xcGdxZEFTMnNOVmdzdDM4Z0FsM2JhZ05ncmpXeXY2OXhMT3lnODV6WElWem9Odk1fbUlrSVljbw?oc=5",
+          "published_at": "Mon, 08 Sep 2025 12:49:47 GMT",
+          "publisher": "Odisha Bytes"
+        }
+      ]
+    },
+    {
+      "id": "1c338072-2f03-4b3e-98ef-7f7f0fb021b3",
+      "detected_at": "2025-09-08T15:25:03.426463+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Will India lift ban on TikTok? IT minister Ashwini Vaishnaw says, 'There is...' - DNA India",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Will India lift ban on TikTok? IT minister Ashwini Vaishnaw says, 'There is...' - DNA India",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPNVBNWDYtY2hObWgxUkpyOGc0Yml6Y2R6OFlEMVpWekIxR1Fna2l6RTl5WlJhdEZoTk5KUGtfWmk1SGZCUzVUamZ5SjBuejB3cjZtUEd0dF9rSGVEMmRIUzlIc0xzdDNuYi1lYW9qWlVFTi0xSXBmMDZxdndWSHdfT0g4QUFXZVF2S0JsakU1eTEtM0ZYTlZ2dTZ2MnMzWFVPVXctWER0RGNMd1h0d1dUVTZvdTVQbXFpT2fSAb8BQVVfeXFMTnJVUnFjYmhXbTd2dWlVRVBodGZmNnZPUmZWWi1BZTR4b0FxclYwR2dfMk11akM0ekxhUXUyYnFySGJmenNHUWUtZFpRczNtWEExSlBxRzF1R29xSHZoN19GaU5kWHpRZmM5VmpRYWV4ekFkcTEtSnptTFA3VVVJQlcxZXlzTC01bmRMUUtmUlplSGY0Y1FwUTVtb1hfOU1fbm41LUZfTjUwYThjZ1lGeDZaenYzem5PYTRCYWNrWEk?oc=5",
+          "published_at": "Mon, 08 Sep 2025 12:46:00 GMT",
+          "publisher": "DNA India"
+        }
+      ]
+    },
+    {
+      "id": "d7350f95-0ccc-4775-96aa-9eb4e2c85827",
+      "detected_at": "2025-09-08T15:25:03.426478+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "No Plans To Lift TikTok Ban In India, Says IT Minister Ashwini Vaishnaw - News18",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "No Plans To Lift TikTok Ban In India, Says IT Minister Ashwini Vaishnaw - News18",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOc2htaDZvd1M1ZUdkTk4yLVh0QVNwMFpZaWlJV3AteE8wYUxTVU9Qa3YxVl91eWQ3SDhXWWdvOGFZTDJhLVJIUVVpWjlpbHF3UkRTUkdPalVKa18ydml4WmFRR3BsVlFFVW9qRDVHSjdhRndJbWRMbThUWmhGaXhVd201RG81OWY3RGlsSkdEWjRLSm4yc1h4dzh4aXdGYi14RE9GVkJrbjhTMjNxeGpZQ2k0bDZmVnpFU0hhZtIBwgFBVV95cUxNOGNDWUFyYy1TcTVTdWRJYUtxQkVxeFFPVFhHMFBwdTZENXhwRzN0Ml9pSm9FN2hpN0w0SnZLTzRCRy16dmxPOERleWUtWGQzZjNYcjFHc3UyQzlwanV5S2JmM256R0lWa2RxVkMzT1ZRekk4bzZ4ZHp5a3JSMF8zbDRZMWk1bndpMkxfby1IWDlObnYzNzduMUZORWJET0pYbnhVa0xMbWNBTU1LX1haRlVTaUNUN0tXcFphdjdYVE05dw?oc=5",
+          "published_at": "Mon, 08 Sep 2025 12:19:49 GMT",
+          "publisher": "News18"
+        }
+      ]
+    },
+    {
+      "id": "844dcd62-232c-478d-9f33-c3bd1971bb66",
+      "detected_at": "2025-09-08T15:25:03.426504+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "No TikTok return, says Centre | OpenAI plans Rs 300 cr Ad blitz in India | Nepal’s GenZ protests & social media ban explained - Storyboard18",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "No TikTok return, says Centre | OpenAI plans Rs 300 cr Ad blitz in India | Nepal’s GenZ protests & social media ban explained - Storyboard18",
+          "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQX1NfU2NUOXlsTm9XbEJkUlQzaS0zakRIRDI5dEtfV25YQjVMeHhCOEgxR284TmFRWk5LMktWbG1GTU1jRDh2c0J0Q0R1OHF0RWFQSXZjekFhRkE5ZTR2X2pfUm9xN1JwSkp3eDlUaHdkT0VVN0lvcm94cDhzRGRjdV9hSFg3ZVpyZXRub1VGMG0zOWNzNTZZNjgySktVc0JmQWdpZEd2ZTFhSU91dTZRUVRqVzJoYzU0OVlidk92bVZDVHJxTWs0MkU1WVVmdWxETmdmTzFnbWVpczdUOFQ4UmtRNWhqYmRPZWVrQ3JvNzlhUzVZV1BXTUZ3dno2TWVWbmFz0gGIAkFVX3lxTE1YRHBxV24yNmVWeXppNFB4QlRMZGtXZ3M0WDc1ZmgzZEZIS0RRN1BRSXdCNXFRTmpZU19USE02SU93Q0QzYUN1VER6dnhzeFNIUWpLdWVENWRtTGpoV3h6Wk00ZUZCVGxPNHJRS1BKR3V5YTVDY0x2SGtwYVF3d2MyUUVYaUVxTVFLcXk5aS1XTkwtVm9JckhrMWJSalZEbVh3aTBKRWlPeldWRVQ4OTVlSVFWUVNXZHcxSHRxcDE2alNaS2x3dkgydkZUbGtSTkV4ZEF4ZE9RaEVYS2hlaE9ONUhfN0c2SVlobDFxMjRlTnRDTUU1Ullid2l5OV9sYzJNZTRNcnhuRQ?oc=5",
+          "published_at": "Mon, 08 Sep 2025 12:05:17 GMT",
+          "publisher": "Storyboard18"
+        }
+      ]
+    },
+    {
+      "id": "4cdd8590-5152-41c9-8ad3-128c39f71add",
+      "detected_at": "2025-09-08T15:25:03.426523+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Nepal youth storm parliament gates over Facebook & Instagram ban | Anger grows over corruption - The Economic Times",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nepal youth storm parliament gates over Facebook & Instagram ban | Anger grows over corruption - The Economic Times",
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQQzBtUk5pbWRqVVA3ejV3dDNfTlBEc0dFUVl3VWIyRVZWVllmZ1IyOUpCbjJoak04Wld0YkljT3NKRHEzTF9SaTNVNDNMTHNwNFJHUDljcHByOUN3YmdYWHBub2Z1a2dLX25JMk05S2dWTGhyUnZtMEFrNy1rT2JNWjZCY3gzUjQ3SWdJWlViRHVDVjU4eWh1TmE4ZXoxZkFMckprZ1RMX3NZaExLbmdlR3RBVjFDNVJDTWNULXl2Wi1CcnNteHhHem9QeXhGcHBNa21PbUFHNEJWU205ZDdtUGdKbFhtbDVq0gHuAUFVX3lxTE5GTXUta2I0RVQtYndGQ0NHdUVsMHlJaTdsRDE5aGlVZVFUd2RjRG53TUt2a0VDb2pwTHFfenEzVDd3eXY0NlQ3Uk5nYmJlZDBsOWxoeTQ2VHM2Z2hpV2dKSERBUFZrMDdmUmN3SzVkczhtOVlQckk0VWcyeWpXek5IS0pGT3YtTUQzQkljZDhQSnlfRmdrQnBTa0JJVjhkQm9zOEdHNFBPV3N0cjhndXZ5SHM5bDBWMXQyTkpGV004MzVZRm9kX2toWWdMSk4xdmF2MUh6a0tPb25VYlVRSldKMVlfRXFERnZNb3ZPSVE?oc=5",
+          "published_at": "Mon, 08 Sep 2025 11:03:28 GMT",
+          "publisher": "The Economic Times"
+        }
+      ]
+    },
+    {
+      "id": "e91cd3d1-f1f5-4b00-a363-4f5ec3c677d3",
+      "detected_at": "2025-09-08T15:25:03.426543+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Nepal bans Facebook, Twitter, WhatsApp and 23 other social media platforms, here’s why - The Times of India",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nepal bans Facebook, Twitter, WhatsApp and 23 other social media platforms, here’s why - The Times of India",
+          "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQOTRqcEZDU0tWVWRNU0dMMVNOMlRxRjRMcm1aNEJwc0h2alJQMEhfU0ZUbkJhS3lSeERtTjA3RmZUOGV1ekU1SHhNaFFoX0Vvd2VOSmNkbExnZU5pY2lNSk1kN2FVUF9KekliaTgzQUhqQWxsdDZ6bWtpN0lPb2ZYZXdmTVY5dXVUV3NSOFJOeUhlYkl6V2MydzYzZUg5NmZ0Y29lQ2NtTUlxdlI3YzRvU0VGMTZJaG02M3V6bDliXy1CUGh0bnhVYVBMZlU5LUVLRzdBTlJFZ3lzM01BMkhVcEpDYXVJZnI5dDNSeUk2Q2huVVpCbmxOeNIB_gFBVV95cUxNd3BJZGFvZnV4YXZHVVhYS3JuSUt5cDlGNnQ2NFBJTHhicGE5ZnhLMENZRG14dXBOaVp3b3I3Snk2R3BUc2t2ZFZPWVZYNHJhTVBHN0JxOGJSMDNzNk5VdXQ4NXgyN2JmVVJmdFBkNE45RTdqWmwyUnZWWU4xODNoQS1CNlkwcVRRVHFYb0tfUHpuTmd2UHBSS21DdnQtelRYcDhrcF9kNjRhWHBLMTVHd0ZzYWJMMDMtdFBKem4yWjhZMDhlZTBheklvai03bW1BSURKQU1HaUZVcHJJNWhSSEFyVjloNmV2bHlLYi1uc2xLdHFOQmMxV2RaWTVkUQ?oc=5",
+          "published_at": "Mon, 08 Sep 2025 11:01:00 GMT",
+          "publisher": "The Times of India"
+        }
+      ]
+    },
+    {
+      "id": "fcabd6fa-52f9-4f29-8402-0ea557365269",
+      "detected_at": "2025-09-08T15:25:03.426560+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Zupee Pivots to Short Video and Astrology After India’s Gaming Ban - Lapaas",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Zupee Pivots to Short Video and Astrology After India’s Gaming Ban - Lapaas",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1XWHhGbmp6Vm5qalJhT0VodDhHNk9fVmpoLW5NMkhFYzlpQWs3Y19hQXUzUXBQY1kxZWtLX0FfYTMybElPZU5ldHliNnFzMXczdDFqTmFVVGJ2VXRGcEtRSmFNR1lsSDdfRldXWFM0cUpfRmvSAXNBVV95cUxNV1h4Rm5qelZuampSYU9FaHQ4RzZPX1ZqaC1uTTJIRWM5aUFrN2NfYUF1M1FwUGNZMWVrS19BX2EzMmxJT2VOZXR5YjZxczF3M3Qxak5hVVRidlV0RnBLUUphTUdZbEg3X0ZXV1hTNHFKX0Zr?oc=5",
+          "published_at": "Mon, 08 Sep 2025 10:51:07 GMT",
+          "publisher": "Lapaas"
+        }
+      ]
+    },
+    {
+      "id": "38808992-966b-4037-b8f7-5500af700a25",
+      "detected_at": "2025-09-08T15:25:03.426578+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Nepal protests: 14 dead, curfew in Kathmandu, Pokhara over social media ban - India Today - India Today",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nepal protests: 14 dead, curfew in Kathmandu, Pokhara over social media ban - India Today - India Today",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNOE9SWWhoRXdNLVFwLXFkeDFtcUZfY25ydndVVDE0MnpLSkhxWHU5bFRzUHRGSlFiVG81ampqNldmVl9tNVowSGZITnF2T2dpT2FFN2x0MXJpZW9hRnBYODlYclFFWnZ6Z2ZUZ050VmRoLXIzNlkxRXIwdFpJa3otMEdDVDJ3WW4yYTJQLWdPbHItWnRrMkxEQW1iUERhY1dhYkhjYWxYdlMxM2xZeURhZVFsN24tN3hydEt5VGh4R3VnMXE4blZXRNIBzgFBVV95cUxQNHBYMVVxdHZFRTl2aUx6eGJjWUNwR3VQakxXUnVqXzhOOVl4bl9LV1EzR0N6T0lGNUluaTdTYktfc0pNWmIzX1E3VnBrZ3ZBaGhuLVZZcE1DRDBYZUJZaTlfZU9KeTN6VzA1VERrc3pDRl8wMjc1ZnNTUXAzcXhUNEE0dEYzVUR1bkRSdnllemplSVRmY0I2YlVQUlVrdndGSUlQUk1GYUNIbUQyNXN2QzNBajFFekpmelp2bWdiR0I4c3cwS0hPWnVYbFFXZw?oc=5",
+          "published_at": "Mon, 08 Sep 2025 10:49:50 GMT",
+          "publisher": "India Today"
+        }
+      ]
+    },
+    {
+      "id": "d378a607-ff2a-4183-9401-7d73e56463ae",
+      "detected_at": "2025-09-08T15:25:03.426595+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "India will not lift ban on TikTok, says IT minister Ashwini Vaishnaw - India Today",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "India will not lift ban on TikTok, says IT minister Ashwini Vaishnaw - India Today",
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNN3NSVVlSdGhVQTlnSWRQSmlhN3l2blowVmVpWGQyMW1rcmExUGlTYWh3ZFB3WGxQdFRpbTFqZExPdktNRHVmMkUxcDJranUyT2o5MXpSQnBOekVXNGJRTzJQbHBmT0hHbVF2aW9qOVB5RFVXeDNZM2NxZXg0eVlIamtobDdLdTVYbDlXRGFsWXBZMnRSXzdxY0xibU53cjNieXNxc2lDY1dNVXRWRWlOUjNXRHlIbG9nZXZrWWFBZWQxTTI3cGg3LTFjX3RwRjjSAdQBQVVfeXFMUElzajQ0SVVCSkxqcUFFbVZLeUtGQUlONVQ3LVo5ZUlqMmluU0ZQc083NVhoRnc5OUF2RUZFd2ZXT1BnTURpb3o1bUlCQlBTUlZzdG80eE5aZ3VZemV5YUZSeGRtaHllSFZqdXl2dEgwZUxsUl9CeW8tMjE2eUpUVlBtaFlJd3lFMy1YNHZRVEpkd3RncEQyN0xRUG1MZDYzem5xTEFONmZDNnZfSkFXdVV4a29PY2V4ZTd4RzlEZUpXRUZwdkQ3eGl5a09mRWx2SG16WXY?oc=5",
+          "published_at": "Mon, 08 Sep 2025 10:31:47 GMT",
+          "publisher": "India Today"
+        }
+      ]
+    },
+    {
+      "id": "f5375e35-f149-489b-935e-a671094f02f8",
+      "detected_at": "2025-09-08T15:25:03.426609+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Social Media Ban Sparks Protests in Nepal, 14 Reported Dead - Outlook India",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Social Media Ban Sparks Protests in Nepal, 14 Reported Dead - Outlook India",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPTUFfTmFzZUN2NmtJZ0hGUldrOTAtWnY0V3NzZk1LaDFmRUdvWjVtRGRaX3p6TDZBUVFVTjZ5Q09uN3RjR1RIVTA5UElDS09nYW1pQ2I5LUdoMkk4RmxRRWlTeFU1UFdFUGJ5VFl1OTBjRHRqUTFlOGRiQU5IVmE0YkRzTjFKbWVBVVUxZlZkNUlEUE5Obm5zRldOTVlYckRuTTJaYTZmQjFpVkp1VDRNUklB0gG_AUFVX3lxTE1oTGhOU2RrSk9uMFZIY0lIVnJMSEdJNEpBQWZPV0t3UEF3MTR6c3FKelFpeXBZN3VoYmw3SDI4OGFQNFN2ZjF2OEtkTDJEX1BtZWFaRTJsRGVqYjExUmdZUFBEVFVwbDU5aDZBSzhnYzYxaXhhckZtS2FsWDZwb09DR0xjWGQxcExoTDZCOVJhTnlBRnotUXdGc0g4dUhZSnUxd0RXSFdhc0g5eHVVRDlPQ2xENk11bjIxTFlSVWhn?oc=5",
+          "published_at": "Mon, 08 Sep 2025 10:22:47 GMT",
+          "publisher": "Outlook India"
+        }
+      ]
+    },
+    {
+      "id": "3bce0c3f-886e-40e8-a822-b1e4cae8008c",
+      "detected_at": "2025-09-08T15:25:03.426629+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "low",
+      "summary": "Supreme Court transfers online money gaming law challenges to itself - Mint",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "monitor",
+          "days_delta": 0,
+          "rationale": "Relevant but no clear immediate risk."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Supreme Court transfers online money gaming law challenges to itself - Mint",
+          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaG5teTdRdTZNOTMySTl2RlJVTDhYWF96ZzlhQ1BjLVZ6SmxBNF81a0RuN29xTnV0R1IxRTVONjRHODdVN3hjd1VFdjNvUnZwSkcwSjc2VE9nUGk2MTlJRmkyQ2N3RTFidkZlM1hZUEFCR1JHQnk2d1ZuckRWZm9GNWNYellsaU1vY3BVaHN5OE9YMVdvNTcwd3RjUnQ4Q0lQR2p6R2llM2xMOHR1MFo1QS1FckFkZEVFR3ItdXVNVUdwVXUyQ19XalFQSndQTWRzSUhBa2xxbXh4NDVHUENiMQ?oc=5",
+          "published_at": "Mon, 08 Sep 2025 10:02:52 GMT",
+          "publisher": "Mint"
+        }
+      ]
+    },
+    {
+      "id": "f94e00ec-131f-4ca7-be61-04796c1a8d5c",
+      "detected_at": "2025-09-08T15:25:03.426646+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Nepal on the boil: Youth storm parliament over social media ban, 1 dead - India Today - India Today",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nepal on the boil: Youth storm parliament over social media ban, 1 dead - India Today - India Today",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPQ0NBQjFYdXpha21iRDJ4Q3EtckxlUE9VSC1XOWU1Y25La3A1U0dBQzR6ZzFhTkoyWC1TbVR5NE94aDZUaXFVZUwyaGJKUzlPRFpNYThzSl9pVHdNQWV3X0ZoSHJ6OVBrZ09lanVzUFZhMTA1N0dUajdFSlgxOUEyajBGSnhWWWJXNlpEX1UyWXJHV0xtNGhaeWpxbkhkbk10YUdudkpMVl9BUGtpbTllSWV3bTlqRGloOGF3bHlvdkhjcGpJ0gHKAUFVX3lxTE5LRlVicVAtQUp2cnNJNFRpa0VWSGh4c3U0NEV5dExsN29wakx5azdBcF9TUnZhNW1lbE0weHVEeFVDVWFHdnk4ejlPYVZtblpsbjRJOXNZRTl6Ql9PV0VxQ01NdUd1Yzd3Q0lMckM2NkNXajhLNzFGaVFyN2twRUg3QWZISlk0eFdwUXY5cmxVb19wWlBEd1ZkSmRVaVEydnI5SDNUN3NkUElaRDBveHdjUk5vZ2VoWWJOUGxYU0NHT3EwSGs5b21oT1E?oc=5",
+          "published_at": "Mon, 08 Sep 2025 09:40:50 GMT",
+          "publisher": "India Today"
+        }
+      ]
+    },
+    {
+      "id": "af4562c9-7168-4862-bf00-bb21823d3f81",
+      "detected_at": "2025-09-08T15:25:03.426661+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Why has Nepal blocked WhatsApp, Facebook, X, other social media apps? Ban triggers protest - DNA India",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Why has Nepal blocked WhatsApp, Facebook, X, other social media apps? Ban triggers protest - DNA India",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNVUxxdkhvaV9pdGRzSUJvU2w2dDZfX2ZLS29ZZEUtdDBCcDFINFk3dVM5VmVJeV8tZ1BySnVfZ3E1NFhTVS1HVkhMT0VxZVlDZkJfbmNwVGlWMGRfXzZfeDctZlV4RGJCSkRJbTZtdzFWSFVhRTRwWHRmMnhWT2Q5Mkliajd1MTZQc0owOWN1amNqaXJwRDlSc2t1dzdRb3dzcDMtVEQ2NGtMTU1MWlg2eVR4SHQ5ZUVaMlNrZk5RQlZCeUE5TTN5T2xLN2tyYTJTal9aOU9QMkFFUVpw0gHiAUFVX3lxTE5kV2dadktzSEdxcnY5SmcyMmo1M2FWejhlaU9pU3R6SGdwNUEyZ0RCUlhKYUxRTERsN29JQVpRUXZRU3pKSE5FeVgySkdGTnF0SG5iNFA0U2FWRjBsWGNLRlpiU1VwVDRHVXZLRktOa2VrdDFnbUpDQVFyNXJmYklXSzd4S0lFR2x1QUtxS0U0aU00dGNDNnc0MVZRSXJQRXFhSmY0VDZVXzBVa3BQVWFmWXdXWFpWNWR3cXd5WEVwejFyandTUzZ5X1MyNlR2M2N0czg4QXFONUFXdWtFa1hhRmc?oc=5",
+          "published_at": "Mon, 08 Sep 2025 09:34:00 GMT",
+          "publisher": "DNA India"
+        }
+      ]
+    },
+    {
+      "id": "11bbae69-7d99-40cd-86f4-e96ed3838458",
+      "detected_at": "2025-09-08T15:25:03.426677+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "low",
+      "summary": "New US Visa Rules 2025: Indians Travellers Will Now Have To Wait Longer For B2 Visa And Here's Why - Times Now",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "monitor",
+          "days_delta": 0,
+          "rationale": "Relevant but no clear immediate risk."
+        }
+      ],
+      "sources": [
+        {
+          "title": "New US Visa Rules 2025: Indians Travellers Will Now Have To Wait Longer For B2 Visa And Here's Why - Times Now",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOM1NIOFBlU3JXdnRTMkRKYUFqQmpweXl4WFNrT0x1aVNVVUR1Q1Nvc0tUeEFzMldJQ0hHUmUxSWJCeFduY25qcURoc1JVMWcxSndHU0lBa1pIUHBhNkk2SV9acWk3bDJ1R0RCWmtNeE5DOGpnWktHN0p2T2hUVDFJQXRvZ2NBSmJyRXEwcnIwM1JFZld5WVlhNnRfLVpVU1oyWFFzSHdzem5tQ05SbGlBRjZFeFluOGxRWXhIRmtJalhNMWxoUVpqT2VjVnJWSWdEWnVoYTZWY2pzdk1JdUN4LVBONHLSAeoBQVVfeXFMTUQ5V29ZM3lHZWNQZFBjcmU0aXNMY3o4TTRsSDV1SFJvMThLcF9uVUJJOGFIdmdYV1NaaWRvRU01aW40RXZqYy1QRlZDNHpPbEdGcVJjNVhoUHRwUk81aGR3VV8xWjZ5V0RwQTZNX0tZOTVSNlBnYmJOaFVkcl9VTnVTTHhqTU5SYXJZdmFHcTAzODJzbjNIRUZnNHdoY0hTZk5NVWFTXzVjT0pieFJjeTBtWGVsdGtma1FERGlnQTZrV3FXekYzYVZ6bnozRllDMHFjTHp1bW5GQ0l5QVRDREhtX3lpOEdvdFFR?oc=5",
+          "published_at": "Mon, 08 Sep 2025 09:32:39 GMT",
+          "publisher": "Times Now"
+        }
+      ]
+    },
+    {
+      "id": "fe68cdbf-ec3d-43b4-8216-61a14a9be0f2",
+      "detected_at": "2025-09-08T15:25:03.426699+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "low",
+      "summary": "‘Why an acting DGP?’ SC grills TN, asks UPSC to fast-track regular police chief appointment - Deccan Herald",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "monitor",
+          "days_delta": 0,
+          "rationale": "Relevant but no clear immediate risk."
+        }
+      ],
+      "sources": [
+        {
+          "title": "‘Why an acting DGP?’ SC grills TN, asks UPSC to fast-track regular police chief appointment - Deccan Herald",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQUXlLNGF1ZEx3ajR6aUlLRXRRRFh3ajBpdEVVYnA2N01ERER3QVlwbjdwRi1MODhnM3h5amtaVTBHUVctVDZPbTNfRTc5QzNqZ3pCX2xUdVRndTl5bHNEb0FuMkFEX1ptOFVrS09Cc3djemdVTDZTSXNPLXZUeG95RGd2YXRHbTM3SXgxT3dUXzB0akpPOEMwVWNHNVBFcHlaMDdZenpBdFFodW00b2c0UzZ5cVhSNkI5bFE?oc=5",
+          "published_at": "Mon, 08 Sep 2025 09:04:29 GMT",
+          "publisher": "Deccan Herald"
+        }
+      ]
+    },
+    {
+      "id": "d8572a17-f284-4b29-88da-158dc08e972e",
+      "detected_at": "2025-09-08T15:25:03.426725+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "medium",
+      "summary": "The silent strain: How lifestyle diseases are reshaping India’s health insurance landscape - Business Today",
+      "impacted_stages": [
+        {
+          "stage": "insurance",
+          "action": "monitor",
+          "days_delta": 0,
+          "rationale": "Processing delays or quotas indicated; consider starting earlier."
+        },
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 14,
+          "rationale": "Processing delays or quotas indicated; consider starting earlier."
+        }
+      ],
+      "sources": [
+        {
+          "title": "The silent strain: How lifestyle diseases are reshaping India’s health insurance landscape - Business Today",
+          "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQODNmMHRoLWxFUDYtUGx1M0ROdzVHemwwZnpIYlVtZ0NEVFpuNXpQVnZ2bzFudjFDaWJ0NWxFVnBOeEpRSEhldjJjWU1ndG1JdU5ieUxkZVhWQWZJZFNrSURsN3VEV0xDcWJhN1VTSnJjRE9laW41TTNEbWptVk9aMmNqT1BRMkJ4Q2FYdDlWNmFKZWZpRU81NnZJSVlWT3Q0djlSUnAySlNfT1pRbnJ6ZElEMTZvWGRjS0JGUVlKQkR0c1NseDIwM3huX3FIay1tS0ZaZjl6MFhqZTJTMEJRQUh5M1dEV0duNU9rRmdB0gHzAUFVX3lxTE5wQnFmc0cwRl9sb01xWHkxRlFCcngtTExWa0VuTnc3ZkpzZnpMaXJWazBha2tOREU1eGVWaGpraVRkdGNRZlRIZlJjYXFIdlVnQVRjT3lCZV9FcU5VbnJfZkZvVkhlemZyZV9hT1dYQm53al9Tek9xMEJuajdvYnlpdlh4SmtKT2JYa2VoRXFBWUY5dDU1aUdZbXhZaHZaeVRUYXluc0JQbF91SnhkWVVZMkVHb05EdDN4M0NoTy1Iay15RGczeUNvOHJHUENVdGNiVlNTUDNlWU92SExFeHh5R25vbVFxZ01nb01NVEMxMzhRcw?oc=5",
+          "published_at": "Mon, 08 Sep 2025 09:03:57 GMT",
+          "publisher": "Business Today"
+        }
+      ]
+    },
+    {
+      "id": "49096547-8402-4408-9e54-30a8cdc3fbb5",
+      "detected_at": "2025-09-08T15:25:03.426742+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "low",
+      "summary": "US visa: Big blow for Indians as new rules end third-country appointments. Check details - Business Today",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "monitor",
+          "days_delta": 0,
+          "rationale": "Relevant but no clear immediate risk."
+        }
+      ],
+      "sources": [
+        {
+          "title": "US visa: Big blow for Indians as new rules end third-country appointments. Check details - Business Today",
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPUWtmaDJFb1dqUjNNQi1YLTlLVWZGZmVodzBqdWgwY2tzaW1BcVZMRnpJbWZJMTQyTXFkbERRbkh4MmlpS1ZoUkM1ejNsM3NSNUhpODFmTzgwY1RTck9iR1lvckY1VkQtTXM1aHNvVGJ0MTk3UldvbjZodkJkVmowNFRJQXVvcC1wOXdOVlVGNUtFdmxOcVNoVkhIakY4amxmSkwxdXlENnVRbVMtcXRxYXJVNHVuQTQtU2RQS0Z6NzQzcC1PRTMyMWE5aS0wYWd4VlFlY1I4QmRsSUI1bmNyNkNrQ1NnRnJI0gHuAUFVX3lxTFBkWXpmcENlVW0zbUF0bHZyUWRzNVdfY0NkQUUta0hyVllESFRTSUNjR3pEUFZEWXFRYzBqUEhmY3pJbThSb01XSVR4VGFYNTMyQmxRbHBmX1FnN1NoajdEeEhzWXVPSWFtOUR1SUFwR3hVZWVXeFE2RGQtZWhWb1F6ZVJ0aHBlWTlMSS1aZjFfTlU1SlB4X3lUYWJxQzI2RkpQWTcwdXBfU21xLXNjQlpZTVluSFo3SmlERm1WUHYwNzE1Q1drSlZXUkk4eVE1SWkzTVVsS0tNcTYxblJ1VlVOT0taY1U4aDR3VThzb2c?oc=5",
+          "published_at": "Mon, 08 Sep 2025 08:41:05 GMT",
+          "publisher": "Business Today"
+        }
+      ]
+    },
+    {
+      "id": "8afbc978-1d9d-4099-b1b9-672e9065f765",
+      "detected_at": "2025-09-08T15:25:03.426759+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Social media ban in Nepal: 16 killed as youths clash with police; army deployed - The Times of India",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Social media ban in Nepal: 16 killed as youths clash with police; army deployed - The Times of India",
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQdG5VVTVWaW5uWUJLbEJFX2htQUYxN0lmOEFBb2ozY3M2eWpPVEkzMmp5YUJKaVp1bnBYdl9YRkJhOENRTGJFVG9ObjhXWndxdEN3aUltZHRVcU1TUDVNWGJDb29NNGthSDZaVjVNRzh6cTJmN09kM3RYTnhScFU4MXB5SlBUb1dob1BOM2tVRnJmNXhwOHZ1aG5iR09tUS04RVFXVEgxVGJCMmxvOUJQM2RrWWhEZkpKRDlyVkpoalZ1TlFqeTRFWV9IZXpUbF93anljMFF5VnAwSFczOHRxUGVheHpuelJY0gHuAUFVX3lxTE9OcUhiMXFhdVQxQmRBOTFKMWE1Zlhtb1pTYi1DREZNSmxaV2lJMkRsNi1MLVlyQkdnYllORlhOWERTYk1WOHVDOFZmRzF1R2RuU1k0enJPZXlCTGhtUmJQLWpFSHNGUGF1S1RSellzMEhjV09Ndy1KM0lxQkthYlBUenJleG1Vb0ttcXdsNXVFdUo4NVVpMXhpRE1uUjdoVUFzR2Fmb29uV3JPRWppR29Yb241VjgzakpGZlZlUWthWlhaakZOZG9GYnUwTFVIOXlGaTlWNXVsQ3FxeF9oa2NvZWNQczZRNGFHRm5oR0E?oc=5",
+          "published_at": "Mon, 08 Sep 2025 08:40:00 GMT",
+          "publisher": "The Times of India"
+        }
+      ]
+    },
+    {
+      "id": "fe4844c0-fe7c-4e1a-992f-f1641cba724b",
+      "detected_at": "2025-09-08T15:25:03.426780+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "low",
+      "summary": "Nepal protests: 20 killed, Home Minister quits, curfew in 7 cities - Top updates - India Today",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "monitor",
+          "days_delta": 0,
+          "rationale": "Relevant but no clear immediate risk."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nepal protests: 20 killed, Home Minister quits, curfew in 7 cities - Top updates - India Today",
+          "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNVlVITUU5QVBWZUxhTExDVjljZFVvNXhIeFM3Y2hPTW9jVzdZV3c1aGV2RldoRHdzdG1VRWUyb1FaeXlUbllEdkVteWFQWDRRaERLSzZidGZUeVZFZ1QydTVlaUVrVFJDWFFsVERKaUc3SjU2UUxFTTY5MFZzeUM2X1VGSm8yS0ZDTUU4SUNsQXU1UTJyUnVpM25iUm5qLXI2Z2NaLWhWeUZoQzJOWlB1TWMyRkhCM2ZobUM0VE5kTURnV2dRcmRRLWpCdEJydlBSaU9lSWc2eGl3THhteDZPWnJXdEZBQdIB6wFBVV95cUxQeXZTbHZNbEpVZkJ0TWFfbjlDTURjTGNabzdudktxVndReFp5X09FOG92OFdFbGpObkhjLUpvamdULUNDZXZQZnNLWlpwbjZqRGhybnByUTlJMjgzWnFUa3ZlSldwNzlEcF9ZSlkwZWFld2FRNVNnNTlSS2dmRDhFcWQ4anVMNndPcmlEVlliZDFaRkEyU2Y0elZmNVlacWZsLVlMTXBYbnZmYjNBQU9WT25oMk1SS09qOFQ2Z05yTjRMZm5sa3dWUk1Fa1o3M2pJeGtyY1VBLVBXcnNxeWxOaVo2UlJybm9CeUdB?oc=5",
+          "published_at": "Mon, 08 Sep 2025 08:29:49 GMT",
+          "publisher": "India Today"
+        }
+      ]
+    },
+    {
+      "id": "85a40d0c-afbe-4519-b421-6fd155797ea9",
+      "detected_at": "2025-09-08T15:25:03.426796+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Explained: Real reason why Nepal imposed ban on Facebook, Instagram and X - India.Com",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Explained: Real reason why Nepal imposed ban on Facebook, Instagram and X - India.Com",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNSHpjMVM1ZXcyWDIwMVJjblEwdmhHcGM1ZHhZcUZSY0ljUjl0b1VlOFNsZWpucFRUXzJ2M0VDbzVCYjI0QldYMG5GZWd2aHR4SVgyUERwM29waWI3UmxsN0RkNWVHVklTbzJaaFd5Nmk5Vkt0cVNVdUc5QVk5WGY0M1NDdzBHMUQwZHRUVkFXb1pTOWFmVUE5aEF2WW5FTl9VOGhhQXQ1cHI0N2l6SFdURmFuMNIBuAFBVV95cUxPSnNJSFZrcWhuZFZfTVpicFh0Q3BueWRrZ3pKMTVvSkVfLTFvVjRfT0ZEdjZMUGU5UWtlQUdrb1RpUzhKOXo2SVVqcHYwRE84MW1HM3pHZ1FzUE9hdFY2YUsyWVRFa0x2eUtrSGNIbWh6dGJGYUxaSjI1SjJmVWgzNmd1aGZhdXBDS1NxVDZDTi1EVTZDSTBOVWJ6dzFWRzdYX1Q4cVBfTXJLcDFhM0J4QXE3dnVsV2xj?oc=5",
+          "published_at": "Mon, 08 Sep 2025 07:58:59 GMT",
+          "publisher": "India.Com"
+        }
+      ]
+    },
+    {
+      "id": "5dc49a64-1cfe-4833-89cf-0896685f0763",
+      "detected_at": "2025-09-08T15:25:03.426813+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "low",
+      "summary": "No GST on life and health insurance: How much will you really save? - India Today",
+      "impacted_stages": [
+        {
+          "stage": "insurance",
+          "action": "monitor",
+          "days_delta": 0,
+          "rationale": "Relevant but no clear immediate risk."
+        }
+      ],
+      "sources": [
+        {
+          "title": "No GST on life and health insurance: How much will you really save? - India Today",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOVnlnc3VBMWJQN05tVDFIYV9RX08yV2pERGlkNzVwUDJOUGRST2RqdGlCLV9aN1JNS3J4S0p3VV9UOHJoRUdLVGhZOHk2aG1rQUdJbUxiZ1dsVkFDNTJTRjE4SWtJbDhqbjlDcFhrSTF4RUNmMG9WUks3a0VWSHdTQkJSWGxoOW9iYWQ2S0hnaGQ1R2FLRDNWcTU2dkRvd2lCeGYybzN3cTJBNXNHaGp6Rl9zVkRfOWx4aElqVzM2c3IxXzDSAcgBQVVfeXFMTzFOc2R6RmctcVBtOU9NQmhiVkhnUWttdHRvZGFEZXZxUENwUjZSVFFUQkN0UWVQVTBYbUYxWmxjTGF6ZWpSY0N0ZXpQMGdJeExUclAwN09FR0lMV1FIcHp5M3lDbmU3Zm9MRzZLS1huU0NGQ1hPYVdGSzFnZnJPVG1GS3gtZ0hXUWxMRHlhQnZDSmhya2tmZWl3eTNwdkVXdmx0Yk1vTWViNzFqNXpxU0NKZGxOSGxCMlNEWTg4REN5TVJIYVUtVU8?oc=5",
+          "published_at": "Mon, 08 Sep 2025 07:56:22 GMT",
+          "publisher": "India Today"
+        }
+      ]
+    },
+    {
+      "id": "72caccec-89c5-404e-9f91-85e092e3865e",
+      "detected_at": "2025-09-08T15:25:03.426836+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "low",
+      "summary": "U.S. Embassy Town Hall in Jaisalmer: Essential Consular Services and Support for U.S. Citizens in India on September 17, 2025 - Travel And Tour World",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "monitor",
+          "days_delta": 0,
+          "rationale": "Relevant but no clear immediate risk."
+        }
+      ],
+      "sources": [
+        {
+          "title": "U.S. Embassy Town Hall in Jaisalmer: Essential Consular Services and Support for U.S. Citizens in India on September 17, 2025 - Travel And Tour World",
+          "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPWkhSQUEzWU9rc1BWTVlEb0wzbzhZcE43VjhWeTJhRzZ2T0hMLTJ1R3BHSXBwU2pwOWlJSlUxU1ZpVzltblVFWjlWYjZpVHBlTXdRSktaaEpiVndIcTJja1JiQWRUM0FKTGZTeU8wMHY3cTdmcGpydVhmUmhfalRSRHNETFpsUzVWR1ZXeUxxT2UzaTlGdndETDNkeXFTOVVBOXVrYjFVaUQteEF2bnBJa19ZOURNX3otR2VLaGY4UXNXS2ZfVWlOU19pM21waGFzWmRYd05GajBIUUNUUlljdG0yRW1wVGROOEI5THp4cjlwb3pIN1JyRE4wZXhvVWc?oc=5",
+          "published_at": "Mon, 08 Sep 2025 07:44:40 GMT",
+          "publisher": "Travel And Tour World"
+        }
+      ]
+    },
+    {
+      "id": "ebc4db8c-d9ff-403b-b4b6-49d7f3f3984a",
+      "detected_at": "2025-09-08T15:25:03.426852+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Celebrity endorsers confront legal risks in India’s gaming ban - ETLegalWorld.com",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Celebrity endorsers confront legal risks in India’s gaming ban - ETLegalWorld.com",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQWk9nRWtPUjVTUGc4UlVmUWVMREZtcEczYjhUT0thcVVqVzMwTm5EV2QxaHZjS0RyWUw5clJMcDZzUFpaclZTOC00YlJWSFJCNkE3Q2JQTDNsRW9ITjFoUHNOOEYzLU1hSWN4N0lidW1ybmFFUXpWLXFJZHEzT3M1RnRpSnJWNThqcnZuNHJoNWU1bEV3N2J0RXd4cVBjQ0ZUbzEzc0MzSEZ3MktIeloybHFweUZGYXpTOGpxVm85bzBJNXN5dDFtQmJR0gHPAUFVX3lxTE9rTjNoekVzUUpSMUozRl9IbU1kVmo1Wm5jcmgxX1NBS1MtOUc4WHVuWTd0R3hHbmJ4UWtGcks3T01ScXJxV2MxcklYNlJ6Yk9INDhpeWxtY1hseWJEVV82Wlp4YlhGUnZVLTlXMTZBd2x5N3gxbUNTUXVKSzQ1MEp3V0k0VG9ydUlSLXpGSlRWdVNWekxycnZoUXJwaEZrOVVHR3dDQ1RnQWJTeTFRZGRzaUZsR3BORnJkQzdiWHBXNGQ3OW9Cc2FtV1dKdE9PZw?oc=5",
+          "published_at": "Mon, 08 Sep 2025 07:40:36 GMT",
+          "publisher": "ETLegalWorld.com"
+        }
+      ]
+    },
+    {
+      "id": "62a7ceb2-bb11-4904-a0f9-7366fd70aa86",
+      "detected_at": "2025-09-08T15:25:03.426867+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "medium",
+      "summary": "U.S. Tightens Visa Rules Again: Expect Longer Wait Times - Skift",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 14,
+          "rationale": "Processing delays or quotas indicated; consider starting earlier."
+        }
+      ],
+      "sources": [
+        {
+          "title": "U.S. Tightens Visa Rules Again: Expect Longer Wait Times - Skift",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQT21EdnBCNW51dUt5VllkSWF5ZFZmOXlzdUdNTjVzdkNjZFVRR0E4MnFEMURVRmxQbUpBY2lpMnp6aFQ3dy1FNWJ6b25sTm1BLTBtVWtOUUNuVENsdUhpT2xZcEpMdHlzYjd3UUI3NzRlUko3ZW5TRGdsVHpPbDl5UWx1RGQ4T3pmSmI5dA?oc=5",
+          "published_at": "Mon, 08 Sep 2025 07:31:10 GMT",
+          "publisher": "Skift"
+        }
+      ]
+    },
+    {
+      "id": "0d30a0a6-4109-468b-892d-1b1e0b2d8deb",
+      "detected_at": "2025-09-08T15:25:03.426883+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "India Mulling Invite for Taliban Foreign Minister Despite UN Ban - Khaama Press",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "India Mulling Invite for Taliban Foreign Minister Despite UN Ban - Khaama Press",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPNGpidDY0TWZMaHRXSkRrYS01SjBvS042MVhnQWlTcW0yWk5veUVDMWNYV2lpSTBGZDFzUlc2X2pnQTJZaXlubGduTmRFSWJadlZHZWJ0c2VMdkhXLUx4SlY5Ujl0X1hDckltOHctTEhvZ25ORm5mQmVNS21JR1VfclRQVlNnelhpU1RiSVpVWdIBjwFBVV95cUxPNGpidDY0TWZMaHRXSkRrYS01SjBvS042MVhnQWlTcW0yWk5veUVDMWNYV2lpSTBGZDFzUlc2X2pnQTJZaXlubGduTmRFSWJadlZHZWJ0c2VMdkhXLUx4SlY5Ujl0X1hDckltOHctTEhvZ25ORm5mQmVNS21JR1VfclRQVlNnelhpU1RiSVpVWQ?oc=5",
+          "published_at": "Mon, 08 Sep 2025 07:11:28 GMT",
+          "publisher": "Khaama Press"
+        }
+      ]
+    },
+    {
+      "id": "864cd350-193c-474e-83a7-e4500e0ceaca",
+      "detected_at": "2025-09-08T15:25:03.426898+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "medium",
+      "summary": "New US visa rules to affect Indian travellers: Longer waiting period, no overseas interviews - The Times of India",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 14,
+          "rationale": "Processing delays or quotas indicated; consider starting earlier."
+        }
+      ],
+      "sources": [
+        {
+          "title": "New US visa rules to affect Indian travellers: Longer waiting period, no overseas interviews - The Times of India",
+          "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxQcnZhLWpyOHdtbnM1c3ZiUTV2Z1pSeGprczh3NzNHQzhsYlhLZlY0aGh1SzVvWHZ1eEd1cUkxR3ZHeUNZb1VLbXdIYTF3UndobklNV1VmRjVBa0NTQ2UxcVNUanhVOFNnanB1M1BCX2puR3JqUDJUU243bW80SFJwVFVEX3JPcTJTWnR6WU5PYTlQZjQxOFNlcDV1TV9KUHg3cEd2WWpaYWE1LVFWRWROckhrb09Sb19rTEhaeXJOVHRibmR2X0FpN0hrV19ubFV6U3ZLYU1seXZMNVN1M3UtRUI4VS05UFVsMktWeld0MVN2YXNHZG5nTWFVd0ZhTXfSAYQCQVVfeXFMT0wwRlNZRExJbjNMUzFKdjNZaHRFVkpyWE53OFdEN2pPOE1iQ29XbjRlSzdTcnRyeEFZOUxkMUpBY3g3TXgzY3BkZ05iMmJWX1B1di1Id2ZCRmZhUGYyLWNFelFMVTByN09fMG9LMk9uSklnc3VyZDRZUDdxZ1ZDNDAxQV9YSGowQ2tHX01YbHlzYnNKcVJYdzZ5TDZfUkhtd1lRODlsRTgzMnlhTXl5X0MzZFpsNmpGZm9pOVNFSWUyQ0hvUFotVVpoY2RFV1YyTHVPVEtaVG5SYk13RlZoeTlDV2d4eEJHejdUMUpFQzRHVTl1ZnM2NjB2Q1N5MHFIZ3FQYlA?oc=5",
+          "published_at": "Mon, 08 Sep 2025 07:04:00 GMT",
+          "publisher": "The Times of India"
+        }
+      ]
+    },
+    {
+      "id": "822dc95f-12e2-4e78-86d8-ac1705da35ce",
+      "detected_at": "2025-09-08T15:25:03.426916+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "low",
+      "summary": "Supreme Court refuses to intervene in plea challenging the appointment of first woman V-C for Aligarh Muslim University - The Hindu",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "monitor",
+          "days_delta": 0,
+          "rationale": "Relevant but no clear immediate risk."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Supreme Court refuses to intervene in plea challenging the appointment of first woman V-C for Aligarh Muslim University - The Hindu",
+          "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPTDBUSWg0d2l3M2IySW5lVVhaazRqYllVODZVWlRqZnUyZUR5Y28wd3cyZEMxdEhSRUpLUlQ1a3h3Y0ZBRENhV0gtVHhKM2t3dUNfWFN3R2IxYXc5OHJEODVKdEpDbWFoTUI0WkxULXpyaF9GOW9aZzdCZ0gyMHRLS1FuT3hqSGhDVy1LbENpUGhPbElRUTl4VFVJYllmWHA5RjFVNGl3T2d6WXp3T0w1R0pzVVBWVThpRXRtSjB5U28xWTFaLTBENzNGdUhVanRERDB1NlRpU0N4bEJVVDlVZ2hQMTVORDA5Y0VYZWl1akp3UzAtSmZGUUxB0gGAAkFVX3lxTE96RERnRWdiTWxuRFN3VER0VmhoTUhDWWNMb3hGY2xaX1ZhYUJUZTZkUEpMckV1NzZRM3NqT2lfYjFrQ19xemdBUkkyNVg0aFcyWUtlWkJ2SmdHZHVKTm5sdlBVSzlEX0x6RUczSmRTRktsQTZ4YXJiZmhIT0pRZ2dCbkRrNWdLZFU5UHJNM0NHOXVjVERLUG1GWmpUOF91eUJWbFljNk9CUTZWZU00RHNwazNsYUFGbDZwSTNiVHF1ZlNfV1VQUmF4bVprSGJKT2kxLTZlWExMMUdYYmJ3aExVUE1HbXY0ZmVSbER2eG5RY253MHZVVkJXODcwdDE3OWU?oc=5",
+          "published_at": "Mon, 08 Sep 2025 06:58:00 GMT",
+          "publisher": "The Hindu"
+        }
+      ]
+    },
+    {
+      "id": "8766949f-50ea-4b8b-8ec2-53f504db0a08",
+      "detected_at": "2025-09-08T15:25:03.426932+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "No proposal to lift TikTok ban in India, says IT minister Ashwini Vaishnaw - Moneycontrol",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+        }
+      ],
+      "sources": [
+        {
+          "title": "No proposal to lift TikTok ban in India, says IT minister Ashwini Vaishnaw - Moneycontrol",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOT2ZJekp1bmVPMHhuZFMxWWRvUFo0MWtlZC1vZGk2YW1ydHJhSFEyR3FlXzB6TUdETGx1VkdPOGVWZ25UaFdFcjhZZUw0X2hjbFJVMDlUSGlIdjJPN3lUQjZXVmZsM1J0MjFrYjBkQlZ0Z3oxMmxwdkVuYzlkLUJ0YkVITjFuanBRbjR4WVl3ZXFiVF83eDBDLWxURkRIb2Zqck8zVS1WWmNPOC1sTlhyRUdSN2tDNk9SekJDbm1hbWZrd1ozcXhidU9CUDRSbUtT0gHWAUFVX3lxTE04aWdNMV82Y09TN3VZR1BpRWZrOU9aYjF2WEw1dkhPR3FuczN6MGZwQVVsU2RDMXBMeTlGS3E3Q1lwSEY3UGlvM2huZGNULVZsRXJ4eE04bFBTTml1anRvYkZZWkxsdVhRZjY5Uk8wTU16Q05vWWdoRzhEV1VmQ1prWVdHS2xUcWhNdXRsdmhuZVFyWHZzanpLQ2xaSDZyUDEwcnlhZkRRWWtQcVc1VFIyenI5NEh5bUdhWTBKQ19VZnNfLTdfUE9sOHNlel84bmRJZnZ1bmc?oc=5",
+          "published_at": "Mon, 08 Sep 2025 06:52:09 GMT",
+          "publisher": "Moneycontrol"
+        }
+      ]
+    },
+    {
+      "id": "27c71062-2c00-4504-b072-5226469bcfa0",
+      "detected_at": "2025-09-08T15:25:03.426952+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "low",
+      "summary": "Yudh Abhyas 2025: Indian, US soldiers conduct live drills in Alaska to boost defence ties - IANS LIVE",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "monitor",
+          "days_delta": 0,
+          "rationale": "Relevant but no clear immediate risk."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Yudh Abhyas 2025: Indian, US soldiers conduct live drills in Alaska to boost defence ties - IANS LIVE",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSmRRU2s5dVBOa2pubHRDRFBjZzZBMkVza01WTjZLTVRIem1wQmJOSFJfTHVsMlJGY21pV1hTWUt5MFY3MWpjb3pNNzhwaFNrOW43MEViRHd0cDhycnBCRVdCeEV3ZlV5eDlEakNXNzNMZTNOd0paWFhwRzA4TGtaVzI2NXFJNm5JdUNBTm51NklZakdDZWlMT0F0Z2h3SUVvbWdqX2pYOF9oN3hWcFpMTEdXSDc2Mk5ZdkNkV0Q0US0?oc=5",
+          "published_at": "Mon, 08 Sep 2025 06:52:00 GMT",
+          "publisher": "IANS LIVE"
+        }
+      ]
+    },
+    {
+      "id": "d99b7927-eabd-4cfc-8abc-c9492804e35a",
+      "detected_at": "2025-09-08T15:25:03.426967+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "medium",
+      "summary": "US shuts down third-country visa option, forcing Indian students into backlogs and tougher interviews at - The Times of India",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 14,
+          "rationale": "Processing delays or quotas indicated; consider starting earlier."
+        }
+      ],
+      "sources": [
+        {
+          "title": "US shuts down third-country visa option, forcing Indian students into backlogs and tougher interviews at - The Times of India",
+          "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxQTWlfcEw4dUxOakNqbjFBejFsdkFfUGRQZm55enpRMWc0YlFnQjAtQzJJME5MR3FNWlBQMlVWSFJRbGdXSW5FUXlsbi1ETkJfU003MWxNcDZrLXNRZFo0QjNWdTVkQlFYT19rcXk3cGlLdkxhLTAtWl9pNGFjWXFwbkc5TEh1Q1h3bjFDcWs1eGpyR2MtV0pfenEwOEZhN1drTTNKTDFVbEN1ckh6cnF4S3hjVWZaVVJLa3JoTFJZQlNoNUhPTzJ0aE15U2dENmU4TzYwUk1EZHhFTWUzUjVnWU40SktMUzJkZEw5V3hCcnZqSWRtTkR0dFVkYUhOb3Q2eXdibFB1ZHlYRmREREdsc0tCUzk1aXM5SldmZ2dB0gGjAkFVX3lxTFA4eGlscVh5NG1ESjdITkdEaTcxNmNOdDBodXlGSlgtMWw3T3BCcVdLUU1Ba25BQUNsNEM3TENxRXg4Z0JDRDZ6anNVNzNjZEJyUF8zZG9sMmM2STFpdjhPNVlUNkIwbXJMWDZ1eEEwcGJ3LWdaNjlGcUlZVTlwV1VlamtYZVR6UTJMNEJfNTBZYW9tMW5qeUQtcS0tWXl1YkNield4RThGNHM5aFJ3Uk5BWlY0VU1oRVYzM3ZfRklWTnBDX1dIWS13dmF3T1lfRGpYLXk0a1dRTEdMdFlUNkI3YnJmdHkyQnpnWlFjWjJrS3NYN2xwcm5MZW03SmFvYnF1aG81NlQtblB4Z0ZCUEZYcXZpaFdjcDNvOEktd1N0ZDI0Yw?oc=5",
+          "published_at": "Mon, 08 Sep 2025 06:50:00 GMT",
+          "publisher": "The Times of India"
+        }
+      ]
+    },
+    {
+      "id": "98ccddf0-3b10-4ed8-9575-53086766d884",
+      "detected_at": "2025-09-08T15:25:03.426986+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "low",
+      "summary": "Indian students, visitors can no longer apply abroad for a short-term US visa - The Economic Times",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "monitor",
+          "days_delta": 0,
+          "rationale": "Relevant but no clear immediate risk."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Indian students, visitors can no longer apply abroad for a short-term US visa - The Economic Times",
+          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOT05lcTJGLWZfcGVsZWV6YTQyWlQyRV9fMm05bFdPTkI4UjJFcE5XX3FSWk0wSEVsU3NNXzhrWG5sTTNrSmNqcWNVMGlrbTFxMTBVTktGMk1PQ2xmYV81RWJPUVdJYU8tdEtaVjVRWDBTT0VMTkJES1BVS0Q5WXp1R3dKQnEtaHJrUmt0UndSbDJEOXBXZ2U5ZVQ4c09IaVdVMjZnWDRQWHVZOEpKOXV2UFVyZ3ZqT0NPU25XR3YyVWF1V1BDd2pCdl9HVHAxSEY0MWxLckxMejdnbFFUVmR4aXZB0gHnAUFVX3lxTE8tbko4a0lYZVdXZU84TE5xQTk1TmFoWmVRYXNOcHZyUFVwd1VtT0xiZWtSMGFjcmhyTkJZOGNUbFRGSFhVSUt1T2M1aXU0TUwtVFRUdV80U2tGaVFhTlhFZ2VRaWZqNFJfSjZIc083akZ6cUhvbUhYVDNsUFNyV29hVGhReVMzbk5Qa1UwMUNzN0lGV19tUEZ2dUZvbmxNTnBjNGl5clVPVE44X1l1dXRqaENHUkQyY2xKejhOUjNFa3R6M0dySUxvdXhNSVZfZl9yRGZVZ01fWHJKckI3YmtzR2FpN090UQ?oc=5",
+          "published_at": "Mon, 08 Sep 2025 06:37:03 GMT",
+          "publisher": "The Economic Times"
+        }
+      ]
+    },
+    {
+      "id": "5e028a0b-e0ea-416b-a2f4-fa968449ad7c",
+      "detected_at": "2025-09-08T15:25:03.427006+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "low",
+      "summary": "US Tightens Visa Rules: No More Quick Appointments Abroad For Indians - NDTV",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "monitor",
+          "days_delta": 0,
+          "rationale": "Relevant but no clear immediate risk."
+        }
+      ],
+      "sources": [
+        {
+          "title": "US Tightens Visa Rules: No More Quick Appointments Abroad For Indians - NDTV",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNV0R3TFZNNzRiQ2YtZjVHWlFmejk5SlBSYVpDeEI5dFJkWHBONDE1RndnZ05aYlJOTXN3aEdxVTl0NWlEcmZENS1ab2NyRUFKdjBVQ1JXMVljRGVqQnd0LVhZU1JzeV9LRktuam45SklyR0xIMl9ncGhVaEFBaFlxLVNIVVBIUDBOQ08zZ29pSUtPWFZoMFd4UkhtWndmNmFMM3ZZbHpmTE9MOFZp0gG0AUFVX3lxTE5vVjR0dkZJYlBiX1BXUnpWaXFSWndvb0ljdUdvcDZnZXpPRDN4dmdnX21NdmJpRTNjallKRW0yOTF4NTFKMGJGREFab1ktb0ZvYlBjd3NKR29oVjFmbnlON201eW12a2pNRnc5aDdTeTlWY2E3SUxORXhsUFQ5ZmlsODR5R2pJeWlMclpINDFBT1duREFidWhHLTg3UXhMQm5qOXZIaENSR2RzTHR4ZUdhQW1LZg?oc=5",
+          "published_at": "Mon, 08 Sep 2025 06:14:55 GMT",
+          "publisher": "NDTV"
+        }
+      ]
+    }
+  ]
+}
