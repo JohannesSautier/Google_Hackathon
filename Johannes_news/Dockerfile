@@ -1,17 +1,26 @@
-# Use a Python 3.10 slim image for a smaller footprint
-FROM python:3.10-slim
+FROM python:3.11-slim
 
-# Set the working directory
+# OS deps needed by trafilatura/lxml
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential libxml2 libxslt1.1 libxslt1-dev libxml2-dev curl ca-certificates \
+ && rm -rf /var/lib/apt/lists/*
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
 WORKDIR /app
 
-# Copy the requirements file into the container
-COPY requirements.txt .
-
-# Install dependencies
+# Install Python deps
+COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of your application code
-COPY . .
+# Copy app code
+# If your core file isn't main.py, copy that filename instead.
+COPY main.py /app/
+COPY server.py /app/
 
-# Command to run the script when the container starts
-CMD ["python", "main.py"]
+# Cloud Run sets $PORT. Default to 8080 for local runs.
+ENV PORT=8080
+
+# Start FastAPI via uvicorn and bind to $PORT (required by Cloud Run services)
+CMD ["sh", "-c", "python -m uvicorn server:app --host 0.0.0.0 --port ${PORT}"]
