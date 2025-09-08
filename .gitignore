@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# VS Code
+.vscode/
+
+# Env/Secrets
+.env
+*.secret.json
+service-account.json
+
+
+.fire*
+fire*

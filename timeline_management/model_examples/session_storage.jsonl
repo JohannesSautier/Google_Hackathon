@@ -3,26 +3,13 @@
   "userId": "user123",
   "createdAt": "2025-09-15T09:30:00Z",
   "lastUpdatedAt": "2025-09-15T09:45:10Z",
-  "processingStatus": {
-    "overall": "COMPLETED",
-    "phases": {
-      "INTENT_ANALYSIS": "COMPLETED",
-      "GROUNDED_SEARCH": "COMPLETED",
-      "DOCUMENT_PARSING": "COMPLETED",
-      "JOURNEY_CREATION": "COMPLETED"
-    }
-  },
+  "initialProcessStatus": "IN_PROGRESS", // Possible values: IN_PROGRESS, COMPLETED, FAILED
   "initialQuery": "I'm a student from India and got accepted into a Master's program at USC in the US. The program starts in August 2026. What do I need to do to get my visa?",
-  "llmAnalysis": {
-    "detectedIntent": "F-1 Student Visa Application Process",
-    "extractedEntities": {
-      "originCountry": "IND",
-      "destinationCountry": "USA",
-      "processType": "EDUCATION",
-      "institution": "University of Southern California",
-      "programStartDate": "2026-08-15"
-    },
-    "summary": "User requires a timeline and checklist for obtaining an F-1 student visa for a Master's program at USC, starting August 2026."
+  "originCountry": "IND",
+  "destinationCountry": "USA",
+  "processType": "EDUCATION",
+  "institution": "University of Southern California",
+  "programStartDate": "2026-08-15"
   },
   "groundedSearchResults": [
     {
@@ -36,48 +23,6 @@
       "title": "Student Visa Information for India | Official U.S. Visa Information",
       "snippet": "Applicants must schedule two separate appointments: one for biometrics (OFC) and one for the visa interview. Wait times for appointments can be significant.",
       "retrievedAt": "2025-09-15T09:30:06Z"
-    }
-  ],
-  "parsedDocuments": [
-    {
-      "documentId": "doc_parsed_001",
-      "sourceURI": "https://travel.state.gov/content/travel/en/us-visas/study-exchange/student-visa.html",
-      "documentType": "OFFICIAL_VISA_GUIDE",
-      "llmSummary": "This is the primary U.S. Department of State guide for student visas. It outlines the F-1 visa category, defines eligibility, and lists the core application steps. It emphasizes the importance of the I-20 form as a prerequisite for the entire process.",
-      "extractedChecklistItems": [
-        "Be accepted by a SEVP-approved school",
-        "Receive Form I-20 from the school",
-        "Pay the I-901 SEVIS Fee",
-        "Complete the Online Visa Application (DS-160)",
-        "Schedule a visa interview and biometrics appointment",
-        "Attend the interview"
-      ],
-      "extractedMilestones": [
-        {
-          "milestoneKey": "I20_RECEIVED",
-          "name": "I-20 Form Received",
-          "description": "Marks the official start of the visa application process."
-        },
-        {
-          "milestoneKey": "VISA_INTERVIEW_COMPLETED",
-          "name": "Visa Interview Completed",
-          "description": "The final interactive step in the application process."
-        }
-      ],
-      "extractedTimelines": [
-        {
-          "timelineKey": "I20_ISSUANCE_WINDOW",
-          "description": "Students can receive their I-20 up to 365 days before the program start date.",
-          "value": 365,
-          "unit": "days_before_start"
-        },
-        {
-          "timelineKey": "VISA_APPLICATION_WINDOW",
-          "description": "You may apply for your visa as soon as you receive your Form I-20.",
-          "value": null,
-          "unit": null
-        }
-      ]
     }
   ],
   "plannedTimeline": {

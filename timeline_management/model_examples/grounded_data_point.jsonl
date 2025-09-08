@@ -36,8 +36,7 @@
         "country": "DEU"
       },
       "rawContent": "The German Bundestag today passed a new law aimed at accelerating the visa process for skilled workers, with officials hoping to reduce average processing times by up to 25% starting next quarter.",
-      "confidenceScore": 0.85
-    },
+      "confidenceScore": 0.85,
       "proposal": {
         "targetStepKey": "VISA_APPLICATION",
         "action": "UPDATE_STEP_STATUS",

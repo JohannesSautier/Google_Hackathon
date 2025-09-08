@@ -1,0 +1,24 @@
+ {
+     "parsedDocuments": [
+    {
+      "documentId": "doc_parsed_001",
+      "sourceURI": "https://travel.state.gov/content/travel/en/us-visas/study-exchange/student-visa.html",
+      "documentType": "OFFICIAL_VISA_GUIDE",
+      "llmSummary": "This is the primary U.S. Department of State guide for student visas. It outlines the F-1 visa category, defines eligibility, and lists the core application steps. It emphasizes the importance of the I-20 form as a prerequisite for the entire process.",
+      "extractedTimelines": [
+        {
+          "processType": "VISA_APPLICATION", // INSURANCE, PROOFFINANCE, BANKACCOUNT
+          "description": "Students can receive their I-20 up to 365 days before the program start date.",
+          "value": 365,
+          "unit": "days_before_start"
+        },
+        {
+          "timelineKey": "INSURANCE",
+          "description": "You may apply for your Insurance as soon as you receive your Form I-20.",
+          "value": null,
+          "unit": null
+        }
+      ]
+    }
+  ]
+}
