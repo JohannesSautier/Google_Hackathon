@@ -1,0 +1,77 @@
+{
+  "documentId": "doc_parsed_17ee98c8",
+  "sourceURI": "/home/damian/Desktop/cloud/immigration-service/documents IN - DE/Proof of financing _ Study in Germany.html",
+  "documentType": "INFORMATION_PAGE",
+  "llmSummary": "This document details various methods for international students to demonstrate financial proof for studying in Germany, including parental income, guarantees from German residents, bank guarantees, scholarships, and the popular blocked account. It specifies the annual financial requirement of 11,904 euros (effective from Jan 1, 2025) for a blocked account, advises early application due to processing times, and outlines certification requirements for documents when opening an account.",
+  "extractedTimelines": [
+    {
+      "description": "The presumed annual financial requirement for a blocked account increases to 11,904 euros.",
+      "value": 11904,
+      "unit": "euros_per_year",
+      "processType": "PROOFFINANCE"
+    },
+    {
+      "description": "Typical processing time for blocked account paperwork and payment confirmation.",
+      "value": 1,
+      "unit": "week",
+      "processType": "BANKACCOUNT_OPENING"
+    },
+    {
+      "description": "Recommendation to apply for a blocked account well in advance, especially before the semester begins, due to potential longer processing times.",
+      "value": null,
+      "unit": null,
+      "processType": "BANKACCOUNT_OPENING"
+    }
+  ],
+  "extractedChecklist": [
+    {
+      "itemKey": "PARENTAL_FINANCIAL_PROOF",
+      "description": "Submit documents certifying parents' income and financial assets (e.g., last three salary statements, BAföG decision, employment contract).",
+      "requiredFor": "PROOF_OF_FINANCE"
+    },
+    {
+      "itemKey": "GERMAN_RESIDENT_GUARANTEE",
+      "description": "Obtain a guarantee from a person with permanent residence in Germany to cover your expenses, presented to the Alien Registration Office.",
+      "requiredFor": "PROOF_OF_FINANCE"
+    },
+    {
+      "itemKey": "BLOCKED_ACCOUNT_DEPOSIT",
+      "description": "Deposit the required security payment into a blocked account.",
+      "requiredFor": "PROOF_OF_FINANCE"
+    },
+    {
+      "itemKey": "BANK_GUARANTEE",
+      "description": "Present a bank guarantee ('Bankbürgschaft') from a recognized bank.",
+      "requiredFor": "PROOF_OF_FINANCE"
+    },
+    {
+      "itemKey": "SCHOLARSHIP_NOTIFICATION",
+      "description": "Present a scholarship award notification from a recognized scholarship provider.",
+      "requiredFor": "PROOF_OF_FINANCE"
+    },
+    {
+      "itemKey": "BLOCKED_ACCOUNT_APPLY_EARLY",
+      "description": "Apply for a blocked account well in advance to avoid delays, particularly before the semester starts.",
+      "requiredFor": "BLOCKED_ACCOUNT"
+    },
+    {
+      "itemKey": "BLOCKED_ACCOUNT_CERTIFY_DOCUMENTS",
+      "description": "For some local banks, have completed forms and a copy of your passport certified by a German consulate general or embassy.",
+      "requiredFor": "BLOCKED_ACCOUNT"
+    },
+    {
+      "itemKey": "BLOCKED_ACCOUNT_SUBMIT_ORIGINALS",
+      "description": "Submit original documents (not scans or faxes) to the bank, as they typically only accept originals for blocked account applications.",
+      "requiredFor": "BLOCKED_ACCOUNT"
+    }
+  ],
+  "extractedMilestones": [],
+  "extractedChecklistItems": [],
+  "metadata": {
+    "filePath": "/home/damian/Desktop/cloud/immigration-service/documents IN - DE/Proof of financing _ Study in Germany.html",
+    "fileSize": 243573,
+    "processedAt": "2025-09-08T23:35:03.659557",
+    "textLength": 3935,
+    "fileExtension": ".html"
+  }
+}

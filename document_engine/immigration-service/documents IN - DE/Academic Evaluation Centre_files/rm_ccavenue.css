@@ -1,0 +1,49 @@
+.rm_ccavenue_payment_redirect_page {
+    border: 2px solid #ff0000;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.rm_ccavenue_payment_redirect_page input[type="submit"] {
+    border-color: transparent;
+    border-radius: 10px;
+    padding: 10px 40px;
+    background: #488d40;
+    color: #fff;
+    cursor:  pointer;
+}
+.rm_ccavenue_payment_redirect_page input[type="button"] {
+    border-color: transparent;
+    border-radius: 10px;
+    padding: 10px 40px;
+    background: #ffd400;
+    color: #fff;
+    cursor:  pointer;
+    margin: 20px;
+    margin-left: 0;
+}
+.rm_ccavenue_payment_redirect_page h2 {
+    color: #ff0000;
+}
+.rm_ccavenue_payment_sub_page1{
+    border: 2px solid #ff0000;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.rm_ccavenue_payment_sub_page input[type="submit"] {
+    border-color: transparent;
+    border-radius: 10px;
+    padding: 10px 40px;
+    background: #488d40;
+    color: #fff;
+    cursor:  pointer;
+
+}
+p.rm-sub-pay-msg {
+    text-align: left;
+}
+p.rm-sub-pay-msg b {
+    color: red;
+}
+div#rm-submission-re-payment-staus {
+    border: 1px solid;
+}

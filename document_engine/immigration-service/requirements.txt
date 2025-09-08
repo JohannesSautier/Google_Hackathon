@@ -1,0 +1,16 @@
+# PDF Text Extraction Dependencies
+
+# PDF processing
+PyMuPDF==1.23.14
+
+# Image processing
+Pillow==10.1.0
+
+# Google Cloud Vision API
+google-cloud-vision==3.4.4
+
+# Optional: For better PDF handling
+pdfplumber==0.10.3
+
+# Logging and utilities
+pathlib2==2.3.7

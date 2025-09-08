@@ -1,0 +1,16 @@
+{
+  "documentId": "doc_parsed_00090e47",
+  "sourceURI": "/home/damian/Desktop/cloud/immigration-service/documents IN - DE/infostudents-data.pdf",
+  "documentType": "STUDENT_VISA_GUIDE",
+  "llmSummary": "--- Page 1 ---\nLast updated: September 2024 \nChecklist  for a German national visa  \n- Students - \n \nFor an application you require the following documents: \n \n \n \n \nvalid passport issued within the...",
+  "extractedChecklistItems": [],
+  "extractedMilestones": [],
+  "extractedTimelines": [],
+  "metadata": {
+    "filePath": "/home/damian/Desktop/cloud/immigration-service/documents IN - DE/infostudents-data.pdf",
+    "fileSize": 194468,
+    "processedAt": "2025-09-08T23:30:18.836150",
+    "textLength": 3785,
+    "fileExtension": ".pdf"
+  }
+}
