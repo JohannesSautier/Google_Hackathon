@@ -1,14 +1,14 @@
 {
   "version": "v1",
-  "run_id": "23ec2ac0-5bd3-4710-bdb0-7039393a055f",
-  "generated_at": "2025-09-08T15:25:03.427015+00:00",
+  "run_id": "20dba962-cdcc-4c9e-8754-c60727d8f043",
+  "generated_at": "2025-09-08T16:41:36.414605+00:00",
   "origin_country": "India",
   "destination_country": "Germany",
-  "since_utc": "2025-09-01T15:24:58.596968+00:00",
+  "since_utc": "2025-09-01T15:57:27.370650+00:00",
   "alerts": [
     {
-      "id": "657db54f-f041-4e94-b8e1-55ab53867f83",
-      "detected_at": "2025-09-08T15:25:03.426226+00:00",
+      "id": "c383b0fc-3812-49d3-a7a7-7a099e3b30da",
+      "detected_at": "2025-09-08T16:40:42.115902+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "low",
@@ -18,7 +18,7 @@
           "stage": "visa",
           "action": "monitor",
           "days_delta": 0,
-          "rationale": "Relevant but no clear immediate risk."
+          "rationale": "Relevant but no immediate risk."
         }
       ],
       "sources": [
@@ -31,8 +31,32 @@
       ]
     },
     {
-      "id": "ea8d418e-68f8-4d72-ab97-9fcb56b1a65c",
-      "detected_at": "2025-09-08T15:25:03.426289+00:00",
+      "id": "6cdefe9c-2d0a-43fe-9769-6005bb141830",
+      "detected_at": "2025-09-08T16:41:36.408049+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "16 dead in Nepal as social media ban sparks violent protests, and more - India Today - India Today",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected."
+        }
+      ],
+      "sources": [
+        {
+          "title": "16 dead in Nepal as social media ban sparks violent protests, and more - India Today - India Today",
+          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOOG1OdFhQMzJ1N0wzalhzNUhDX2FJaDVkTmwxM0N2a252SDZsa1pRbzBGWHRhWk9OaEF3TFlYREI5aHFkYWdObDViUGFFYVBZcDdHWS0tMnVGdUVGa3RJTjN0dWFkRDFPT1lBR3drdy1HZmxkaU16UlpPNVlyX0ZUczVNWnVGRXItV2tkVGJtaE5DcGp5MDVQdkMwTkozNTBZMmd2MEw1blpZMjF0ZUpiSFRBZ1k0MkRpLXRBUVRjWUpDLXluODhvTFV6YmNUUmlBSHZsMmlxMNIB3AFBVV95cUxPZ2l5QTc2NnZpQlNhTHpZSkJxSWNwT1lIVVJsTG1wc200cS03WWFqS0hNODR6S3hnVldhVllwelpiSTc0MTlJZXFqOWZvRHRWUWxUUmpzdGliVE9ObjlRMEx4ZzgtQkg2OG1MU3djTUxnb1pSRDd2SlVPLUVrTXRka1lSOHkzd0hPcnZmbWdyeURCY0E5OW1SMFpvV2pVdHk4SnA1V3ZmN3IwS0t1VnlCaHZodU9tSkpPcGFsUUdEemNaOEk4ODV2eEFyX1ExTDE5ZnJFaWhJUjFsNGVO?oc=5",
+          "published_at": "Mon, 08 Sep 2025 14:51:39 GMT",
+          "publisher": "India Today"
+        }
+      ]
+    },
+    {
+      "id": "44456f57-5f14-4be2-b6c8-f4aaccd2a62d",
+      "detected_at": "2025-09-08T16:41:36.408767+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -42,7 +66,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -55,47 +79,23 @@
       ]
     },
     {
-      "id": "c6859ad8-89c0-4f7f-b4d0-97211670f133",
-      "detected_at": "2025-09-08T15:25:03.426324+00:00",
+      "id": "6321753a-fc6d-4b5e-86b1-f797024ced23",
+      "detected_at": "2025-09-08T16:41:36.409107+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "low",
-      "summary": "Online Gaming Act, 2025: Game over for RMG? - Law.asia",
+      "summary": "US tightens visa rules on interview appointments, likely to hurt Indians. Details here | Latest News India - Hindustan Times",
       "impacted_stages": [
         {
           "stage": "visa",
           "action": "monitor",
           "days_delta": 0,
-          "rationale": "Relevant but no clear immediate risk."
+          "rationale": "Relevant but no immediate risk."
         }
       ],
       "sources": [
         {
-          "title": "Online Gaming Act, 2025: Game over for RMG? - Law.asia",
-          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9maXBzVTBsUkc1UkNLN3VNOW1Bdnl2WVBQaWRqNnNfdTY5ZFR4RURETTBnQTZLMlhxOU5MemZBbFlnQmpPVFpSTmI5NkFEOXFRdExJ?oc=5",
-          "published_at": "Mon, 08 Sep 2025 14:11:47 GMT",
-          "publisher": "Law.asia"
-        }
-      ]
-    },
-    {
-      "id": "7426ea39-f8a4-4f7d-bdd6-7d3b20932b85",
-      "detected_at": "2025-09-08T15:25:03.426348+00:00",
-      "origin_country": "India",
-      "destination_country": "Germany",
-      "concern_level": "low",
-      "summary": "US tightens Visa rules on interview appointments, likely to hurt Indians. Details here | Latest News India - Hindustan Times",
-      "impacted_stages": [
-        {
-          "stage": "visa",
-          "action": "monitor",
-          "days_delta": 0,
-          "rationale": "Relevant but no clear immediate risk."
-        }
-      ],
-      "sources": [
-        {
-          "title": "US tightens Visa rules on interview appointments, likely to hurt Indians. Details here | Latest News India - Hindustan Times",
+          "title": "US tightens visa rules on interview appointments, likely to hurt Indians. Details here | Latest News India - Hindustan Times",
           "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQcW1WaloyUjJnM3pCSWlNYjNRdGYyWGEwclNhcDZWZHBEbjhKYy0zZC1tZ1FkQVNSanc1TTlGVkwxQi1PbC1TQWNvYllxS0lTUkNSdm9DR3p1TTRQTHJkSVlINDJ0WHh0T3dlb3o0S2Q1TjVmWDM2NXF5TWtLTTNYSElldjg5bzk0TFJzUHJPU2JUOTBXdF8wb3ZUQ3NzSG9GMHhhNkItX214ek9OOGh4b2hhVlVQMnN0dzJQREtwOFFaQjJOWTdudHJtSUs3MU5sc1RpTHlPVGVkSlVZQTcya9IB5gFBVV95cUxPYWhlN2RYNVRlSGo5SGFFMTd2M05Kc21BejNWcXhvS1dBb25nZ1pZTGM5Y1lnSnpQNUR2OE9wYVl2SjVPVTRaTHhLMXFNSXByQmtPZHV1VVEzSWM5dklVTHRxSlZ6aG81UU9wTHZFOGNLRkx3Tmswc0tXbVlkdUxoS1BuSXlEVy0ydzQzMGU2VWRReHpPWkVQdTFBSHZ1RUgtYTdULXBCTFR3SEtWeXV0NkdMaFhoQXRhVnFSeXJva3FYNEVfaGl6WThuZTN0THRPNVNMZUJMS0NteUs1cWE1bkdfSnNhZw?oc=5",
           "published_at": "Mon, 08 Sep 2025 14:05:57 GMT",
           "publisher": "Hindustan Times"
@@ -103,8 +103,8 @@
       ]
     },
     {
-      "id": "96ef78cf-abd4-46b8-a6d4-9031fad018b5",
-      "detected_at": "2025-09-08T15:25:03.426369+00:00",
+      "id": "ecea0ad2-badb-44a6-9557-da39daa2b972",
+      "detected_at": "2025-09-08T16:41:36.409287+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -114,7 +114,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -127,8 +127,8 @@
       ]
     },
     {
-      "id": "7fbdcf38-1319-4597-ab01-dcf44d107bf6",
-      "detected_at": "2025-09-08T15:25:03.426393+00:00",
+      "id": "2011a72d-960d-4b2f-825b-9c5b550398d5",
+      "detected_at": "2025-09-08T16:41:36.409462+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -138,7 +138,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -151,8 +151,8 @@
       ]
     },
     {
-      "id": "03532ea7-8092-43ce-9e60-af7f5e10c092",
-      "detected_at": "2025-09-08T15:25:03.426412+00:00",
+      "id": "d45e1a04-17bd-4e4f-88b7-30412de4eec4",
+      "detected_at": "2025-09-08T16:41:36.409610+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -162,7 +162,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -175,32 +175,32 @@
       ]
     },
     {
-      "id": "3df892d3-4211-44d1-8789-e433772799be",
-      "detected_at": "2025-09-08T15:25:03.426430+00:00",
+      "id": "227818e9-c526-4d63-bb06-bd645c4bd04f",
+      "detected_at": "2025-09-08T16:41:36.409757+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
-      "summary": "Nepal bans Facebook, Instagram, YouTube and Twitter: What's behind the protests in which several people killed - The Times of India",
+      "summary": "Nepal bans Facebook, Instagram, YouTube and Twitter: What's behind the protests in which several people k - The Times of India",
       "impacted_stages": [
         {
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
         {
-          "title": "Nepal bans Facebook, Instagram, YouTube and Twitter: What's behind the protests in which several people killed - The Times of India",
-          "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxQYjY0T1B5QWF3cDFuZlV0VlhEUExfSWhfZXR2WGpPNHU0WU1SSHZ0LU03cjA5T0dJVGx1VVRyNlo0V3A1aUx3MUwtU09nMTRaYkdjM1NuT1ctd19tQ1VoN3JiLUVnaTd6NmRWU2U1SzFVR0piRndQVzY1WnBlNXRmZG15Qy1aM2FYT2R5U2pHX2hDVFVvd2VJdXgtWDBRc3F6QnQ2akM3NGg0dDM4eUdyYzAyWXlDYW04VnB5ZlJ5dnozR3Z6QkJ6LVFrZGZHV0FIRUVzejN3MjFrYlY4TnBJMDVaV1RNOTlRazVYVjRmMm5uckFVSF9nOFd5YmZvV3M1c2pjSGtQOEdzc1lNQnpfWDUzUkVNNjhJ?oc=5",
+          "title": "Nepal bans Facebook, Instagram, YouTube and Twitter: What's behind the protests in which several people k - The Times of India",
+          "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxQYjY0T1B5QWF3cDFuZlV0VlhEUExfSWhfZXR2WGpPNHU0WU1SSHZ0LU03cjA5T0dJVGx1VVRyNlo0V3A1aUx3MUwtU09nMTRaYkdjM1NuT1ctd19tQ1VoN3JiLUVnaTd6NmRWU2U1SzFVR0piRndQVzY1WnBlNXRmZG15Qy1aM2FYT2R5U2pHX2hDVFVvd2VJdXgtWDBRc3F6QnQ2akM3NGg0dDM4eUdyYzAyWXlDYW04VnB5ZlJ5dnozR3Z6QkJ6LVFrZGZHV0FIRUVzejN3MjFrYlY4TnBJMDVaV1RNOTlRazVYVjRmMm5uckFVSF9nOFd5YmZvV3M1c2pjSGtQOEdzc1lNQnpfWDUzUkVNNjhJ0gGeAkFVX3lxTFBBTFcxbC12U0FCcUhCVGZYZzBHenp5Z2VOdzVVYl9lZDRiSkZKQUcwVkQ3dnZCWW42cUFWNVZMREJwOVkwZDZqQzNDdkY4cFpWWkRmdEtXYUZXSEEyOERpcTZpLXhLekd1T0V3Y2JMMnFuaENTU2oxTElaM2lrS211ZlJnaWtCUzV4N0FrZUJYdTZHeHdnYllTYXJDbDE4eWs4Ymd1ZXB5OVBPWEUyZ3dxWDhGUEZNMlVtZHRiRjdFX3UxeVF0YW5aMlBia2ZWMHdOeFhiM3VtV0R1SmpSa1JkVnNidW5RMjk5R0NQWTFRazM2cEs3S0pFZ3E0eC1idGlQWVU4MVZKODNtSFdJREFkOEtsRWJlLTRLcGN3ZEE?oc=5",
           "published_at": "Mon, 08 Sep 2025 13:16:00 GMT",
           "publisher": "The Times of India"
         }
       ]
     },
     {
-      "id": "ed1d071d-0abd-4d07-bfe6-43e0ead7a38a",
-      "detected_at": "2025-09-08T15:25:03.426447+00:00",
+      "id": "e7d53ee0-d5a7-4289-9f7f-7b40efc6462a",
+      "detected_at": "2025-09-08T16:41:36.409898+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -210,7 +210,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -223,8 +223,8 @@
       ]
     },
     {
-      "id": "1c338072-2f03-4b3e-98ef-7f7f0fb021b3",
-      "detected_at": "2025-09-08T15:25:03.426463+00:00",
+      "id": "b706fa66-e588-4eaf-b8b5-69202280e351",
+      "detected_at": "2025-09-08T16:41:36.410038+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -234,7 +234,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -247,8 +247,8 @@
       ]
     },
     {
-      "id": "d7350f95-0ccc-4775-96aa-9eb4e2c85827",
-      "detected_at": "2025-09-08T15:25:03.426478+00:00",
+      "id": "3f6f69b6-b59b-4cc6-8046-ac5b46823433",
+      "detected_at": "2025-09-08T16:41:36.410185+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -258,7 +258,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -271,8 +271,8 @@
       ]
     },
     {
-      "id": "844dcd62-232c-478d-9f33-c3bd1971bb66",
-      "detected_at": "2025-09-08T15:25:03.426504+00:00",
+      "id": "cf32e4b3-dc27-4add-aebe-3e8dbe45b800",
+      "detected_at": "2025-09-08T16:41:36.410352+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -282,7 +282,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -295,8 +295,32 @@
       ]
     },
     {
-      "id": "4cdd8590-5152-41c9-8ad3-128c39f71add",
-      "detected_at": "2025-09-08T15:25:03.426523+00:00",
+      "id": "0af47b17-e66f-4966-a3b9-1d4e9162caaf",
+      "detected_at": "2025-09-08T16:41:36.410506+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "Nepal protests: GenZs revolt against social media ban turns violent - 10 things to know - The Times of India",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected."
+        }
+      ],
+      "sources": [
+        {
+          "title": "Nepal protests: GenZs revolt against social media ban turns violent - 10 things to know - The Times of India",
+          "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQZzhaUEliYm44dUc1bFJWN1l2cDgxazZPLVVmM0tZdHJ0TmVpMHVMYW42bEV5RWF2dGpaa2tvMWRmLU9HYll4TFp0b2JNc1JwUXd6TVJtaDVUU2ZBSkJrVHk4YTdwM29zeU1aOTZCSnUxVEJMUDREaURpckVwdUJ4S3U1RjlxdVVuNFFVdy1OR2Itamhkd0l4dmR3eDVyb1hfdTFKNXJneVJnQmJ2cjJldXRKbG9Qenh0V1JQZ3VTZGI2VjRzbG91MHltNVB0ZUlYQ2tuQzdRMlVXN3lxTkc2TXQ4Q19KZ3lkUFRoS0ZTbElJYWp00gH6AUFVX3lxTE5oRW9EcVdFM1J4ZnVaQ3B4TFBTRXpFMTc3NlVVQjNqQUI0QW9Kb25Za2NUU21RX1BXODRDSDVub2FKMHJ6bFd0UEY2SndEaDVVenVIN2YyazRCMTdCU2pNSlJHWWVmMmpzQjdQaFhwOTVpb0tiNzZrdFo3QlFpVk8wdVM0MDVoX0g3MFpuYW1kek1CVklfbE9CMllEeVV3dzNFSk5jNzduZ1lwcjB3YVBEck9wR3dqZXowUm9FaGxTeVE5dGVqU0NjWTJwLXpvNEFQRnlNMW1DVUxpdnVCdUg5anlVcVBSZTRUSVRiZF9kRmpGM3Q4MS1hWHc?oc=5",
+          "published_at": "Mon, 08 Sep 2025 11:37:00 GMT",
+          "publisher": "The Times of India"
+        }
+      ]
+    },
+    {
+      "id": "e6f70214-3431-4682-b838-30f8fc67d25e",
+      "detected_at": "2025-09-08T16:41:36.410656+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -306,7 +330,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -319,8 +343,8 @@
       ]
     },
     {
-      "id": "e91cd3d1-f1f5-4b00-a363-4f5ec3c677d3",
-      "detected_at": "2025-09-08T15:25:03.426543+00:00",
+      "id": "7d136e3c-ed05-4657-b26a-b6f66c4c23b2",
+      "detected_at": "2025-09-08T16:41:36.410808+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -330,7 +354,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -343,8 +367,8 @@
       ]
     },
     {
-      "id": "fcabd6fa-52f9-4f29-8402-0ea557365269",
-      "detected_at": "2025-09-08T15:25:03.426560+00:00",
+      "id": "c0c9aa13-e086-4618-bea6-1efe1d08b600",
+      "detected_at": "2025-09-08T16:41:36.410957+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -354,7 +378,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -367,8 +391,8 @@
       ]
     },
     {
-      "id": "38808992-966b-4037-b8f7-5500af700a25",
-      "detected_at": "2025-09-08T15:25:03.426578+00:00",
+      "id": "e71cd192-b625-4438-8ff8-7138c6e20a0b",
+      "detected_at": "2025-09-08T16:41:36.411095+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -378,7 +402,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -391,8 +415,8 @@
       ]
     },
     {
-      "id": "d378a607-ff2a-4183-9401-7d73e56463ae",
-      "detected_at": "2025-09-08T15:25:03.426595+00:00",
+      "id": "8a2afe37-0d30-4d44-985c-128d30d94fe7",
+      "detected_at": "2025-09-08T16:41:36.411241+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -402,7 +426,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -415,8 +439,32 @@
       ]
     },
     {
-      "id": "f5375e35-f149-489b-935e-a671094f02f8",
-      "detected_at": "2025-09-08T15:25:03.426609+00:00",
+      "id": "52e378ce-08b4-448c-bcd4-e940fab2c647",
+      "detected_at": "2025-09-08T16:41:36.411412+00:00",
+      "origin_country": "India",
+      "destination_country": "Germany",
+      "concern_level": "high",
+      "summary": "The Indian government has no plans to lift the ban on TikTok, Union Minister for IT, Information and Broadcasting, and Railways Ashwini Vaishnaw said, dismissing speculation about the app’s return. “There is absolutely no proposal which has come from any - instagram.com",
+      "impacted_stages": [
+        {
+          "stage": "visa",
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected."
+        }
+      ],
+      "sources": [
+        {
+          "title": "The Indian government has no plans to lift the ban on TikTok, Union Minister for IT, Information and Broadcasting, and Railways Ashwini Vaishnaw said, dismissing speculation about the app’s return. “There is absolutely no proposal which has come from any - instagram.com",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1UTXdyOXlETGdyS3dKelhhT3h6OExIUVRpdjlFdGZjQVV6RHBjWGplRUNMcl9zNFR1YTBWY2NWTGZEbU5uX2ttVUZvTW5ReXB1WWc?oc=5",
+          "published_at": "Mon, 08 Sep 2025 10:25:22 GMT",
+          "publisher": "instagram.com"
+        }
+      ]
+    },
+    {
+      "id": "052b91c2-61a4-48c3-8257-706cb225a365",
+      "detected_at": "2025-09-08T16:41:36.411549+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -426,7 +474,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -439,32 +487,32 @@
       ]
     },
     {
-      "id": "3bce0c3f-886e-40e8-a822-b1e4cae8008c",
-      "detected_at": "2025-09-08T15:25:03.426629+00:00",
+      "id": "8eb08558-c13f-4908-91c9-e3dea277c60c",
+      "detected_at": "2025-09-08T16:41:36.411723+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "low",
-      "summary": "Supreme Court transfers online money gaming law challenges to itself - Mint",
+      "summary": "Very tragic event, Israels Consulate General to South India on Jerusalem Shooting - Tribune India",
       "impacted_stages": [
         {
           "stage": "visa",
           "action": "monitor",
           "days_delta": 0,
-          "rationale": "Relevant but no clear immediate risk."
+          "rationale": "Relevant but no immediate risk."
         }
       ],
       "sources": [
         {
-          "title": "Supreme Court transfers online money gaming law challenges to itself - Mint",
-          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOaG5teTdRdTZNOTMySTl2RlJVTDhYWF96ZzlhQ1BjLVZ6SmxBNF81a0RuN29xTnV0R1IxRTVONjRHODdVN3hjd1VFdjNvUnZwSkcwSjc2VE9nUGk2MTlJRmkyQ2N3RTFidkZlM1hZUEFCR1JHQnk2d1ZuckRWZm9GNWNYellsaU1vY3BVaHN5OE9YMVdvNTcwd3RjUnQ4Q0lQR2p6R2llM2xMOHR1MFo1QS1FckFkZEVFR3ItdXVNVUdwVXUyQ19XalFQSndQTWRzSUhBa2xxbXh4NDVHUENiMQ?oc=5",
-          "published_at": "Mon, 08 Sep 2025 10:02:52 GMT",
-          "publisher": "Mint"
+          "title": "Very tragic event, Israels Consulate General to South India on Jerusalem Shooting - Tribune India",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPeEZQZndKOFI2Q1dOZzhud2dWbGVibkktd2RHcjZETXB4T0stQmwzVXF5WndvYXFtVERndVBLSlN0TzZ3cEVyNHVnUWc0TzZveV9RcWJQak5aVXNncXBQQThxajZqa1JTNjlBZmJ4bWNISERYc1RleFFoeldCM25ZLUFwVkV2WVYwLXBJaTlZcVYzOWlMbEFtVzF6akhrYWlCWGFzTFVBUS0wandaMWJKdUJCUFAwMTN5SDBVdGtR0gHCAUFVX3lxTE1sd1hBaVFPUm1nY3JKWkRBWG5uenBxLURSNkh4YWdtLXh4U1dGQVZtTXBhTTVWdXJTQmVtbkgxVGsydzE4Z2ZsWUJESmV0VHlZVW9PMkJsN00yaXl2Tno1QVhla0J1T0NJVGRJbTFNcHJiUVJDdmIwN09UeWpNY2t6UVpIRF9jaldvSWJScGxqZ1BZOFpDOGNRdi1BV2ZvM3lvNmhyTDB0OGs1T3p5WVVEZ2x1XzVBVHEyTmFxMW5wMUZB?oc=5",
+          "published_at": "Mon, 08 Sep 2025 09:50:12 GMT",
+          "publisher": "Tribune India"
         }
       ]
     },
     {
-      "id": "f94e00ec-131f-4ca7-be61-04796c1a8d5c",
-      "detected_at": "2025-09-08T15:25:03.426646+00:00",
+      "id": "bcb348d2-5b3e-4ebb-932f-4b75fc9d30e7",
+      "detected_at": "2025-09-08T16:41:36.411870+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -474,7 +522,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -487,8 +535,8 @@
       ]
     },
     {
-      "id": "af4562c9-7168-4862-bf00-bb21823d3f81",
-      "detected_at": "2025-09-08T15:25:03.426661+00:00",
+      "id": "76237843-f7bc-435f-9ea1-4331b065a91b",
+      "detected_at": "2025-09-08T16:41:36.412007+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -498,7 +546,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -511,8 +559,8 @@
       ]
     },
     {
-      "id": "11bbae69-7d99-40cd-86f4-e96ed3838458",
-      "detected_at": "2025-09-08T15:25:03.426677+00:00",
+      "id": "250cff56-4cc4-4fdd-a06e-0a22ec6726c1",
+      "detected_at": "2025-09-08T16:41:36.412157+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "low",
@@ -522,7 +570,7 @@
           "stage": "visa",
           "action": "monitor",
           "days_delta": 0,
-          "rationale": "Relevant but no clear immediate risk."
+          "rationale": "Relevant but no immediate risk."
         }
       ],
       "sources": [
@@ -535,8 +583,8 @@
       ]
     },
     {
-      "id": "fe68cdbf-ec3d-43b4-8216-61a14a9be0f2",
-      "detected_at": "2025-09-08T15:25:03.426699+00:00",
+      "id": "6913d969-c1b9-47f2-a546-f4cb2696e3e5",
+      "detected_at": "2025-09-08T16:41:36.412323+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "low",
@@ -546,7 +594,7 @@
           "stage": "visa",
           "action": "monitor",
           "days_delta": 0,
-          "rationale": "Relevant but no clear immediate risk."
+          "rationale": "Relevant but no immediate risk."
         }
       ],
       "sources": [
@@ -559,8 +607,8 @@
       ]
     },
     {
-      "id": "d8572a17-f284-4b29-88da-158dc08e972e",
-      "detected_at": "2025-09-08T15:25:03.426725+00:00",
+      "id": "5dcfc4e1-258e-4c9e-b490-a717e7df5af1",
+      "detected_at": "2025-09-08T16:41:36.412553+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "medium",
@@ -570,13 +618,13 @@
           "stage": "insurance",
           "action": "monitor",
           "days_delta": 0,
-          "rationale": "Processing delays or quotas indicated; consider starting earlier."
+          "rationale": "Processing delays or quotas indicated."
         },
         {
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 14,
-          "rationale": "Processing delays or quotas indicated; consider starting earlier."
+          "rationale": "Processing delays or quotas indicated."
         }
       ],
       "sources": [
@@ -589,8 +637,8 @@
       ]
     },
     {
-      "id": "49096547-8402-4408-9e54-30a8cdc3fbb5",
-      "detected_at": "2025-09-08T15:25:03.426742+00:00",
+      "id": "00b5a76a-e262-44bd-9206-d4209c3e14fd",
+      "detected_at": "2025-09-08T16:41:36.412699+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "low",
@@ -600,7 +648,7 @@
           "stage": "visa",
           "action": "monitor",
           "days_delta": 0,
-          "rationale": "Relevant but no clear immediate risk."
+          "rationale": "Relevant but no immediate risk."
         }
       ],
       "sources": [
@@ -613,23 +661,23 @@
       ]
     },
     {
-      "id": "8afbc978-1d9d-4099-b1b9-672e9065f765",
-      "detected_at": "2025-09-08T15:25:03.426759+00:00",
+      "id": "042ec864-349e-4524-8d6d-f4bbcf694867",
+      "detected_at": "2025-09-08T16:41:36.412839+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
-      "summary": "Social media ban in Nepal: 16 killed as youths clash with police; army deployed - The Times of India",
+      "summary": "Social media ban in Nepal: 19 killed as youths clash with police; home minister resigns - The Times of India",
       "impacted_stages": [
         {
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
         {
-          "title": "Social media ban in Nepal: 16 killed as youths clash with police; army deployed - The Times of India",
+          "title": "Social media ban in Nepal: 19 killed as youths clash with police; home minister resigns - The Times of India",
           "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQdG5VVTVWaW5uWUJLbEJFX2htQUYxN0lmOEFBb2ozY3M2eWpPVEkzMmp5YUJKaVp1bnBYdl9YRkJhOENRTGJFVG9ObjhXWndxdEN3aUltZHRVcU1TUDVNWGJDb29NNGthSDZaVjVNRzh6cTJmN09kM3RYTnhScFU4MXB5SlBUb1dob1BOM2tVRnJmNXhwOHZ1aG5iR09tUS04RVFXVEgxVGJCMmxvOUJQM2RrWWhEZkpKRDlyVkpoalZ1TlFqeTRFWV9IZXpUbF93anljMFF5VnAwSFczOHRxUGVheHpuelJY0gHuAUFVX3lxTE9OcUhiMXFhdVQxQmRBOTFKMWE1Zlhtb1pTYi1DREZNSmxaV2lJMkRsNi1MLVlyQkdnYllORlhOWERTYk1WOHVDOFZmRzF1R2RuU1k0enJPZXlCTGhtUmJQLWpFSHNGUGF1S1RSellzMEhjV09Ndy1KM0lxQkthYlBUenJleG1Vb0ttcXdsNXVFdUo4NVVpMXhpRE1uUjdoVUFzR2Fmb29uV3JPRWppR29Yb241VjgzakpGZlZlUWthWlhaakZOZG9GYnUwTFVIOXlGaTlWNXVsQ3FxeF9oa2NvZWNQczZRNGFHRm5oR0E?oc=5",
           "published_at": "Mon, 08 Sep 2025 08:40:00 GMT",
           "publisher": "The Times of India"
@@ -637,23 +685,23 @@
       ]
     },
     {
-      "id": "fe4844c0-fe7c-4e1a-992f-f1641cba724b",
-      "detected_at": "2025-09-08T15:25:03.426780+00:00",
+      "id": "a8fe741a-9fc7-47a6-8865-a815a40c3c44",
+      "detected_at": "2025-09-08T16:41:36.412983+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
-      "concern_level": "low",
-      "summary": "Nepal protests: 20 killed, Home Minister quits, curfew in 7 cities - Top updates - India Today",
+      "concern_level": "high",
+      "summary": "Won't bow down to 'Gen Z troublemakers': Nepal PM refuses to lift social media ban - India Today",
       "impacted_stages": [
         {
           "stage": "visa",
-          "action": "monitor",
-          "days_delta": 0,
-          "rationale": "Relevant but no clear immediate risk."
+          "action": "accelerate",
+          "days_delta": 30,
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
         {
-          "title": "Nepal protests: 20 killed, Home Minister quits, curfew in 7 cities - Top updates - India Today",
+          "title": "Won't bow down to 'Gen Z troublemakers': Nepal PM refuses to lift social media ban - India Today",
           "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNVlVITUU5QVBWZUxhTExDVjljZFVvNXhIeFM3Y2hPTW9jVzdZV3c1aGV2RldoRHdzdG1VRWUyb1FaeXlUbllEdkVteWFQWDRRaERLSzZidGZUeVZFZ1QydTVlaUVrVFJDWFFsVERKaUc3SjU2UUxFTTY5MFZzeUM2X1VGSm8yS0ZDTUU4SUNsQXU1UTJyUnVpM25iUm5qLXI2Z2NaLWhWeUZoQzJOWlB1TWMyRkhCM2ZobUM0VE5kTURnV2dRcmRRLWpCdEJydlBSaU9lSWc2eGl3THhteDZPWnJXdEZBQdIB6wFBVV95cUxQeXZTbHZNbEpVZkJ0TWFfbjlDTURjTGNabzdudktxVndReFp5X09FOG92OFdFbGpObkhjLUpvamdULUNDZXZQZnNLWlpwbjZqRGhybnByUTlJMjgzWnFUa3ZlSldwNzlEcF9ZSlkwZWFld2FRNVNnNTlSS2dmRDhFcWQ4anVMNndPcmlEVlliZDFaRkEyU2Y0elZmNVlacWZsLVlMTXBYbnZmYjNBQU9WT25oMk1SS09qOFQ2Z05yTjRMZm5sa3dWUk1Fa1o3M2pJeGtyY1VBLVBXcnNxeWxOaVo2UlJybm9CeUdB?oc=5",
           "published_at": "Mon, 08 Sep 2025 08:29:49 GMT",
           "publisher": "India Today"
@@ -661,8 +709,8 @@
       ]
     },
     {
-      "id": "85a40d0c-afbe-4519-b421-6fd155797ea9",
-      "detected_at": "2025-09-08T15:25:03.426796+00:00",
+      "id": "26e102e1-7b0c-4a6b-9a3e-e2d285ca319c",
+      "detected_at": "2025-09-08T16:41:36.413122+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -672,7 +720,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -685,8 +733,8 @@
       ]
     },
     {
-      "id": "5dc49a64-1cfe-4833-89cf-0896685f0763",
-      "detected_at": "2025-09-08T15:25:03.426813+00:00",
+      "id": "c3ca2824-e392-406a-8fd3-054247c9e837",
+      "detected_at": "2025-09-08T16:41:36.413284+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "low",
@@ -696,7 +744,7 @@
           "stage": "insurance",
           "action": "monitor",
           "days_delta": 0,
-          "rationale": "Relevant but no clear immediate risk."
+          "rationale": "Relevant but no immediate risk."
         }
       ],
       "sources": [
@@ -709,8 +757,8 @@
       ]
     },
     {
-      "id": "72caccec-89c5-404e-9f91-85e092e3865e",
-      "detected_at": "2025-09-08T15:25:03.426836+00:00",
+      "id": "933d6098-0793-4c56-a748-020f064eeb24",
+      "detected_at": "2025-09-08T16:41:36.413439+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "low",
@@ -720,7 +768,7 @@
           "stage": "visa",
           "action": "monitor",
           "days_delta": 0,
-          "rationale": "Relevant but no clear immediate risk."
+          "rationale": "Relevant but no immediate risk."
         }
       ],
       "sources": [
@@ -733,8 +781,8 @@
       ]
     },
     {
-      "id": "ebc4db8c-d9ff-403b-b4b6-49d7f3f3984a",
-      "detected_at": "2025-09-08T15:25:03.426852+00:00",
+      "id": "c3359202-6195-4ba3-abc5-a4fd0686bd3d",
+      "detected_at": "2025-09-08T16:41:36.413586+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -744,7 +792,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -757,8 +805,8 @@
       ]
     },
     {
-      "id": "62a7ceb2-bb11-4904-a0f9-7366fd70aa86",
-      "detected_at": "2025-09-08T15:25:03.426867+00:00",
+      "id": "047273ae-35b7-40e6-9d9d-ac6a3fe6a3b7",
+      "detected_at": "2025-09-08T16:41:36.413726+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "medium",
@@ -768,7 +816,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 14,
-          "rationale": "Processing delays or quotas indicated; consider starting earlier."
+          "rationale": "Processing delays or quotas indicated."
         }
       ],
       "sources": [
@@ -781,8 +829,8 @@
       ]
     },
     {
-      "id": "0d30a0a6-4109-468b-892d-1b1e0b2d8deb",
-      "detected_at": "2025-09-08T15:25:03.426883+00:00",
+      "id": "32e6ef1f-2041-4163-92b3-75bceab49735",
+      "detected_at": "2025-09-08T16:41:36.413860+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -792,7 +840,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -805,8 +853,8 @@
       ]
     },
     {
-      "id": "864cd350-193c-474e-83a7-e4500e0ceaca",
-      "detected_at": "2025-09-08T15:25:03.426898+00:00",
+      "id": "baf5cebd-9428-48d7-87f1-36cc8894919f",
+      "detected_at": "2025-09-08T16:41:36.414000+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "medium",
@@ -816,7 +864,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 14,
-          "rationale": "Processing delays or quotas indicated; consider starting earlier."
+          "rationale": "Processing delays or quotas indicated."
         }
       ],
       "sources": [
@@ -829,8 +877,8 @@
       ]
     },
     {
-      "id": "822dc95f-12e2-4e78-86d8-ac1705da35ce",
-      "detected_at": "2025-09-08T15:25:03.426916+00:00",
+      "id": "c42a30c8-2d64-44f1-b405-e5a4e3170507",
+      "detected_at": "2025-09-08T16:41:36.414240+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "low",
@@ -840,7 +888,7 @@
           "stage": "visa",
           "action": "monitor",
           "days_delta": 0,
-          "rationale": "Relevant but no clear immediate risk."
+          "rationale": "Relevant but no immediate risk."
         }
       ],
       "sources": [
@@ -853,8 +901,8 @@
       ]
     },
     {
-      "id": "8766949f-50ea-4b8b-8ec2-53f504db0a08",
-      "detected_at": "2025-09-08T15:25:03.426932+00:00",
+      "id": "a5510857-1753-4144-82eb-e09374f6842f",
+      "detected_at": "2025-09-08T16:41:36.414513+00:00",
       "origin_country": "India",
       "destination_country": "Germany",
       "concern_level": "high",
@@ -864,7 +912,7 @@
           "stage": "visa",
           "action": "accelerate",
           "days_delta": 30,
-          "rationale": "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+          "rationale": "Potential suspension/ban/paused intake detected."
         }
       ],
       "sources": [
@@ -873,102 +921,6 @@
           "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOT2ZJekp1bmVPMHhuZFMxWWRvUFo0MWtlZC1vZGk2YW1ydHJhSFEyR3FlXzB6TUdETGx1VkdPOGVWZ25UaFdFcjhZZUw0X2hjbFJVMDlUSGlIdjJPN3lUQjZXVmZsM1J0MjFrYjBkQlZ0Z3oxMmxwdkVuYzlkLUJ0YkVITjFuanBRbjR4WVl3ZXFiVF83eDBDLWxURkRIb2Zqck8zVS1WWmNPOC1sTlhyRUdSN2tDNk9SekJDbm1hbWZrd1ozcXhidU9CUDRSbUtT0gHWAUFVX3lxTE04aWdNMV82Y09TN3VZR1BpRWZrOU9aYjF2WEw1dkhPR3FuczN6MGZwQVVsU2RDMXBMeTlGS3E3Q1lwSEY3UGlvM2huZGNULVZsRXJ4eE04bFBTTml1anRvYkZZWkxsdVhRZjY5Uk8wTU16Q05vWWdoRzhEV1VmQ1prWVdHS2xUcWhNdXRsdmhuZVFyWHZzanpLQ2xaSDZyUDEwcnlhZkRRWWtQcVc1VFIyenI5NEh5bUdhWTBKQ19VZnNfLTdfUE9sOHNlel84bmRJZnZ1bmc?oc=5",
           "published_at": "Mon, 08 Sep 2025 06:52:09 GMT",
           "publisher": "Moneycontrol"
-        }
-      ]
-    },
-    {
-      "id": "27c71062-2c00-4504-b072-5226469bcfa0",
-      "detected_at": "2025-09-08T15:25:03.426952+00:00",
-      "origin_country": "India",
-      "destination_country": "Germany",
-      "concern_level": "low",
-      "summary": "Yudh Abhyas 2025: Indian, US soldiers conduct live drills in Alaska to boost defence ties - IANS LIVE",
-      "impacted_stages": [
-        {
-          "stage": "visa",
-          "action": "monitor",
-          "days_delta": 0,
-          "rationale": "Relevant but no clear immediate risk."
-        }
-      ],
-      "sources": [
-        {
-          "title": "Yudh Abhyas 2025: Indian, US soldiers conduct live drills in Alaska to boost defence ties - IANS LIVE",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSmRRU2s5dVBOa2pubHRDRFBjZzZBMkVza01WTjZLTVRIem1wQmJOSFJfTHVsMlJGY21pV1hTWUt5MFY3MWpjb3pNNzhwaFNrOW43MEViRHd0cDhycnBCRVdCeEV3ZlV5eDlEakNXNzNMZTNOd0paWFhwRzA4TGtaVzI2NXFJNm5JdUNBTm51NklZakdDZWlMT0F0Z2h3SUVvbWdqX2pYOF9oN3hWcFpMTEdXSDc2Mk5ZdkNkV0Q0US0?oc=5",
-          "published_at": "Mon, 08 Sep 2025 06:52:00 GMT",
-          "publisher": "IANS LIVE"
-        }
-      ]
-    },
-    {
-      "id": "d99b7927-eabd-4cfc-8abc-c9492804e35a",
-      "detected_at": "2025-09-08T15:25:03.426967+00:00",
-      "origin_country": "India",
-      "destination_country": "Germany",
-      "concern_level": "medium",
-      "summary": "US shuts down third-country visa option, forcing Indian students into backlogs and tougher interviews at - The Times of India",
-      "impacted_stages": [
-        {
-          "stage": "visa",
-          "action": "accelerate",
-          "days_delta": 14,
-          "rationale": "Processing delays or quotas indicated; consider starting earlier."
-        }
-      ],
-      "sources": [
-        {
-          "title": "US shuts down third-country visa option, forcing Indian students into backlogs and tougher interviews at - The Times of India",
-          "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxQTWlfcEw4dUxOakNqbjFBejFsdkFfUGRQZm55enpRMWc0YlFnQjAtQzJJME5MR3FNWlBQMlVWSFJRbGdXSW5FUXlsbi1ETkJfU003MWxNcDZrLXNRZFo0QjNWdTVkQlFYT19rcXk3cGlLdkxhLTAtWl9pNGFjWXFwbkc5TEh1Q1h3bjFDcWs1eGpyR2MtV0pfenEwOEZhN1drTTNKTDFVbEN1ckh6cnF4S3hjVWZaVVJLa3JoTFJZQlNoNUhPTzJ0aE15U2dENmU4TzYwUk1EZHhFTWUzUjVnWU40SktMUzJkZEw5V3hCcnZqSWRtTkR0dFVkYUhOb3Q2eXdibFB1ZHlYRmREREdsc0tCUzk1aXM5SldmZ2dB0gGjAkFVX3lxTFA4eGlscVh5NG1ESjdITkdEaTcxNmNOdDBodXlGSlgtMWw3T3BCcVdLUU1Ba25BQUNsNEM3TENxRXg4Z0JDRDZ6anNVNzNjZEJyUF8zZG9sMmM2STFpdjhPNVlUNkIwbXJMWDZ1eEEwcGJ3LWdaNjlGcUlZVTlwV1VlamtYZVR6UTJMNEJfNTBZYW9tMW5qeUQtcS0tWXl1YkNield4RThGNHM5aFJ3Uk5BWlY0VU1oRVYzM3ZfRklWTnBDX1dIWS13dmF3T1lfRGpYLXk0a1dRTEdMdFlUNkI3YnJmdHkyQnpnWlFjWjJrS3NYN2xwcm5MZW03SmFvYnF1aG81NlQtblB4Z0ZCUEZYcXZpaFdjcDNvOEktd1N0ZDI0Yw?oc=5",
-          "published_at": "Mon, 08 Sep 2025 06:50:00 GMT",
-          "publisher": "The Times of India"
-        }
-      ]
-    },
-    {
-      "id": "98ccddf0-3b10-4ed8-9575-53086766d884",
-      "detected_at": "2025-09-08T15:25:03.426986+00:00",
-      "origin_country": "India",
-      "destination_country": "Germany",
-      "concern_level": "low",
-      "summary": "Indian students, visitors can no longer apply abroad for a short-term US visa - The Economic Times",
-      "impacted_stages": [
-        {
-          "stage": "visa",
-          "action": "monitor",
-          "days_delta": 0,
-          "rationale": "Relevant but no clear immediate risk."
-        }
-      ],
-      "sources": [
-        {
-          "title": "Indian students, visitors can no longer apply abroad for a short-term US visa - The Economic Times",
-          "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOT05lcTJGLWZfcGVsZWV6YTQyWlQyRV9fMm05bFdPTkI4UjJFcE5XX3FSWk0wSEVsU3NNXzhrWG5sTTNrSmNqcWNVMGlrbTFxMTBVTktGMk1PQ2xmYV81RWJPUVdJYU8tdEtaVjVRWDBTT0VMTkJES1BVS0Q5WXp1R3dKQnEtaHJrUmt0UndSbDJEOXBXZ2U5ZVQ4c09IaVdVMjZnWDRQWHVZOEpKOXV2UFVyZ3ZqT0NPU25XR3YyVWF1V1BDd2pCdl9HVHAxSEY0MWxLckxMejdnbFFUVmR4aXZB0gHnAUFVX3lxTE8tbko4a0lYZVdXZU84TE5xQTk1TmFoWmVRYXNOcHZyUFVwd1VtT0xiZWtSMGFjcmhyTkJZOGNUbFRGSFhVSUt1T2M1aXU0TUwtVFRUdV80U2tGaVFhTlhFZ2VRaWZqNFJfSjZIc083akZ6cUhvbUhYVDNsUFNyV29hVGhReVMzbk5Qa1UwMUNzN0lGV19tUEZ2dUZvbmxNTnBjNGl5clVPVE44X1l1dXRqaENHUkQyY2xKejhOUjNFa3R6M0dySUxvdXhNSVZfZl9yRGZVZ01fWHJKckI3YmtzR2FpN090UQ?oc=5",
-          "published_at": "Mon, 08 Sep 2025 06:37:03 GMT",
-          "publisher": "The Economic Times"
-        }
-      ]
-    },
-    {
-      "id": "5e028a0b-e0ea-416b-a2f4-fa968449ad7c",
-      "detected_at": "2025-09-08T15:25:03.427006+00:00",
-      "origin_country": "India",
-      "destination_country": "Germany",
-      "concern_level": "low",
-      "summary": "US Tightens Visa Rules: No More Quick Appointments Abroad For Indians - NDTV",
-      "impacted_stages": [
-        {
-          "stage": "visa",
-          "action": "monitor",
-          "days_delta": 0,
-          "rationale": "Relevant but no clear immediate risk."
-        }
-      ],
-      "sources": [
-        {
-          "title": "US Tightens Visa Rules: No More Quick Appointments Abroad For Indians - NDTV",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNV0R3TFZNNzRiQ2YtZjVHWlFmejk5SlBSYVpDeEI5dFJkWHBONDE1RndnZ05aYlJOTXN3aEdxVTl0NWlEcmZENS1ab2NyRUFKdjBVQ1JXMVljRGVqQnd0LVhZU1JzeV9LRktuam45SklyR0xIMl9ncGhVaEFBaFlxLVNIVVBIUDBOQ08zZ29pSUtPWFZoMFd4UkhtWndmNmFMM3ZZbHpmTE9MOFZp0gG0AUFVX3lxTE5vVjR0dkZJYlBiX1BXUnpWaXFSWndvb0ljdUdvcDZnZXpPRDN4dmdnX21NdmJpRTNjallKRW0yOTF4NTFKMGJGREFab1ktb0ZvYlBjd3NKR29oVjFmbnlON201eW12a2pNRnc5aDdTeTlWY2E3SUxORXhsUFQ5ZmlsODR5R2pJeWlMclpINDFBT1duREFidWhHLTg3UXhMQm5qOXZIaENSR2RzTHR4ZUdhQW1LZg?oc=5",
-          "published_at": "Mon, 08 Sep 2025 06:14:55 GMT",
-          "publisher": "NDTV"
         }
       ]
     }

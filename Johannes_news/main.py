@@ -23,16 +23,14 @@ print("✅ Debugger attached, continuing execution...")
 import argparse
 import json
 import re
-import time
 import uuid
 from datetime import datetime, timezone, timedelta
 from typing import List, Dict, Any, Optional
 
 import feedparser
-import requests
 import trafilatura
 from dateutil import parser as dtparser
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, validator
 
 # -------- Configuration --------
 
@@ -46,7 +44,6 @@ IMMIGRATION_KEYWORDS = [
     "financial requirement", "schengen", "border control"
 ]
 
-# Map keywords to pipeline stages & default action bias
 STAGE_MAP = {
     "visa": ["visa", "residence permit", "work permit", "student visa", "blue card", "green card",
              "family reunification", "embassy", "consulate", "appointment", "backlog",
@@ -59,7 +56,7 @@ STAGE_MAP = {
 
 DEFAULT_TIMELINE_STAGES = ["visa", "insurance", "bank_account", "proof_of_finance"]
 
-# -------- Data models (output contract) --------
+# -------- Data models --------
 
 class Source(BaseModel):
     title: str
@@ -68,8 +65,8 @@ class Source(BaseModel):
     publisher: Optional[str] = None
 
 class Impact(BaseModel):
-    stage: str  # "visa" | "insurance" | "bank_account" | "proof_of_finance"
-    action: str  # "accelerate" | "delay" | "monitor"
+    stage: str
+    action: str
     days_delta: int = 0
     rationale: str
 
@@ -92,7 +89,7 @@ class Alert(BaseModel):
     detected_at: str
     origin_country: str
     destination_country: str
-    concern_level: str  # "low" | "medium" | "high"
+    concern_level: str
     summary: str
     impacted_stages: List[Impact]
     sources: List[Source]
@@ -109,15 +106,9 @@ class AlertsEnvelope(BaseModel):
 # -------- Helpers --------
 
 def build_google_news_rss_queries(origin: str, destination: str) -> List[str]:
-    """
-    Build a small set of focused Google News RSS queries combining countries and immigration keywords.
-    We keep the number modest to avoid duplicates; dedup happens later anyway.
-    """
     def q(s: str) -> str:
-        # Encode for URL (very simple; requests will re-encode)
         return s.replace(" ", "+")
     base = "https://news.google.com/rss/search"
-    # A few combined queries; Google News automatically expands related words.
     core_terms = [
         f'"visa" OR "residence permit" OR "work permit" OR "student visa"',
         f'"immigration" OR "migration" OR "emigration"',
@@ -126,20 +117,18 @@ def build_google_news_rss_queries(origin: str, destination: str) -> List[str]:
         f'"health insurance" OR "proof of funds" OR "blocked account" OR "bank account"',
     ]
     queries = []
-    # Pair each core set with both countries once; this keeps it concise but relevant.
     for terms in core_terms:
-        # Country pairing inside the same query keeps results tight
         search = f'({terms}) AND ("{origin}" OR "{destination}")'
         queries.append(f"{base}?q={q(search)}&hl=en-US&gl=US&ceid=US:en")
     return queries
 
-def fetch_rss_entries(url: str) -> List[Dict[str, Any]]:
+def fetch_rss_entries(url: str):
     feed = feedparser.parse(url)
     return getattr(feed, "entries", []) or []
 
 def within_since(pubdate: Optional[str], since_dt: datetime) -> bool:
     if not pubdate:
-        return True  # keep if unknown
+        return True
     try:
         dt = dtparser.parse(pubdate)
         if not dt.tzinfo:
@@ -149,9 +138,6 @@ def within_since(pubdate: Optional[str], since_dt: datetime) -> bool:
         return True
 
 def extract_text(url: str, timeout: int = 15) -> str:
-    """
-    Best-effort article text extraction using trafilatura.
-    """
     try:
         downloaded = trafilatura.fetch_url(url, timeout=timeout)
         if not downloaded:
@@ -160,6 +146,11 @@ def extract_text(url: str, timeout: int = 15) -> str:
         return extracted or ""
     except Exception:
         return ""
+
+def contains_relevant_keywords(text: str) -> bool:
+    """Pre-filter: only keep articles with immigration/visa keywords."""
+    text_low = text.lower()
+    return any(kw in text_low for kw in IMMIGRATION_KEYWORDS)
 
 def guess_stages_from_text(text: str) -> List[str]:
     text_low = text.lower()
@@ -170,18 +161,12 @@ def guess_stages_from_text(text: str) -> List[str]:
                 hit_stages.add(stage)
                 break
     if not hit_stages:
-        # immigration/visa topics generally lean toward "visa"
         hit_stages.add("visa")
     return sorted(hit_stages)
 
 def simple_rule_based_reasoner(title: str, text: str, origin: str, destination: str) -> Dict[str, Any]:
-    """
-    Heuristic triage if LLM is disabled/unavailable.
-    Returns {concern_level, impacts[], summary}
-    """
     body = (title + "\n\n" + text).lower()
     summary = title.strip()
-    # concern
     high_triggers = ["ban", "suspend", "suspension", "moratorium", "halt", "pause", "stopped", "stop processing", "intake paused"]
     medium_triggers = ["backlog", "delay", "long wait", "longer wait", "processing time", "quota", "cap", "strike"]
     concern = "low"
@@ -196,15 +181,15 @@ def simple_rule_based_reasoner(title: str, text: str, origin: str, destination: 
         if concern == "high":
             action = "accelerate" if st in ("visa", "proof_of_finance") else "monitor"
             delta = 30 if action == "accelerate" else 0
-            rationale = "Potential suspension/ban/paused intake detected; start earlier or secure slots."
+            rationale = "Potential suspension/ban/paused intake detected."
         elif concern == "medium":
             action = "accelerate" if st == "visa" else "monitor"
             delta = 14 if action == "accelerate" else 0
-            rationale = "Processing delays or quotas indicated; consider starting earlier."
+            rationale = "Processing delays or quotas indicated."
         else:
             action = "monitor"
             delta = 0
-            rationale = "Relevant but no clear immediate risk."
+            rationale = "Relevant but no immediate risk."
         impacts.append({
             "stage": st,
             "action": action,
@@ -213,17 +198,12 @@ def simple_rule_based_reasoner(title: str, text: str, origin: str, destination: 
         })
     return {"concern_level": concern, "impacts": impacts, "summary": summary}
 
-# -------- Optional: Gemini reasoning via google-generativeai --------
+# -------- Optional: Gemini reasoning --------
 
 def llm_reasoner_gemini(text: str, model_name: str = "gemini-1.5-pro") -> Optional[Dict[str, Any]]:
-    """
-    Uses google-generativeai (hosted by Google) with GOOGLE_API_KEY.
-    Produces structured JSON: {concern_level, impacts[], summary}
-    """
     try:
         import google.generativeai as genai
         from google.generativeai import types
-
         import os
         api_key = os.getenv("GOOGLE_API_KEY")
         if not api_key:
@@ -231,11 +211,12 @@ def llm_reasoner_gemini(text: str, model_name: str = "gemini-1.5-pro") -> Option
         genai.configure(api_key=api_key)
         sys_inst = (
             "You are an analyst for a relocation timeline assistant. "
-            "Given a news article, decide if it materially affects migration steps "
-            "(visa, insurance, bank_account, proof_of_finance). "
-            "Return strict JSON with keys: concern_level in ['low','medium','high'], "
-            "impacts (list of {stage, action in ['accelerate','delay','monitor'], days_delta (int), rationale}), "
-            "summary (<=35 words). Be concise and pragmatic."
+            "ONLY consider news about immigration, visas, residence permits, "
+            "embassies/consulates, proof of finance, health insurance, or banking. "
+            "Ignore news about TikTok, social media, gaming, politics unrelated to immigration, "
+            "and ignore countries other than the specified origin/destination. "
+            "Return JSON: concern_level (low|medium|high), impacts "
+            "(list of {stage, action, days_delta, rationale}), summary."
         )
         prompt = f"""Article:
 {text}
@@ -244,20 +225,20 @@ Output schema:
 {{
   "concern_level": "low|medium|high",
   "impacts": [{{"stage":"visa|insurance|bank_account|proof_of_finance","action":"accelerate|delay|monitor","days_delta":int,"rationale":"string"}}],
-  "summary": "string max 35 words"
+  "summary": "string"
 }}
 Return ONLY the JSON object."""
-
         model = genai.GenerativeModel(model_name, system_instruction=sys_inst)
         resp = model.generate_content(prompt, generation_config=types.GenerationConfig(
             temperature=0.2, max_output_tokens=300
         ))
         cand = resp.candidates[0].content.parts[0].text if resp.candidates else ""
-        # Strip code fences if present
-        cand = re.sub(r"^```json\s*|\s*```$", "", cand.strip(), flags=re.IGNORECASE | re.MULTILINE)
+        cand = re.sub(r"^```json\s*|\s*```$", "", cand.strip(), flags=re.MULTILINE)
         data = json.loads(cand)
-        # Lightweight validation
         if "concern_level" in data and "impacts" in data and "summary" in data:
+            # Post-filter stages
+            valid_stages = set(DEFAULT_TIMELINE_STAGES)
+            data["impacts"] = [i for i in data["impacts"] if i.get("stage") in valid_stages]
             return data
         return None
     except Exception:
@@ -280,11 +261,9 @@ def run_pipeline(origin: str, destination: str, since_days: int, use_llm: bool,
             if not link or link in seen_urls:
                 continue
             seen_urls.add(link)
-
             published = e.get("published") or e.get("pubDate") or e.get("updated")
             if not within_since(published, since_dt):
                 continue
-
             title = e.get("title", "").strip()
             publisher = (e.get("source", {}) or {}).get("title") or e.get("source") or ""
             stories.append({
@@ -307,11 +286,14 @@ def run_pipeline(origin: str, destination: str, since_days: int, use_llm: bool,
     alerts: List[Alert] = []
     for s in stories:
         text = extract_text(s["url"])
-        # Fall back to title for reasoning if extraction failed
-        reasoning_text = (s["title"] + "\n\n" + text).strip()
+        combined_text = (s["title"] + "\n\n" + text).strip()
+
+        # 🔹 Pre-filter: drop irrelevant stories early
+        if not contains_relevant_keywords(combined_text):
+            continue
 
         if use_llm:
-            llm_out = llm_reasoner_gemini(reasoning_text, model_name=model_name)
+            llm_out = llm_reasoner_gemini(combined_text, model_name=model_name)
         else:
             llm_out = None
 
@@ -324,13 +306,11 @@ def run_pipeline(origin: str, destination: str, since_days: int, use_llm: bool,
                 try:
                     impacts.append(Impact(**it))
                 except Exception:
-                    # Skip malformed impact entries
                     continue
             if not impacts:
-                # Fallback stages if the LLM refused to commit
-                for st in guess_stages_from_text(reasoning_text):
+                for st in guess_stages_from_text(combined_text):
                     impacts.append(Impact(stage=st, action="monitor", days_delta=0,
-                                          rationale="LLM output incomplete; monitoring recommended."))
+                                          rationale="LLM output incomplete."))
         else:
             rb = simple_rule_based_reasoner(s["title"], text, origin, destination)
             concern_level = rb["concern_level"]
@@ -366,14 +346,13 @@ def run_pipeline(origin: str, destination: str, since_days: int, use_llm: bool,
 
 def main():
     parser = argparse.ArgumentParser(description="Immigration news watcher → timeline recommendations")
-    parser.add_argument("--origin", required=True, help="Origin country, e.g. 'India'")
-    parser.add_argument("--destination", required=True, help="Destination country, e.g. 'Germany'")
-    parser.add_argument("--since_days", type=int, default=3, help="Look back this many days (default 3)")
-    parser.add_argument("--use_llm", type=lambda x: x.lower() in ("true","1","yes","y"), default=False,
-                        help="Enable Gemini reasoning (default false)")
-    parser.add_argument("--model", default="gemini-1.5-pro", help="Gemini model name if --use_llm true")
-    parser.add_argument("--max_articles", type=int, default=40, help="Max articles to analyze (default 40)")
-    parser.add_argument("--out_file", default="alerts.json", help="Where to write the JSON output")
+    parser.add_argument("--origin", required=True)
+    parser.add_argument("--destination", required=True)
+    parser.add_argument("--since_days", type=int, default=3)
+    parser.add_argument("--use_llm", type=lambda x: x.lower() in ("true","1","yes","y"), default=False)
+    parser.add_argument("--model", default="gemini-1.5-pro")
+    parser.add_argument("--max_articles", type=int, default=40)
+    parser.add_argument("--out_file", default="alerts.json")
     args = parser.parse_args()
 
     env = run_pipeline(
