@@ -1,0 +1,81 @@
+[
+  {
+    "subreddit": "InternationalStudents",
+    "post_id": "1mg3wjt",
+    "title": "Canadians increasingly angered by amount of international students, want increased deportations for expired visas.",
+    "author": "Commercial_Tea_7662",
+    "score": 926,
+    "upvote_ratio": 0.94,
+    "num_comments": 242,
+    "created_utc": 1754175804.0,
+    "created_datetime": "2025-08-03T01:03:24",
+    "url": "https://sencanada.ca/en/sencaplus/opinion/canada-should-run-security-checks-on-all-international-students-senator-downe/",
+    "permalink": "https://reddit.com/r/InternationalStudents/comments/1mg3wjt/canadians_increasingly_angered_by_amount_of/",
+    "selftext": "",
+    "is_self": false,
+    "link_flair_text": null,
+    "comments": [
+      {
+        "comment_id": "n6mpgfd",
+        "author": "GamesCatsComics",
+        "body": "I mean... The key there is \"expired\".\n\nComing as a student doesn't mean permanent residency... I totally support pipelines towards it for skills that are needed here.\n\nBut you need to accept a student visa isn't a permanent immigration status, work towards permanent properly, or leave when your visa is done.",
+        "score": 34,
+        "created_utc": 1754188425.0,
+        "created_datetime": "2025-08-03T04:33:45",
+        "parent_id": "t3_1mg3wjt",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "n6mh33o",
+        "author": "Party_Programmer_202",
+        "body": "The fact wanting people to be deported when they are literally on “expired” visas is looked at as racist is insane",
+        "score": 79,
+        "created_utc": 1754185192.0,
+        "created_datetime": "2025-08-03T03:39:52",
+        "parent_id": "t3_1mg3wjt",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "n6n33x2",
+        "author": "Cupcake179",
+        "body": "strange. The linked page says \"Canada should run security checks on all international students\". It didn't exactly mention \"Canadians increasingly angered by amount of international students, want increased deportations for expired visas.\" \n\nis this a rage bait? \n\nAnd immigration do require security checks for international students - Depending on your country of origin or application circumstances, **IRCC may ask you for a police certificate** to ensure there's no criminal conviction or security risk. \n\nper diploma mills, it's a known issue. Canada has tightened on immigration, study/work permits. Many uninformed comments there about how international student permits and visas work. Not everyone has an easy pathways to PR, citizenships, or jobs. This is all very rage bait and a big distraction to deeper issues globally (not just canada).",
+        "score": 10,
+        "created_utc": 1754194206.0,
+        "created_datetime": "2025-08-03T06:10:06",
+        "parent_id": "t3_1mg3wjt",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "n6o2ekz",
+        "author": "kasajizocat",
+        "body": "If they are overstaying their visa, they are no longer legal immigrants and should be deported. Simple as that. What’s so controversial? Otherwise should we allow people on tourist visa to overstay as well?",
+        "score": 5,
+        "created_utc": 1754213478.0,
+        "created_datetime": "2025-08-03T11:31:18",
+        "parent_id": "t3_1mg3wjt",
+        "is_submitter": false
+      }
+    ],
+    "keyword_analysis": {
+      "found_keywords": {
+        "application": "visa",
+        "overstay": "visa",
+        "certificate": "insurance"
+      },
+      "found_categories": [
+        "visa",
+        "insurance"
+      ],
+      "has_relevant_keywords": true,
+      "keyword_count": 3
+    },
+    "relevance_analysis": {
+      "relevant": true,
+      "reason": "```json\n{\n  \"relevant\": true,\n  \"reason\": \"The Reddit post title and comments directly address the issue of international students overstaying their visas in Canada.  The comments specifically discuss",
+      "confidence": 0.7,
+      "topics": [],
+      "usefulness": "medium"
+    },
+    "subreddit_priority": 1
+  }
+]

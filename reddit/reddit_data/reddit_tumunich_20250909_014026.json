@@ -1,0 +1,78 @@
+[
+  {
+    "subreddit": "tumunich",
+    "post_id": "1guy2wy",
+    "title": "Don't take it too seriously",
+    "author": "semjon_eschweiler",
+    "score": 723,
+    "upvote_ratio": 0.99,
+    "num_comments": 26,
+    "created_utc": 1732025656.0,
+    "created_datetime": "2024-11-19T15:14:16",
+    "url": "https://i.redd.it/a2xujree9v1e1.png",
+    "permalink": "https://reddit.com/r/tumunich/comments/1guy2wy/dont_take_it_too_seriously/",
+    "selftext": "",
+    "is_self": false,
+    "link_flair_text": null,
+    "comments": [
+      {
+        "comment_id": "lxxn8pd",
+        "author": "Massder_2021",
+        "body": "but it.is your _\"Dream University\"_",
+        "score": 21,
+        "created_utc": 1732028051.0,
+        "created_datetime": "2024-11-19T15:54:11",
+        "parent_id": "t3_1guy2wy",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "lxxuvgn",
+        "author": "mys31f_cs",
+        "body": "same goes for bachelor lol",
+        "score": 15,
+        "created_utc": 1732030504.0,
+        "created_datetime": "2024-11-19T16:35:04",
+        "parent_id": "t3_1guy2wy",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "lxykq1n",
+        "author": "RealFias",
+        "body": "Worst time of my life, happy to be gone",
+        "score": 12,
+        "created_utc": 1732038251.0,
+        "created_datetime": "2024-11-19T18:44:11",
+        "parent_id": "t3_1guy2wy",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "lxy1dev",
+        "author": "Background-Elk-543",
+        "body": "now im scared barely passing is not good right",
+        "score": 7,
+        "created_utc": 1732032499.0,
+        "created_datetime": "2024-11-19T17:08:19",
+        "parent_id": "t3_1guy2wy",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "ly200zv",
+        "author": "IntellectualSwan4424",
+        "body": "60h per week is rookie numbers tho",
+        "score": 8,
+        "created_utc": 1732079729.0,
+        "created_datetime": "2024-11-20T06:15:29",
+        "parent_id": "t3_1guy2wy",
+        "is_submitter": false
+      }
+    ],
+    "relevance_analysis": {
+      "relevant": true,
+      "reason": "```json\n{\n  \"relevant\": true,\n  \"reason\": \"While the post and comments lack specifics, the mention of a \\\"Dream University\\\" and experiences related to bachelor's studies strongly suggest the context ",
+      "confidence": 0.7,
+      "topics": [],
+      "usefulness": "medium"
+    },
+    "subreddit_priority": 1
+  }
+]

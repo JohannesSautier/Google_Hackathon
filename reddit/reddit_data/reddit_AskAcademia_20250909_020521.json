@@ -1,0 +1,260 @@
+[
+  {
+    "subreddit": "AskAcademia",
+    "post_id": "1hmntp4",
+    "title": "Completed a Research Paper all by myself, and now the Professor published it on her name",
+    "author": "Ok_Willingness8351",
+    "score": 1819,
+    "upvote_ratio": 0.98,
+    "num_comments": 164,
+    "created_utc": 1735217815.0,
+    "created_datetime": "2024-12-26T13:56:55",
+    "url": "https://www.reddit.com/r/AskAcademia/comments/1hmntp4/completed_a_research_paper_all_by_myself_and_now/",
+    "permalink": "https://reddit.com/r/AskAcademia/comments/1hmntp4/completed_a_research_paper_all_by_myself_and_now/",
+    "selftext": "During my engineering final year, I created a research paper entirely by myself, not even the faculty guide helped me. We submitted the paper to be published in an IEEE conference but it was rejected.\n\nFast-forward to 2023, this professor moved to a different college and started pursuing PhD. She copy/pasted my entire research paper word-to-word, and just added a few topics in intro, and published the paper under her name with two entirely different folks. She even copy/pasted the flow chart from my research manuscript.\n\nNow, I would like to claim the ownership of the work as this is unfair. I do not want to do any legal stuff or take the paper down. Can I ask the editors of the Journal to revise the authors and add me? Can I also ask them to remove the other two authors? What will be the best way to get credibility of my work? I feel devastated, as it was my hard work, and now it is published on an IEEE journal with three names who haven't done anything except adding one or two paragraphs in introduction. Please help, as I have emails where I emailed my manuscript to my college professor back on 2021. She moved to a different college in 2022, and paper was published in 2023 with her PhD guide.",
+    "is_self": true,
+    "link_flair_text": "STEM",
+    "comments": [
+      {
+        "comment_id": "m3vaydy",
+        "author": "Rambo_Baby",
+        "body": "Compile all of the proof and email the editor of the IEEE journal. Also email the ethics office at the thief’s institution. Don’t let thieves get away with stealing your work.",
+        "score": 1374,
+        "created_utc": 1735218079.0,
+        "created_datetime": "2024-12-26T14:01:19",
+        "parent_id": "t3_1hmntp4",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "m3vckpu",
+        "author": "deong",
+        "body": "> Now, I would like to claim the ownership of the work as this is copyright infringement. I do not want to do any legal stuff or take the paper down. \n\nThere isn’t really a way to just have it switched to your name and nothing else happens. This is major academic misconduct. Your options are (a) do nothing, (b) accuse the professor of plagiarism and provide evidence, etc., or (c) maybe ask the professor to go through whatever process the journal provides to add you as an author. But note that (c) there is unlikely to get you what you want. Generally making a change after publication requires some details and justification, and she’s not going to provide a justification that says \"I plagiarized the whole thing\". She might be willing to falsely say something like \"I inadvertently omitted this person who created Figure 2 from the author list\", in which case you might get to claim some minor coauthorship benefit in future. \n\nThe IEEE journal doesn’t want to be in the middle of any of this. They will never in a million years remove or change authorship unilaterally. They’ll just issue a retraction saying that there were serious concerns over plagiarism, not wade in and try to decide who gets credit themselves. \n\nBut realistically in terms of your options, it’s do nothing or go nuclear. And even if you try option (c), you’re dealing with a caged animal at that point. This is someone who knows what they did, knows their career is on the line, knows that you know what they did, and none of it is public yet. She may just go on offense before you can even decide your next move.",
+        "score": 380,
+        "created_utc": 1735218904.0,
+        "created_datetime": "2024-12-26T14:15:04",
+        "parent_id": "t3_1hmntp4",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "m3vd80x",
+        "author": "Great-Professor8018",
+        "body": "I doubt very much that your name could be added by the editors. This may be seen as scientific misconduct in all likelihood. If you can demonstrate it (by showing your older work), the paper would likely be retracted. I don't know about IEEE (I am not an engineer by any stretch of the imagination), but many sciience journals would be reluctant to add a name post publication.\n\nI found this discussion you may find useful:\n\nhttps://academia.stackexchange.com/questions/176606/changing-authors-after-a-paper-is-published",
+        "score": 76,
+        "created_utc": 1735219227.0,
+        "created_datetime": "2024-12-26T14:20:27",
+        "parent_id": "t3_1hmntp4",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "m3vet4f",
+        "author": "apenature",
+        "body": "Compile a white paper memorandum with all your evidence. Then send a report with a cover letter/executive summary.\n\nReport it to, via certified/registered mail/email with read receipt:\n\n-The research office of the university the work was done.\n-The research office of the university in which they currently work. \n-Any co-authors. \n-The editors/organisers of the actual entity that published it, i.e. the journal/conference organisers. Ask for formal retraction. \n-The ethics office of the publisher. Ask for formal retraction. \n-if this was laboratory work, send it to the ethics coordinator for the lab. \n\nAfter, get a lawyer and have a cease and desist drafted, serve this professor. To have them stop presenting it. \n\nGood luck! This will not be fun or easy. There is going to be an issue with the institutions pushing back. But if you press and are correct you will get some resolution. This professor is truly fucked if they did what you are alleging they did. \n\nFAFO. There are consequences, and this professor knew them. The academy doesn't need diseased branches. Enough evidence and the publishers and the universities are gonna cut her loose to protect themselves.",
+        "score": 67,
+        "created_utc": 1735219992.0,
+        "created_datetime": "2024-12-26T14:33:12",
+        "parent_id": "t3_1hmntp4",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "m3vfe2c",
+        "author": "throwawaysob1",
+        "body": "Follow the advice which other commenters have given about contacting IEEE. File an ethics complaint, or you could contact the conference committee/chair person/secretariat also.\n\nSo this professor is doing a PhD now? Would not want to be in her shoes when it reaches her supervisor - what a stupid thing for them to do!",
+        "score": 99,
+        "created_utc": 1735220263.0,
+        "created_datetime": "2024-12-26T14:37:43",
+        "parent_id": "t3_1hmntp4",
+        "is_submitter": false
+      }
+    ],
+    "keyword_analysis": {
+      "found_keywords": {
+        "claim": "insurance"
+      },
+      "found_categories": [
+        "insurance"
+      ],
+      "has_relevant_keywords": true,
+      "keyword_count": 1
+    },
+    "relevance_analysis": {
+      "relevant": true,
+      "reason": "```json\n{\n  \"relevant\": false,\n  \"reason\": \"The Reddit post and comments primarily discuss academic plagiarism and copyright infringement related to a research paper.  While the user mentions wanting ",
+      "confidence": 0.7,
+      "topics": [],
+      "usefulness": "medium"
+    },
+    "subreddit_priority": 1
+  },
+  {
+    "subreddit": "AskAcademia",
+    "post_id": "himc90",
+    "title": "In an interview right before receiving the 2013 Nobel prize in physics, Peter Higgs stated that he wouldn't be able to get an academic job today, because he wouldn't be regarded as productive enough.",
+    "author": "randomusefulbits",
+    "score": 1563,
+    "upvote_ratio": 0.99,
+    "num_comments": 128,
+    "created_utc": 1593519792.0,
+    "created_datetime": "2020-06-30T14:23:12",
+    "url": "https://www.reddit.com/r/AskAcademia/comments/himc90/in_an_interview_right_before_receiving_the_2013/",
+    "permalink": "https://reddit.com/r/AskAcademia/comments/himc90/in_an_interview_right_before_receiving_the_2013/",
+    "selftext": "> By the time he retired in 1996, he was uncomfortable with the new academic culture. \"After I retired it was quite a long time before I went back to my department. I thought I was well out of it. It wasn't my way of doing things any more. Today I wouldn't get an academic job. It's as simple as that. I don't think I would be regarded as productive enough.\"\n\nAnother interesting quote from the article is the following:\n\n> He doubts a similar breakthrough could be achieved in today's academic culture, because of the expectations on academics to collaborate and keep churning out papers. He said: \"It's difficult to imagine how I would ever have enough peace and quiet in the present sort of climate to do what I did in 1964.\"\n\nSource (the whole article is pretty interesting): http://theguardian.com/science/2013/dec/06/peter-higgs-boson-academic-system",
+    "is_self": true,
+    "link_flair_text": "Interdisciplinary",
+    "comments": [
+      {
+        "comment_id": "fwh04za",
+        "author": "zen_veteran",
+        "body": "Yes, modern science and academia are broken. It is pay to play or heartless, fruitless labor.",
+        "score": 386,
+        "created_utc": 1593522974.0,
+        "created_datetime": "2020-06-30T15:16:14",
+        "parent_id": "t3_himc90",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "fwhnqat",
+        "author": "pinoiboy1",
+        "body": "Currently wrapping up my PhD. There is a stark difference in work balance life between students in my lab who are focused on industry and those focused on academia. The ones in academia feel an immense stress to get high level publications (some staying 8+ years to try to push something into nature/science). The competition has become cut throat. This is a trend not just in America but in Europe, Asia and middle east. International graduate students tell me in China go back 20 years, having any ACS publication from american university is enough to get professorship. Now you better come stacked with publications and at least one nature/science. American universities are even more competitive. How many publications, how many conferences, how many patents...",
+        "score": 73,
+        "created_utc": 1593535113.0,
+        "created_datetime": "2020-06-30T18:38:33",
+        "parent_id": "t3_himc90",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "fwh0v7j",
+        "author": "PassTheWinePlease",
+        "body": "This and the combination of the inevitable pandemic effects on the job market make me really second guess if academia is a “good” career option.",
+        "score": 141,
+        "created_utc": 1593523424.0,
+        "created_datetime": "2020-06-30T15:23:44",
+        "parent_id": "t3_himc90",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "fwhho5v",
+        "author": "politicsasusual101",
+        "body": "“It's difficult to imagine how I would ever have enough peace and quiet in the present sort of climate to do what I did in 1964.\"\n\nExactly! Sometimes if you just have some actual peace and quiet to work on a problem or let it take you into unexpected directions, you can produce amazing discoveries. \n\nInstead, it always feels like working *until* a paper materialises then move onto the next thing that will get a paper etc.",
+        "score": 70,
+        "created_utc": 1593532217.0,
+        "created_datetime": "2020-06-30T17:50:17",
+        "parent_id": "t3_himc90",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "fwhp8d4",
+        "author": "notnotaginger",
+        "body": "It’s ironic to me that research has shown that productivity isn’t all it’s cracked up to be yet here we are.",
+        "score": 62,
+        "created_utc": 1593535824.0,
+        "created_datetime": "2020-06-30T18:50:24",
+        "parent_id": "t3_himc90",
+        "is_submitter": false
+      }
+    ],
+    "keyword_analysis": {
+      "found_keywords": {
+        "interview": "visa"
+      },
+      "found_categories": [
+        "visa"
+      ],
+      "has_relevant_keywords": true,
+      "keyword_count": 1
+    },
+    "relevance_analysis": {
+      "relevant": true,
+      "reason": "```json\n{\n  \"relevant\": false,\n  \"reason\": \"The Reddit post and comments discuss the changing nature of academia and the challenges faced by researchers, particularly regarding productivity expectatio",
+      "confidence": 0.7,
+      "topics": [],
+      "usefulness": "medium"
+    },
+    "subreddit_priority": 1
+  },
+  {
+    "subreddit": "AskAcademia",
+    "post_id": "1kbcdy5",
+    "title": "I'm a public school teacher- University of Kentucky, College of Medicine plagiarized my work and won’t respond",
+    "author": "Agreeable_Mobile_235",
+    "score": 1101,
+    "upvote_ratio": 0.97,
+    "num_comments": 147,
+    "created_utc": 1746005862.0,
+    "created_datetime": "2025-04-30T11:37:42",
+    "url": "https://www.reddit.com/r/AskAcademia/comments/1kbcdy5/im_a_public_school_teacher_university_of_kentucky/",
+    "permalink": "https://reddit.com/r/AskAcademia/comments/1kbcdy5/im_a_public_school_teacher_university_of_kentucky/",
+    "selftext": "As a public school teacher in Kentucky I helped create a project that brought University of Kentucky (UK) professional students into our K–12 classrooms to inspire kids. My husband and I coined the name, chose the color scheme, designed the lesson plan process, and even took the original photos. This wasn’t a one-off. We worked on this idea for years before ever moving to Kentucky.\n\nI coordinated between UK and the school district and helped students design accessible lesson plans for younger learners. Now, UK medical students and a staff member published an article claiming credit for this initiative — using our words, our pictures, and our concept, **without giving us any recognition.** They volunteered at our events but didn’t create the idea or the program. Even others who did contribute intellectually were left out.\n\n**UK’s College of Medicine and legal team have ignored every attempt we’ve made to correct this.** I feel betrayed. As a teacher, I always tell my students to value **honesty** and give credit where it’s due. Institutions should be held to the same standard.\n\n**Plagiarism is wrong.** Silence is complicity. Everyone deserves credit for their work.\n\nWhat can be done about this?\n\n  \nEDIT: \n\nA few clarifications:\n\n1. Posting here was a last resort. We actually reached out to the 3 students and the staff member weeks BEFORE this poster came out, asking specifically about continuing with the publication that we (my husband and I) had initiated...they didn't even respond to us.\n\n2. This was a poster in a research conference at University of Kentucky, College of Medicine. We had larger publications in talks and if it wasn't for me calling them out on social media, I have reason to believe they may have taken this further, considering that they and everyone we have reached out to within UK has ignored us.",
+    "is_self": true,
+    "link_flair_text": "Professional Misconduct in Research",
+    "comments": [
+      {
+        "comment_id": "mptcbwv",
+        "author": "Extension_Break_1202",
+        "body": "If this is a published article in an academic conference or academic journal, thus framed as “research”, you could contact the UK office of research integrity and take up your complaint with them.",
+        "score": 603,
+        "created_utc": 1746007639.0,
+        "created_datetime": "2025-04-30T12:07:19",
+        "parent_id": "t3_1kbcdy5",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "mptp8hx",
+        "author": "SherbetOutside1850",
+        "body": "I am a UK faculty, though I am not in the College of Medicine.\n\nFirst, you should get a lawyer if you don't have one, just to get some guidance on how to preserve and put together your own evidence.\n\n\\-All of the original work you did, preserve the original files with time stamps on every version.  \n\\-Any invitations or overtures you made to the Medical School to ask them to participate  \n\\-Any additional communication with Medical School staff regarding scheduling, etc.  \n\\-Any communication with your superiors or staff (VP, secretaries, whatever) about this event and your role in it.  \n\\-Any communication between yourself and your husband regarding the project\n\nMake sure everything has a time stamp of some kind.\n\nIf you have all that together, then I'd go to the Office of Research Integrity, which is housed in the VP for Research office. Contact information is here: 859-257-9428 ([rs\\_ORI@uky.edu](mailto:rs_ORI@uky.edu)).\n\nThe other thing to do is to contact the journal and tell them you have solid evidence that these people misrepresented the research. They will listen to you. If you are convincing, they will act on it.\n\nFinally, I'd just say this: UK has an army of lawyers that shield them from any consequences, whether they are at fault or not. UK legal is there to protect UK, not to be neutral arbiters in a dispute with UK. Stop calling them. They won't care. \n\nBut one thing Capilouto hates is bad publicity. For that reason, you might find some satisfaction going to Linda Blackford, who covers all things education for the *Herald Leader* ([lblackford@herald-leader.com](mailto:lblackford@herald-leader.com), 859-488-1571). I think she would be interested in your story. If she thinks it has real legs, she'll publish it.\n\nThat said, be very careful that you can *prove* what you are saying. That is, you have time stamped files and images showing these ideas, images, text, and so forth originated with you, you have correspondence with your VP about getting UK involved, you have emails reaching out to them about the relationship, etc.\n\nFinally, as a quick and dirty piece of advice: next time you come up with a fabulous idea, print everything out, write up a description, put it in an envelope and mail it to yourself as a certified letter but *do not open it*. Only then contact people about your idea. Your envelope can be unsealed in court or by your lawyer and that provides support for your timeline that some idea or creative endeavor originated with you.\n\nGood luck.",
+        "score": 331,
+        "created_utc": 1746013958.0,
+        "created_datetime": "2025-04-30T13:52:38",
+        "parent_id": "t3_1kbcdy5",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "mptemdi",
+        "author": "No-Tie-710",
+        "body": "Contact the journal editor - they have the power to retract. Also contact the institutional review board which supervises research ethics.",
+        "score": 188,
+        "created_utc": 1746008942.0,
+        "created_datetime": "2025-04-30T12:29:02",
+        "parent_id": "t3_1kbcdy5",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "mptauz9",
+        "author": "lipflip",
+        "body": "That sound so wrong. How can anyone just silently copy your concept and publish about it? Wouldn't it be just easier and a win-win to involve you in this?\n\nWhere was it published? Like on their blog (look what we have done to get more school students into science) or as a scientific article (a novel university outreach concept  to bring more students into science, journal/conference on science attractiveness)?\n\nIf it's the former, i would find it annoying but ignore it. It's nasty but doesn't matter. If it is the later, you can also contact the journal or publisher of the journal (after giving the university enough time to react, say two weeks). Be sure to document your prior work so that you can prove that it's your concept.",
+        "score": 69,
+        "created_utc": 1746006771.0,
+        "created_datetime": "2025-04-30T11:52:51",
+        "parent_id": "t3_1kbcdy5",
+        "is_submitter": false
+      },
+      {
+        "comment_id": "mptjj7m",
+        "author": "nicepelican",
+        "body": "Based on your other post this isn’t an article but a poster. Posters tend to be taken less seriously than an article (partly because an article is permanently available online whereas a poster is often a one-off presentation). I recognize this is a very frustrating experience and you deserve an apology but if this is just a poster at a random conference in the long run they won’t gain too much benefit from it, and there isn’t anything to retract.\n\nHave you contacted the faculty involved? Faculty are usually pretty nervous about plagiarism so they will likely clamp down on the students presenting this work again.",
+        "score": 48,
+        "created_utc": 1746011437.0,
+        "created_datetime": "2025-04-30T13:10:37",
+        "parent_id": "t3_1kbcdy5",
+        "is_submitter": false
+      }
+    ],
+    "keyword_analysis": {
+      "found_keywords": {
+        "claim": "insurance"
+      },
+      "found_categories": [
+        "insurance"
+      ],
+      "has_relevant_keywords": true,
+      "keyword_count": 1
+    },
+    "relevance_analysis": {
+      "relevant": true,
+      "reason": "```json\n{\n  \"relevant\": false,\n  \"reason\": \"The Reddit post and comments primarily discuss allegations of plagiarism by the University of Kentucky College of Medicine concerning a K-12 educational pro",
+      "confidence": 0.7,
+      "topics": [],
+      "usefulness": "medium"
+    },
+    "subreddit_priority": 1
+  }
+]
