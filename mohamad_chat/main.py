@@ -49,7 +49,7 @@ async def chat_with_agent(request: ChatRequest):
     """
     try:
         configure_gemini()
-        model = genai.GenerativeModel('gemini-2.0-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
 
         # Construct the prompt with comprehensive context
         prompt = f"""

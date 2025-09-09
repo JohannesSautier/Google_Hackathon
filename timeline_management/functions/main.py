@@ -5,12 +5,129 @@ from datetime import datetime, timedelta, timezone
 import json 
 from firebase_admin import storage
 from firebase_functions import storage_fn
+import requests
+from io import BytesIO
+from firebase_admin import storage
+from google.cloud import aiplatform
+import vertexai
+from vertexai.generative_models import GenerativeModel, Part
+from firebase_functions import pubsub_fn
+
 
 # We will move our data classes to a separate file for better organization
 # from models import ProcessStep, AgentFinding, JourneyEvent 
 
 # --- App Initialization ---
 options.set_global_options(region="europe-west1")
+
+# --- Helpers --- 
+def _run_mail_agent_logic(db):
+    print("Executing Mail Agent logic...")
+    journeys_query = db.collection("journeys").where("status", "==", "IN_PROGRESS").stream()
+    
+    for journey in journeys_query:
+        journey_id = journey.id
+        journey_data = journey.to_dict()
+        timeline = journey_data.get("timeline", [])
+        
+        if not timeline:
+            continue
+
+        print(f"  -> Processing mail for journey: {journey_id}")
+        
+        # 1. De-duplication: Fetch existing email content to avoid reprocessing
+        existing_dps = db.collection("data_points").where("journeyId", "==", journey_id).where("sourceType", "==", "EMAIL_AGENT").stream()
+        existing_contents = {dp.to_dict().get("rawContent") for dp in existing_dps}
+
+        # 2. Prepare and call the external Mail API
+        api_payload = {"timeline": {step['stepId']: {"start_date": step['estimatedStartDate'], "end_date": step['estimatedEndDate']} for step in timeline}}
+        mail_api_url = "https://dream-team-mail-api-958207203523.europe-west1.run.app/analyze-emails"
+        
+        try:
+            response = requests.post(mail_api_url, json=api_payload)
+            response.raise_for_status()
+            api_response = response.json()
+            
+            # The API returns a list with the results object at index 0
+            results = api_response[0].get("results", [])
+
+            # 3. Process new results
+            new_results_count = 0
+            for result in results:
+                if result.get("rawContent") not in existing_contents:
+                    new_results_count += 1
+                    # Add sourceType and journeyId to the result to form a complete dataPoint
+                    result_as_datapoint = {**result, "sourceType": "EMAIL_AGENT", "journeyId": journey_id}
+                    
+                    dp_ref = db.collection("data_points").document()
+                    dp_ref.set(result_as_datapoint)
+                    
+                    event_data = {
+                        "journeyId": journey_id, "dataPointId": dp_ref.id,
+                        "status": "PENDING", "createdAt": datetime.now(timezone.utc).isoformat()
+                    }
+                    db.collection("journey_events").add(event_data)
+            print(f"  -> Found {len(results)} results, added {new_results_count} new data points.")
+        except Exception as e:
+            print(f"  -> ERROR processing mail for journey {journey_id}: {e}")
+
+def add_new_data_points_and_create_events(db, data_points):
+    """Helper to save data points and create their processing events."""
+    for data_point in data_points:
+        dp_ref = db.collection("data_points").document()
+        dp_ref.set(data_point)
+        event_data = {
+            "journeyId": data_point.get("journeyId"), "dataPointId": dp_ref.id,
+            "status": "PENDING", "createdAt": datetime.now(timezone.utc).isoformat()
+        }
+        db.collection("journey_events").add(event_data)
+
+            
+# --- Helper Logic for the News Agent ---
+def _run_news_agent_logic(db):
+    print("Executing News Agent logic...")
+    journeys_query = db.collection("journeys").where("status", "==", "IN_PROGRESS").stream()
+
+    # 1. De-duplication: Fetch all existing news source URIs to avoid reprocessing
+    existing_dps = db.collection("data_points").where("sourceType", "==", "NEWS_API").stream()
+    existing_uris = {dp.to_dict().get("sourceURI") for dp in existing_dps}
+
+    for journey in journeys_query:
+        journey_id = journey.id
+        journey_data = journey.to_dict()
+        
+        print(f"  -> Processing news for journey: {journey_id}")
+        
+        # 2. Prepare and call the external News API
+        api_payload = {
+            "origin": journey_data.get("originCountry"),
+            "destination": journey_data.get("destinationCountry"),
+            "since_days": 7, "max_articles": 20, "use_llm": True
+        }
+        news_api_url = "https://dream-team-news-api-958207203523.europe-west1.run.app/run" # Using a placeholder for your live URL
+        
+        try:
+            response = requests.post(news_api_url, json=api_payload)
+            response.raise_for_status()
+            data_points = response.json().get("dataPoints", [])
+
+            # 3. Filter out duplicates and add journeyId
+            new_data_points = []
+            for dp in data_points:
+                if dp.get("sourceURI") not in existing_uris:
+                    dp["journeyId"] = journey_id
+                    new_data_points.append(dp)
+            
+            # 4. Proxy the new data points to our own /add_agent_finding endpoint
+            if new_data_points:
+                # We can call our own function directly for efficiency instead of a full HTTP request.
+                add_new_data_points_and_create_events(db, new_data_points)
+                print(f"  -> Found {len(data_points)} articles, added {len(new_data_points)} new data points.")
+            else:
+                print("  -> Found 0 new articles.")
+        except Exception as e:
+            print(f"  -> ERROR processing news for journey {journey_id}: {e}")
+
 
 # --- API Endpoint 1: Create a Journey ---
 @https_fn.on_request()
@@ -243,12 +360,12 @@ def upload_document(req: https_fn.Request) -> https_fn.Response:
         return https_fn.Response("Internal Server Error", status=500)
 
 
-# --- Background Function 3: Process a Document on Upload ---
-@storage_fn.on_object_finalized()
+# --- Background Function: Process Document (Live API Call) ---
+@storage_fn.on_object_finalized(memory=options.MemoryOption.GB_1) 
 def process_document(event: storage_fn.CloudEvent) -> None:
     """
-    Triggered when a new file is uploaded to Cloud Storage. This function
-    simulates document parsing and saves the metadata to Firestore.
+    Triggers on file upload, downloads the file, and sends it to the
+    external document parsing API.
     """
     if not firebase_admin._apps:
         firebase_admin.initialize_app()
@@ -257,104 +374,125 @@ def process_document(event: storage_fn.CloudEvent) -> None:
     bucket_name = event.data.bucket
     file_path = event.data.name
     
-    # We only want to process files in our 'user_documents' folder.
     if not file_path.startswith("user_documents/"):
-        print(f"Ignoring file '{file_path}' as it's not in 'user_documents/'.")
         return
 
     print(f"Processing new document: gs://{bucket_name}/{file_path}")
-
     try:
-        # Extract journeyId from the file path (e.g., 'user_documents/abc-123/file.pdf')
         parts = file_path.split("/")
-        if len(parts) < 3:
-            print(f"Could not extract journeyId from path: {file_path}")
-            return
         journey_id = parts[1]
         
-        # --- SIMULATE AI DOCUMENT PARSING ---
-        # In a real app, you would download the file content and send it to
-        # Document AI or the Gemini API to generate this payload.
-        # For the hackathon, we'll use the hardcoded structure you provided.
-        print("Simulating document parsing with an AI model...")
-        parsed_metadata = {
-            "journeyId": journey_id,
-            "sourceURI": f"gs://{bucket_name}/{file_path}", # Link to the file in Storage
-            "documentType": "OFFICIAL_VISA_GUIDE",
-            "llmSummary": "This is the primary U.S. Department of State guide for student visas...",
-            "extractedTimelines": [
-                {
-                    "processType": "VISA_APPLICATION",
-                    "description": "Students can receive their I-20 up to 365 days before the program start date.",
-                    "value": 365,
-                    "unit": "days_before_start"
-                },
-                {
-                    "timelineKey": "INSURANCE",
-                    "description": "You may apply for your Insurance as soon as you receive your Form I-20.",
-                    "value": None,
-                    "unit": None
-                }
-            ],
-            "processedAt": firestore.SERVER_TIMESTAMP
-        }
+        # 1. Download the file content from Cloud Storage into memory
+        bucket = storage.bucket(bucket_name)
+        blob = bucket.blob(file_path)
+        file_bytes = blob.download_as_bytes()
+        file_in_memory = BytesIO(file_bytes)
 
-        # Save the structured metadata to the 'parsed_documents' collection
+        # 2. Call your external Document Parsing API
+        doc_api_url = "https://dream-team-doc-api-958207203523.europe-west1.run.app/process-document/"
+        source_uri = f"gs://{bucket_name}/{file_path}"
+        
+        files = {'file': (file_path.split('/')[-1], file_in_memory, 'application/octet-stream')}
+        data = {'source_uri': source_uri}
+        
+        print(f"Calling Document Parsing API for {source_uri}...")
+        response = requests.post(doc_api_url, files=files, data=data)
+        response.raise_for_status()  # Raise an exception for bad status codes (4xx or 5xx)
+        
+        # 3. Get the JSON response and enrich it
+        parsed_metadata = response.json()
+        parsed_metadata["journeyId"] = journey_id
+        parsed_metadata["processedAt"] = firestore.SERVER_TIMESTAMP
+        
+        # 4. Save the live response to Firestore
         db.collection("parsed_documents").add(parsed_metadata)
-        print(f"Successfully saved parsed metadata for journey '{journey_id}' to Firestore.")
+        print(f"Successfully saved parsed metadata for journey '{journey_id}' from live API.")
 
     except Exception as e:
         print(f"Error processing document {file_path}: {e}")
         
-# --- Helper Function: Mock Gemini Call ---
+# --- Helper Function: Live Gemini Call for Timeline Generation ---
 def _generate_timeline_from_docs(docs: list) -> list:
     """
-    This function simulates a call to the Gemini API.
-    It takes parsed document data and returns a structured timeline.
+    Takes a list of relevant parsed documents, constructs a prompt,
+    and calls the Gemini API to generate a structured timeline.
     """
-    print("Simulating Gemini API call to generate timeline...")
-    # In a real implementation, you would format the content of the `docs`
-    # into a prompt and call a model like Gemini 1.5 Flash.
+    print("Calling live Gemini API to generate timeline...")
     
-    # For our test, we'll return a hardcoded, plausible timeline.
-    mock_timeline = [
-        {
-            "stepId": "BANKACCOUNT_OPEN",
-            "title": "Open German Blocked Bank Account",
-            "description": "Based on Proof of Finance documents, open a blocked account (Sperrkonto).",
-            "status": "NOT_STARTED",
-            "estimatedStartDate": "2025-10-01T00:00:00",
-            "estimatedEndDate": "2025-10-07T00:00:00",
-            "dependencies": [],
-        },
-        {
-            "stepId": "INSURANCE_GET",
-            "title": "Get German Health Insurance",
-            "description": "Based on insurance guides, acquire valid health insurance for the visa application.",
-            "status": "NOT_STARTED",
-            "estimatedStartDate": "2025-10-01T00:00:00",
-            "estimatedEndDate": "2025-10-05T00:00:00",
-            "dependencies": [],
-        },
-        {
-            "stepId": "VISA_APPLICATION_SUBMIT",
-            "title": "Submit Visa Application",
-            "description": "Compile all documents (Proof of Finance, Insurance, etc.) and submit the application.",
-            "status": "NOT_STARTED",
-            "estimatedStartDate": "2025-10-08T00:00:00",
-            "estimatedEndDate": "2025-12-08T00:00:00",
-            "dependencies": ["BANKACCOUNT_OPEN", "INSURANCE_GET"],
-        },
-    ]
-    return mock_timeline
+    # Initialize Vertex AI - ensure your region is correct
+    vertexai.init(project="tum-cdtm25mun-8742", location="europe-west1")
+    model = GenerativeModel("gemini-2.5-flash")
 
-# --- Background Function 4: Timeline Orchestrator ---
+    # 1. Filter for only relevant documents, as you requested
+    required_processes = {"VISA_APPLICATION", "INSURANCE", "PROOFFINANCE", "BANKACCOUNT"}
+    relevant_docs_content = []
+    for doc in docs:
+        is_relevant = False
+        for timeline_info in doc.get("extractedTimelines", []):
+            process_type = timeline_info.get("processType")
+            if process_type in required_processes:
+                is_relevant = True
+                break
+        if is_relevant:
+            relevant_docs_content.append(json.dumps(doc))
+
+    # 2. Construct the prompt for Gemini
+    prompt = f"""
+    You are an expert immigration logistics planner. Your task is to create a detailed, step-by-step timeline for a student's immigration process based on the provided JSON data extracted from their documents.
+
+    CONTEXT:
+    - The student is preparing to study in Germany.
+    - Today's date is {datetime.now(timezone.utc).date().isoformat()}.
+    - You must create a logical sequence of events, estimate start and end dates, and identify dependencies between steps.
+
+    INPUT DATA FROM PARSED DOCUMENTS:
+    ```json
+    {json.dumps(relevant_docs_content, indent=2)}
+    ```
+
+    TASK:
+    Generate a JSON array of timeline events. Each event must be an object with the following keys: "stepId", "title", "description", "status", "estimatedStartDate", "estimatedEndDate", "dependencies".
+    - "stepId" must be a unique, uppercase_snake_case string.
+    - "status" must be "NOT_STARTED".
+    - Dates must be in 'YYYY-MM-DDTHH:MM:SS' ISO 8601 format.
+    - "dependencies" must be an array of "stepId"s that this step depends on.
+    - Base your timeline ONLY on the information provided in the input data.
+    - Do not output any text other than the JSON array itself.
+    """
+    
+    # 3. Call the Gemini API and parse the response
+    response = model.generate_content(prompt)
+    
+    # Clean up the response to ensure it's valid JSON
+    json_string = response.text.replace("```json", "").replace("```", "").strip()
+    generated_timeline = json.loads(json_string)
+    
+    return generated_timeline
+
+
+# --- Background Function 4: Timeline Orchestrator (More Flexible) ---
 @firestore_fn.on_document_created(document="parsed_documents/{docId}")
 def orchestrate_timeline_generation(event: firestore_fn.Event[firestore_fn.Change]) -> None:
     """
     Triggered when new parsed document metadata is created. Checks if enough
     information exists to generate a timeline, and if so, triggers the process.
+    This version uses a map to handle variations in processType names.
     """
+    # This map translates various possible LLM outputs into our canonical process names.
+    # You can easily add more variations here as you discover them.
+    PROCESS_MAP = {
+        # Potential API Output -> Our App's Standard Name
+        "VISA_APPLICATION": "VISA_APPLICATION",
+        "INSURANCE": "INSURANCE",
+        "TRAVEL_HEALTH_INSURANCE": "INSURANCE",
+        "PROOF_OF_FINANCE": "PROOF_OF_FINANCE",
+        "BANKACCOUNT": "BANKACCOUNT",
+        "BLOCKED_ACCOUNT_RULES": "BANKACCOUNT",
+    }
+    
+    # These are our app's standard names. The check is against these.
+    required_processes = {"VISA_APPLICATION", "INSURANCE", "PROOF_OF_FINANCE", "BANKACCOUNT"}
+    
     if not firebase_admin._apps:
         firebase_admin.initialize_app()
     db = firestore.client()
@@ -363,45 +501,37 @@ def orchestrate_timeline_generation(event: firestore_fn.Event[firestore_fn.Chang
     journey_id = parsed_doc_data.get("journeyId")
 
     if not journey_id:
-        print("Parsed document is missing a journeyId. Skipping.")
         return
 
     try:
-        # 1. Fetch ALL parsed documents for this journey
         docs_query = db.collection("parsed_documents").where("journeyId", "==", journey_id).stream()
         all_parsed_docs = [doc.to_dict() for doc in docs_query]
         
-        # 2. Check if we have documents for all required processes (State Management)
-        required_processes = {"VISA_APPLICATION", "INSURANCE", "PROOFFINANCE", "BANKACCOUNT"}
         found_processes = set()
         
+        # --- NEW FLEXIBLE LOGIC ---
         for doc in all_parsed_docs:
             for timeline_info in doc.get("extractedTimelines", []):
-                # Check both keys from your sample payload
-                process_type = timeline_info.get("processType") or timeline_info.get("timelineKey")
-                if process_type:
-                    found_processes.add(process_type)
+                api_process_type = timeline_info.get("processType") or timeline_info.get("timelineKey")
+                if api_process_type:
+                    # Look up the canonical name in our map
+                    canonical_name = PROCESS_MAP.get(api_process_type)
+                    if canonical_name:
+                        found_processes.add(canonical_name)
         
-        print(f"Journey {journey_id}: Found documents for processes: {found_processes}")
+        print(f"Journey {journey_id}: Found canonical processes: {found_processes}")
 
-        # 3. Decide whether to trigger timeline generation
-        if not required_processes.issubset(found_processes):
-            # LATENT STATE: Still waiting on more documents
-            print(f"Still waiting for all required documents. Need {required_processes - found_processes}.")
-            db.collection("journeys").document(journey_id).set({"timelineStatus": "AWAITING_DOCUMENTS"}, merge=True)
-            return
+        # if not required_processes.issubset(found_processes):
+        #     print(f"Still waiting for all required documents. Need {required_processes - found_processes}.")
+        #     db.collection("journeys").document(journey_id).set({"timelineStatus": "AWAITING_DOCUMENTS"}, merge=True)
+        #     return
         
-        # GEMINI STATE: We have everything we need!
         print("All required document types found! Proceeding to generate timeline.")
         
-        # 4. Call our (mock) Gemini function to get the timeline
         generated_timeline = _generate_timeline_from_docs(all_parsed_docs)
         
-        # 5. Update the journey with the new timeline
         journey_update_data = {
-            "timeline": generated_timeline,
-            "timelineStatus": "GENERATED",
-            "status": "IN_PROGRESS" # The journey is now actionable
+            "timeline": generated_timeline, "timelineStatus": "GENERATED", "status": "IN_PROGRESS"
         }
         db.collection("journeys").document(journey_id).update(journey_update_data)
         
@@ -410,7 +540,6 @@ def orchestrate_timeline_generation(event: firestore_fn.Event[firestore_fn.Chang
     except Exception as e:
         print(f"Error orchestrating timeline for journey {journey_id}: {e}")
         db.collection("journeys").document(journey_id).set({"timelineStatus": "ERROR"}, merge=True)
-
 
 @https_fn.on_request()
 def get_data_points(req: https_fn.Request) -> https_fn.Response:
@@ -461,3 +590,29 @@ def get_data_points(req: https_fn.Request) -> https_fn.Response:
     except Exception as e:
         print(f"Error getting data points: {e}")
         return https_fn.Response("An internal error occurred.", status=500)
+    
+# --- Main Cron Job Entry Point ---
+@pubsub_fn.on_message_published(topic="agent-triggers") # <-- THE FIX IS HERE
+def run_scheduled_agent(event: pubsub_fn.CloudEvent) -> None:
+    """
+    Receives a message from Cloud Scheduler and runs the specified agent logic.
+    """
+    if not firebase_admin._apps:
+        firebase_admin.initialize_app()
+    db = firestore.client()
+
+    try:
+        # Decode the message from Pub/Sub
+        message_data = json.loads(event.data.message.data.decode("utf-8"))
+        agent_type = message_data.get("agent_type")
+        print(f"Received trigger for agent type: {agent_type}")
+        
+        if agent_type == "MAIL":
+            _run_mail_agent_logic(db)
+        elif agent_type == "NEWS":
+            _run_news_agent_logic(db)
+        else:
+            print(f"Unknown agent type: {agent_type}")
+            
+    except Exception as e:
+        print(f"Error in scheduled agent runner: {e}")

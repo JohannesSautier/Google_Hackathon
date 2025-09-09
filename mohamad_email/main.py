@@ -60,7 +60,7 @@ def analyze_with_gemini(email_content, initial_timeline):
         raise ValueError("GEMINI_API_KEY not found in environment variables.")
 
     genai.configure(api_key=GEMINI_API_KEY)
-    model = genai.GenerativeModel('gemini-2.0-flash')
+    model = genai.GenerativeModel('gemini-2.5-flash')
 
     prompt = f"""
     You are an expert AI assistant for a tool that helps with migration to a new country.

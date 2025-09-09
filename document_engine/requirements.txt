@@ -1,23 +1,28 @@
 # PDF Text Extraction Dependencies
 
 # PDF processing
-PyMuPDF==1.23.14
+PyMuPDF
 
 # Image processing
-Pillow==10.1.0
+Pillow
 
 # Google Cloud Vision API
-google-cloud-vision==3.4.4
+google-cloud-vision
 
 # Optional: For better PDF handling
-pdfplumber==0.10.3
+pdfplumber
 
 # HTML processing
-beautifulsoup4==4.12.2
-requests==2.31.0
+beautifulsoup4
+requests
 
 # Google Generative AI (Gemini)
-google-generativeai==0.8.3
+google-generativeai
 
 # Logging and utilities
-pathlib2==2.3.7
+pathlib2
+
+# FastAPI for the API server
+fastapi
+uvicorn[standard]
+python-multipart

@@ -14,5 +14,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of your application's source code to the container
 COPY main.py .
 
+ENV GEMINI_API_KEY=""
+EXPOSE 8080
+
 # Command to run the FastAPI application using Uvicorn
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]

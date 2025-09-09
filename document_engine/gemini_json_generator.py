@@ -57,7 +57,7 @@ class GeminiJSONGenerator:
           "unit": "days_before_start"
         },
         {
-          "timelineKey": "INSURANCE",
+          "processType": "INSURANCE",
           "description": "You may apply for your Insurance as soon as you receive your Form I-20.",
           "value": null,
           "unit": null
@@ -86,11 +86,13 @@ Document Types should be one of:
 - OFFICIAL_VISA_GUIDE
 - INFORMATION_PAGE
 
+Restrict the processType to only VISA_APPLICATION, INSURANCE, PROOFFINANCE or BANKACCOUNT. Make sure we are able to generate as much as timeline items as possible, also with as much as with the 4 as possible. Do not create if there's no relevance, but even if there's a slight relevance, create it.
+
 For checklist items, extract specific, actionable requirements that applicants must complete.
 For milestones, identify key steps in the process with meaningful milestoneKey values.
 For timelines, extract time-related requirements with appropriate units (days, weeks, months, years).
 
-Return ONLY valid JSON, no additional text or explanations.
+Return ONLY valid JSON, in that exact output format specified, no additional text or explanations.
 """
     
     def generate_document_json(self, document_text: str, source_uri: str, document_id: str) -> Dict:
