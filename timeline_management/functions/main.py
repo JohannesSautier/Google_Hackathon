@@ -410,3 +410,54 @@ def orchestrate_timeline_generation(event: firestore_fn.Event[firestore_fn.Chang
     except Exception as e:
         print(f"Error orchestrating timeline for journey {journey_id}: {e}")
         db.collection("journeys").document(journey_id).set({"timelineStatus": "ERROR"}, merge=True)
+
+
+@https_fn.on_request()
+def get_data_points(req: https_fn.Request) -> https_fn.Response:
+    """
+    HTTP endpoint to retrieve historical data points for a given journey.
+    Accepts a required 'journeyId' and an optional 'sourceType' query parameter.
+    """
+    def json_converter(o):
+        if isinstance(o, datetime):
+            return o.isoformat()
+        raise TypeError(f"Object of type {o.__class__.__name__} is not JSON serializable")
+
+    if not firebase_admin._apps:
+        firebase_admin.initialize_app()
+    db = firestore.client()
+    
+    if req.method != "GET":
+        return https_fn.Response("Method Not Allowed", status=405)
+        
+    # --- Parameter Handling ---
+    journey_id = req.args.get("journeyId")
+    source_type = req.args.get("sourceType") # This will be None if not provided
+
+    if not journey_id:
+        return https_fn.Response("Missing required 'journeyId' query parameter.", status=400)
+        
+    try:
+        # --- Dynamic Query Building ---
+        # Start with the base query
+        query = db.collection("data_points").where("journeyId", "==", journey_id)
+        
+        # If sourceType is provided, add it to the query
+        if source_type:
+            print(f"Filtering by sourceType: {source_type}")
+            query = query.where("sourceType", "==", source_type)
+        
+        # Execute the query
+        docs = query.stream()
+        results = [doc.to_dict() for doc in docs]
+
+        response_body = json.dumps(results, default=json_converter)
+        
+        return https_fn.Response(
+            response_body,
+            status=200,
+            headers={"Content-Type": "application/json"}
+        )
+    except Exception as e:
+        print(f"Error getting data points: {e}")
+        return https_fn.Response("An internal error occurred.", status=500)

@@ -15,6 +15,7 @@ CREATE_JOURNEY_URL = "https://create-journey-w3spnqcwla-ew.a.run.app"
 GET_JOURNEY_URL = "https://get-journey-w3spnqcwla-ew.a.run.app"
 ADD_AGENT_FINDING_URL = "https://add-agent-finding-w3spnqcwla-ew.a.run.app"
 UPLOAD_DOCUMENT_URL = "https://upload-document-w3spnqcwla-ew.a.run.app"
+GET_DATA_POINTS_URL = "https://europe-west1-tum-cdtm25mun-8742.cloudfunctions.net/get_data_points"
 
 # --- Firebase Admin SDK Initialization (using ADC) ---
 try:
@@ -120,6 +121,40 @@ def test_timeline_orchestration():
     assert any(step["stepId"] == "VISA_APPLICATION_SUBMIT" for step in final_journey_doc["timeline"])
     print("   > ✔️ Verified: Timeline was successfully generated and added to the journey.")
     print("✔️ Timeline Orchestration Flow PASSED.")
+    return journey_id
+    
+def test_get_data_points(journey_id):
+    """
+    Tests the get_data_points endpoint for both filtered and unfiltered queries.
+    """
+    print("\n--- Testing: GET /get_data_points ---")
+    
+    # === Step 1: Setup - Create dummy data points ===
+    print("   > Creating dummy data points in Firestore...")
+    db.collection("data_points").add({"journeyId": journey_id, "sourceType": "NEWS_API", "content": "News 1"})
+    db.collection("data_points").add({"journeyId": journey_id, "sourceType": "NEWS_API", "content": "News 2"})
+    db.collection("data_points").add({"journeyId": journey_id, "sourceType": "EMAIL_AGENT", "content": "Email 1"})
+    # Give Firestore a moment to index
+    time.sleep(2)
+
+    # === Test Case 1: Fetch ALL data points for the journey ===
+    print("   > Testing unfiltered fetch (all data points)...")
+    response_all = requests.get(f"{GET_DATA_POINTS_URL}?journeyId={journey_id}")
+    assert response_all.status_code == 200
+    all_points = response_all.json()
+    assert len(all_points) == 3, f"Expected 3 total data points, but got {len(all_points)}"
+    print("   > ✔️ Unfiltered fetch PASSED.")
+
+    # === Test Case 2: Fetch only NEWS_API data points ===
+    print("   > Testing filtered fetch (sourceType=NEWS_API)...")
+    response_filtered = requests.get(f"{GET_DATA_POINTS_URL}?journeyId={journey_id}&sourceType=NEWS_API")
+    assert response_filtered.status_code == 200
+    filtered_points = response_filtered.json()
+    assert len(filtered_points) == 2, f"Expected 2 NEWS_API data points, but got {len(filtered_points)}"
+    assert all(p["sourceType"] == "NEWS_API" for p in filtered_points)
+    print("   > ✔️ Filtered fetch PASSED.")
+    print("✔️ Get Data Points Flow PASSED.")
+
 
 # --- Test Script ---
 
@@ -233,7 +268,13 @@ def run_tests():
     print("\n🚀 Starting backend integration tests...")
     try:
         # We will run our new self-contained test
-        test_timeline_orchestration()
+        # Self-contained test for timeline orchestration
+        journey_id_for_orchestration = test_timeline_orchestration()
+
+        # === Test for Get Data Points ===
+        # We can use the journey_id from the orchestration test
+        if journey_id_for_orchestration:
+            test_get_data_points(journey_id_for_orchestration)
 
     except AssertionError as e:
         print(f"\n❌ TEST FAILED: {e}")

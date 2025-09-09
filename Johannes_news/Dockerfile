@@ -21,6 +21,8 @@ COPY server.py /app/
 
 # Cloud Run sets $PORT. Default to 8080 for local runs.
 ENV PORT=8080
+ENV GEMINI_API_KEY=""
+EXPOSE $PORT
 
 # Start FastAPI via uvicorn and bind to $PORT (required by Cloud Run services)
 CMD ["sh", "-c", "python -m uvicorn server:app --host 0.0.0.0 --port ${PORT}"]

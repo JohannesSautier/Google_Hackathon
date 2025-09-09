@@ -479,6 +479,7 @@ def run_pipeline(origin: str,
 
     if use_llm and not _try_gemini():
         # No key present; silently downgrade to rules
+        print("⚠️ GEMINI_API_KEY not set or Gemini import failed; falling back to rule-based processing.")
         use_llm = False
 
     since_dt = _now_utc() - timedelta(days=since_days)
