@@ -14,5 +14,5 @@ RUN pip install --upgrade pip && \
 # Copy the rest of the application code into the container
 COPY . .
 
-# Set a command to run the script when the container launches
-CMD ["python", "main.py"]
+# Command to run the FastAPI application using Uvicorn
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]

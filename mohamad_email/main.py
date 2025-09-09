@@ -1,12 +1,19 @@
 import os
 import json
 import base64
+import datetime
+from fastapi import FastAPI, Request
+from pydantic import BaseModel
+
+# Your existing imports
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 import google.generativeai as genai
-import datetime
+
+# --- FastAPI App Initialization ---
+app = FastAPI()
 
 # --- GCP Cloud Run Environment Variables ---
 # Your Gmail token JSON string.
@@ -18,13 +25,18 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
 # Define the JSON structure for the initial timeline
-INITIAL_TIMELINE = {
+DEFAULT_TIMELINE = {
     "VISA_APPLICATION": {"start_date": "2025-09-01", "end_date": "2025-09-30"},
     "INSURANCE": {"start_date": "2025-09-08", "end_date": "2025-09-14"},
     "BANKACCOUNT": {"start_date": "2025-09-15", "end_date": "2025-09-21"},
     "PROOFFINANCE": {"start_date": "2025-09-22", "end_date": "2025-09-28"}
 }
 
+# Define a Pydantic model for the request body
+class TimelineRequest(BaseModel):
+    timeline: dict = DEFAULT_TIMELINE
+
+# Your existing helper functions remain the same
 def get_email_body(payload):
     """Recursively extracts the plain text body from the email payload."""
     if 'body' in payload and 'data' in payload['body']:
@@ -86,8 +98,14 @@ def analyze_with_gemini(email_content, initial_timeline):
         print(f"Raw response from Gemini: {response.text}")
         return None
 
-def main():
-    """Main function to perform email scraping and analysis."""
+# The new API endpoint
+@app.post("/analyze-emails")
+async def analyze_emails_api(request_body: TimelineRequest):
+    """
+    An API endpoint to trigger email scraping and analysis with a customizable timeline.
+    """
+    initial_timeline = request_body.timeline
+
     # A list of keywords related to the migration stages
     relevant_keywords = [
         "visa", "appointment", "biometrics", "embassy", "consulate", "immigration",
@@ -102,15 +120,13 @@ def main():
             SCOPES
         )
     except (json.JSONDecodeError, TypeError) as e:
-        print(f"Error loading credentials: {e}")
-        raise
+        return {"error": f"Error loading credentials: {e}"}, 500
 
     if not creds.valid and creds.refresh_token:
         try:
             creds.refresh(Request())
         except Exception as e:
-            print(f"Error refreshing token: {e}")
-            raise
+            return {"error": f"Error refreshing token: {e}"}, 500
 
     service = build('gmail', 'v1', credentials=creds)
 
@@ -119,9 +135,9 @@ def main():
         messages = results.get('messages', [])
         
         if not messages:
-            print('No messages found.')
-            return 'No messages found.'
-        
+            return {"status": "No new messages found."}, 200
+
+        analysis_results = []
         for message in messages:
             msg = service.users().messages().get(userId='me', id=message['id'], format='full').execute()
             
@@ -134,33 +150,21 @@ def main():
             is_relevant = any(keyword in email_content_str for keyword in relevant_keywords)
             
             if not is_relevant:
-                print(f"Subject: {subject} -> Not related to migration. Ignoring.")
                 continue
 
-            print(f"Subject: {subject} -> Relevant! Sending to Gemini for analysis.")
-            
             email_to_analyze = {
                 'subject': subject,
                 'sender': sender,
                 'body': email_body
             }
 
-            gemini_output = analyze_with_gemini(email_to_analyze, INITIAL_TIMELINE)
+            gemini_output = analyze_with_gemini(email_to_analyze, initial_timeline)
             
             if gemini_output:
-                print("Gemini Analysis Output:")
-                print(json.dumps(gemini_output, indent=2))
-                
-                if gemini_output.get("dataType") == "PROPOSAL":
-                    print("  -> This is a PROPOSAL. Proposing a timeline shift!")
-            else:
-                print("Gemini returned an invalid response.")
+                analysis_results.append(gemini_output)
 
-        return 'Email analysis completed successfully.'
+        return {"results": analysis_results, "status": "Email analysis completed successfully."}, 200
         
     except HttpError as error:
-        print(f'An HTTP error occurred: {error}')
-        raise
-
-if __name__ == '__main__':
-    main()
+        return {"error": f'An HTTP error occurred: {error}'}, 500
+    

@@ -1,4 +1,6 @@
+fastapi
+uvicorn
 google-api-python-client
 google-auth-oauthlib
-google-auth[requests]
 google-generativeai
+google-api-core
