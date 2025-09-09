@@ -14,5 +14,8 @@ RUN pip install --upgrade pip && \
 # Copy the rest of the application code into the container
 COPY . .
 
+ENV GEMINI_API_KEY=""
+ENV GMAIL_TOKEN_JSON=""
+
 # Command to run the FastAPI application using Uvicorn
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]

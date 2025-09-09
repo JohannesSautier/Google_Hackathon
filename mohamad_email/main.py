@@ -17,10 +17,11 @@ app = FastAPI()
 
 # --- GCP Cloud Run Environment Variables ---
 # Your Gmail token JSON string.
-GMAIL_TOKEN_JSON = os.environ.get("GMAIL_TOKEN_JSON")
+GMAIL_TOKEN_JSON = os.environ.get("GMAIL_TOKEN_JSON", "token.json")
 # Your Gemini API key.
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-
+if not GMAIL_TOKEN_JSON:
+    raise ValueError("GMAIL_TOKEN_JSON not found in environment variables.")
 # Define the scope for Gmail API
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
@@ -115,8 +116,11 @@ async def analyze_emails_api(request_body: TimelineRequest):
     ]
     
     try:
+        json_payload = None
+        with open(GMAIL_TOKEN_JSON if GMAIL_TOKEN_JSON == "token.json" else "token.json", 'r') as token_file:
+            json_payload = json.load(token_file)
         creds = Credentials.from_authorized_user_info(
-            json.loads(GMAIL_TOKEN_JSON),
+            json_payload,
             SCOPES
         )
     except (json.JSONDecodeError, TypeError) as e:
