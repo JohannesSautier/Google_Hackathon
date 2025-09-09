@@ -363,8 +363,6 @@ def _generate_timeline_from_docs(docs: list) -> list:
                 is_relevant = True
                 break
         if is_relevant:
-            # THIS IS THE FIX: Use the json_converter to handle timestamps
-            # when preparing the document for the prompt.
             relevant_docs_for_prompt.append(json.dumps(doc, default=json_converter))
 
     prompt = f"""
@@ -483,6 +481,32 @@ def get_data_points(req: https_fn.Request) -> https_fn.Response:
         print(f"Error getting data points: {e}")
         return https_fn.Response("An internal error occurred.", status=500)
     
+# --- NEW API Endpoint: Get All Journeys ---
+@https_fn.on_request()
+def get_all_journeys(req: https_fn.Request) -> https_fn.Response:
+    """HTTP endpoint to retrieve all journey documents from Firestore."""
+    if not firebase_admin._apps:
+        firebase_admin.initialize_app()
+    db = firestore.client()
+
+    if req.method != "GET":
+        return https_fn.Response("Method Not Allowed", status=405)
+
+    try:
+        journeys_query = db.collection("journeys").stream()
+        journeys_list = [journey.to_dict() for journey in journeys_query]
+        
+        response_body = json.dumps(journeys_list, default=json_converter)
+        
+        return https_fn.Response(
+            response_body,
+            status=200,
+            headers={"Content-Type": "application/json"}
+        )
+    except Exception as e:
+        print(f"Error getting all journeys: {e}")
+        return https_fn.Response("An internal error occurred.", status=500)
+
 # --- Main Cron Job Entry Point ---
 @pubsub_fn.on_message_published(topic="agent-triggers")
 def run_scheduled_agent(event: pubsub_fn.CloudEvent) -> None:
@@ -491,7 +515,14 @@ def run_scheduled_agent(event: pubsub_fn.CloudEvent) -> None:
     db = firestore.client()
 
     try:
-        message_data = json.loads(event.data.message.data.decode("utf-8"))
+        message_payload = event.data.message.data
+        if not message_payload:
+            print(f"Running both Mail and News agents by default.")
+            _run_mail_agent_logic(db)
+            _run_news_agent_logic(db)
+            return
+
+        message_data = json.loads(message_payload)
         agent_type = message_data.get("agent_type")
         print(f"Received trigger for agent type: {agent_type}")
         
@@ -504,3 +535,4 @@ def run_scheduled_agent(event: pubsub_fn.CloudEvent) -> None:
             
     except Exception as e:
         print(f"Error in scheduled agent runner: {e}")
+
