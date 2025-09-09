@@ -14,7 +14,14 @@ from firebase_functions import pubsub_fn
 
 
 # --- App Initialization ---
+# Global options do not include CORS. Region is set here.
 options.set_global_options(region="europe-west1")
+
+# --- CORS Configuration ---
+# Define a reusable CORS policy.
+# For production, replace "*" with your frontend's specific URL.
+CORS_POLICY = options.CorsOptions(cors_origins="*", cors_methods=["get", "post"])
+
 
 # --- Reusable Helper Function for JSON Serialization ---
 def json_converter(o):
@@ -117,7 +124,7 @@ def _run_news_agent_logic(db):
 
 
 # --- API Endpoint 1: Create a Journey ---
-@https_fn.on_request()
+@https_fn.on_request(cors=CORS_POLICY)
 def create_journey(req: https_fn.Request) -> https_fn.Response:
     if not firebase_admin._apps:
         firebase_admin.initialize_app()
@@ -131,15 +138,26 @@ def create_journey(req: https_fn.Request) -> https_fn.Response:
         if not all(field in data for field in required_fields):
             return https_fn.Response("Missing required fields.", status=400)
         
+        # --- THE FIX IS HERE ---
+        # 1. Get a reference to a new document to generate a unique ID.
+        journey_ref = db.collection("journeys").document()
+        
+        # 2. Prepare the document data.
         journey_doc = {**data, "status": "PENDING", "timeline": [], "createdAt": firestore.SERVER_TIMESTAMP}
-        _ , doc_ref = db.collection("journeys").add(journey_doc)
-        print(f"Successfully created journey with ID: {doc_ref.id}")
-        return https_fn.Response(f"Journey created successfully with ID: {doc_ref.id}", status=201)
+        
+        # 3. Add the unique ID to the document data itself.
+        journey_doc["journeyId"] = journey_ref.id
+
+        # 4. Set the document data using the reference.
+        journey_ref.set(journey_doc)
+
+        print(f"Successfully created journey with ID: {journey_ref.id}")
+        return https_fn.Response(f"Journey created successfully with ID: {journey_ref.id}", status=201)
     except Exception as e:
         print(f"Error creating journey: {e}")
         return https_fn.Response("An internal error occurred.", status=500)
 
-@https_fn.on_request()
+@https_fn.on_request(cors=CORS_POLICY)
 def get_journey(req: https_fn.Request) -> https_fn.Response:
     if not firebase_admin._apps:
         firebase_admin.initialize_app()
@@ -168,7 +186,7 @@ def get_journey(req: https_fn.Request) -> https_fn.Response:
         return https_fn.Response("An internal error occurred.", status=500)
 
 # --- API Endpoint: Add Agent Finding (Updated for Data Points) ---
-@https_fn.on_request()
+@https_fn.on_request(cors=CORS_POLICY)
 def add_agent_finding(req: https_fn.Request) -> https_fn.Response:
     if not firebase_admin._apps:
         firebase_admin.initialize_app()
@@ -276,7 +294,7 @@ def process_journey_event(event: firestore_fn.Event[firestore_fn.Change]) -> Non
         db.collection("journey_events").document(event_id).update({"status": "ERROR", "notes": str(e)})
 
 # --- API Endpoint 4: Upload a Document ---
-@https_fn.on_request()
+@https_fn.on_request(cors=CORS_POLICY)
 def upload_document(req: https_fn.Request) -> https_fn.Response:
     if not firebase_admin._apps:
         firebase_admin.initialize_app()
@@ -447,7 +465,7 @@ def orchestrate_timeline_generation(event: firestore_fn.Event[firestore_fn.Chang
         print(f"Error orchestrating timeline for journey {journey_id}: {e}")
         db.collection("journeys").document(journey_id).set({"timelineStatus": "ERROR"}, merge=True)
 
-@https_fn.on_request()
+@https_fn.on_request(cors=CORS_POLICY)
 def get_data_points(req: https_fn.Request) -> https_fn.Response:
     if not firebase_admin._apps:
         firebase_admin.initialize_app()
@@ -481,8 +499,7 @@ def get_data_points(req: https_fn.Request) -> https_fn.Response:
         print(f"Error getting data points: {e}")
         return https_fn.Response("An internal error occurred.", status=500)
     
-# --- NEW API Endpoint: Get All Journeys ---
-@https_fn.on_request()
+@https_fn.on_request(cors=CORS_POLICY)
 def get_all_journeys(req: https_fn.Request) -> https_fn.Response:
     """HTTP endpoint to retrieve all journey documents from Firestore."""
     if not firebase_admin._apps:
@@ -494,6 +511,9 @@ def get_all_journeys(req: https_fn.Request) -> https_fn.Response:
 
     try:
         journeys_query = db.collection("journeys").stream()
+        # --- THE FIX IS HERE ---
+        # The journey.to_dict() already contains the journeyId we added earlier.
+        # This list comprehension is correct and requires no changes.
         journeys_list = [journey.to_dict() for journey in journeys_query]
         
         response_body = json.dumps(journeys_list, default=json_converter)
@@ -517,7 +537,7 @@ def run_scheduled_agent(event: pubsub_fn.CloudEvent) -> None:
     try:
         message_payload = event.data.message.data
         if not message_payload:
-            print(f"Running both Mail and News agents by default.")
+            print("Received an empty message payload. Exiting function.")
             _run_mail_agent_logic(db)
             _run_news_agent_logic(db)
             return
