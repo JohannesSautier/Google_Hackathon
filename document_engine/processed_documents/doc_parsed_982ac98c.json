@@ -1,0 +1,52 @@
+{
+  "documentId": "doc_parsed_982ac98c",
+  "sourceURI": null,
+  "documentType": "INFORMATION_PAGE",
+  "llmSummary": "This document from Studierendenwerk Hamburg provides a comprehensive guide to health insurance for students in Germany. It details the requirement to prove health insurance for university enrollment, outlines the two main systems (public GKV and private PKV), and specifies eligibility criteria and switching rules based on age, study status, and previous insurance. It also includes specific guidance for international students from EU/EEA/Switzerland and other countries regarding home country insurance and the visa process.",
+  "extractedTimelines": [
+    {
+      "description": "Privately insured persons under the age of 30 may switch to public health insurance (GKV) within the first 3 months of commencing studies.",
+      "value": 3,
+      "unit": "months_after_start",
+      "timelineKey": "SWITCH_TO_PUBLIC_INSURANCE_WINDOW",
+      "processType": "INSURANCE"
+    },
+    {
+      "description": "Family health insurance is usually available up to 25 years of age.",
+      "value": 25,
+      "unit": "years_of_age",
+      "timelineKey": "FAMILY_INSURANCE_ELIGIBILITY_AGE",
+      "processType": "INSURANCE"
+    },
+    {
+      "description": "Health insurance for students (KVdS) is usually available up to 30 years of age.",
+      "value": 30,
+      "unit": "years_of_age",
+      "timelineKey": "STUDENT_INSURANCE_ELIGIBILITY_AGE",
+      "processType": "INSURANCE"
+    },
+    {
+      "description": "Voluntary health insurance (Freiwillige Versicherung) is applicable for students over 30 years of age.",
+      "value": 30,
+      "unit": "years_of_age_threshold",
+      "timelineKey": "VOLUNTARY_INSURANCE_ELIGIBILITY_AGE_START",
+      "processType": "INSURANCE"
+    },
+    {
+      "description": "If choosing private health insurance, it is necessary to apply for exemption from compulsory insurance within the first three months of the insurance liability taking effect (enrolment at university or exclusion from family insurance policy).",
+      "value": 3,
+      "unit": "months_after_start",
+      "timelineKey": "APPLY_EXEMPTION_PRIVATE_INSURANCE_WINDOW",
+      "processType": "INSURANCE"
+    }
+  ],
+  "extractedChecklistItems": [],
+  "extractedMilestones": [],
+  "metadata": {
+    "filePath": "/home/damian/Desktop/cloud/immigration-service/documents IN - DE/Infosheet_Health_Insurance_2024_03_13.pdf",
+    "fileSize": 413093,
+    "processedAt": "2025-09-08T23:34:48.705965",
+    "textLength": 30233,
+    "fileExtension": ".pdf"
+  }
+}

@@ -1,0 +1,1 @@
+(function(e){var a=e(".spt-marquee"),r=a.data("duplicated"),t=a.data("loop"),o=a.html();a.on("beforeStarting",function(){if(!0===r){for(a.marquee("destroy"),i=0;i<t;i++)a=a.append(o);a.marquee()}}).marquee()})(jQuery);

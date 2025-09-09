@@ -1,0 +1,251 @@
+{
+  "documentId": "doc_parsed_ea5f52ed",
+  "sourceURI": "/home/damian/Desktop/cloud/immigration-service/documents IN - DE/aufenthalten-data.pdf",
+  "documentType": "APPLICATION_FORM",
+  "llmSummary": "This document is an application form for a national visa to Germany. It collects comprehensive personal data of the applicant, including family details (spouse, children, parents), previous stays in Germany, intended accommodation and purpose of stay (e.g., employment, study, family reunion), references, means of subsistence, and health insurance status. It also includes declarations regarding criminal history and past visa/residency issues.",
+  "checklistItems": [
+    {
+      "item": "Attach a photo (do not glue)",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide surname",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide former surname(s) (if applicable)",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide first name(s)",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide date of birth (day/month/year)",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide place of birth",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide country of birth",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide current nationality (state all)",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide former nationalities (if applicable)",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Select marital status (single, married, civil union, divorced, widowed) and provide date if applicable",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Select sex (male/female)",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Select type of travel document (Passport, Official passport, Diplomatic passport, Special passport, Other) and specify if 'Other'",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide number of travel document",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide date of issue of travel document",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide valid until date of travel document",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide issuing authority of travel document",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide residence permit number (if applicable)",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Provide valid until date of residence permit (if applicable)",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Provide current street and number",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide current postcode and place",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide email address",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide phone number",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide mobile phone number",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide spouse's/registered partner's surname (if applicable)",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Provide spouse's/registered partner's former surname(s) (if applicable)",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Provide spouse's/registered partner's first name(s) (if applicable)",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Provide spouse's/registered partner's date of birth (day/month/year) (if applicable)",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Provide spouse's/registered partner's place of birth (if applicable)",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Provide spouse's/registered partner's country of birth (if applicable)",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Provide spouse's/registered partner's current nationality (state all, if applicable)",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Provide spouse's/registered partner's former nationalities (if applicable)",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Provide spouse's/registered partner's place of residence (if applicable)",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Provide surname, first name(s), sex, date and place of birth, nationality, and place of residence for all children (even over 18 years old, if applicable)",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Provide father's surname, first name(s), date and place of birth, nationality, and place of residence",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide mother's surname, first name(s), date and place of birth, nationality, and place of residence",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Declare if you have ever been to Germany before (Yes/No)",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "If yes to previous stays, provide dates (month/year) and places for the last five stays",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Provide intended street and number of stay in Germany (if known)",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide intended postcode and place of stay in Germany",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Describe how you will be accommodated (single room, apartment with X rooms, collective accommodation, other)",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Declare if you intend to maintain your permanent residence outside Germany (Yes/No)",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "If yes to maintaining residence outside Germany, state where",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Declare if family members intend to accompany you (Yes/No)",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "If yes to accompanying family members, state which ones",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "State purpose of stay in Germany (Employment, Study, Au pair, Language course, Family reunion, Other) and specify if 'Other'",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "If applicable, specify intended employment",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Provide details of references in Germany (e.g., employer, educational establishment, relatives), including name, street, number, postcode, place, phone/mobile number, and email address",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide trade or profession for which you trained",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Provide current trade or profession (if different from trained)",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "State intended duration of stay in Germany (from date to date)",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Describe your means of subsistence",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Declare if you have health insurance that covers Germany (Yes/No)",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "Declare if you have ever been convicted (Yes/No)",
+      "status": "REQUIRED"
+    },
+    {
+      "item": "If yes to conviction in Germany, provide when and where, reason for penalty, and nature and extent of penalty",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "If yes to conviction in other countries, provide when and where, reason for penalty, and nature and extent of penalty",
+      "status": "OPTIONAL"
+    },
+    {
+      "item": "Declare if you have ever been expelled or deported from Germany, had a residence permit application rejected, or entry to Germany refused (Yes/No)",
+      "status": "REQUIRED"
+    }
+  ],
+  "extractedTimelines": [
+    {
+      "description": "Applicant intends to stay no longer than twelve months in the Federal territory and applies for a visa covering the whole duration.",
+      "value": 12,
+      "unit": "months",
+      "timelineKey": "MAX_INTENDED_STAY",
+      "processType": "VISA_DURATION_REQUEST"
+    }
+  ],
+  "milestones": [],
+  "extractedChecklistItems": [],
+  "extractedMilestones": [],
+  "metadata": {
+    "filePath": "/home/damian/Desktop/cloud/immigration-service/documents IN - DE/aufenthalten-data.pdf",
+    "fileSize": 496828,
+    "processedAt": "2025-09-08T23:35:56.327819",
+    "textLength": 11261,
+    "fileExtension": ".pdf"
+  }
+}

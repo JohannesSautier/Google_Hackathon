@@ -1,0 +1,90 @@
+{
+  "documentId": "doc_parsed_dab1b1d0",
+  "sourceURI": null,
+  "documentType": "STUDENT_VISA_GUIDE",
+  "llmSummary": "This DAAD guide provides essential information for international students on Germany's mandatory healthcare system and health insurance requirements. It details the two types of insurance (statutory and private), conditions for recognizing home country insurance (e.g., EU/EEA), and specific DAAD insurance options. It clarifies that students must prove equivalent coverage by the time of registration or visa application, outlines student rates, and advises on seeking medical care.",
+  "extractedTimelines": [
+    {
+      "description": "International students must prove equivalent health insurance coverage by the time they apply for a visa.",
+      "value": null,
+      "unit": null,
+      "timelineKey": "INSURANCE_PROOF_VISA_APPLICATION",
+      "processType": "INSURANCE"
+    },
+    {
+      "description": "International students must prove equivalent health insurance coverage by the time they register.",
+      "value": null,
+      "unit": null,
+      "timelineKey": "INSURANCE_PROOF_REGISTRATION",
+      "processType": "INSURANCE"
+    },
+    {
+      "description": "It is best to clarify your health insurance situation as soon as possible.",
+      "value": null,
+      "unit": null,
+      "timelineKey": "CLARIFY_INSURANCE_EARLY",
+      "processType": "INSURANCE"
+    }
+  ],
+  "extractedChecklist": [
+    {
+      "itemKey": "HEALTH_INSURANCE_MANDATORY_GERMANY",
+      "description": "Every person in Germany must have health insurance.",
+      "itemType": "MANDATORY_REQUIREMENT"
+    },
+    {
+      "itemKey": "PROVE_EQUIVALENT_HEALTH_INSURANCE_COVERAGE",
+      "description": "International students must prove equivalent health insurance coverage that meets German health insurance standards.",
+      "itemType": "MANDATORY_REQUIREMENT"
+    },
+    {
+      "itemKey": "CONTACT_HOME_INSURER_VALIDITY",
+      "description": "Inform your home country insurance provider whether your insurance is valid in Germany.",
+      "itemType": "ACTION_ITEM"
+    },
+    {
+      "itemKey": "OBTAIN_EHIC_IF_APPLICABLE",
+      "description": "Obtain a European Health Insurance Card (EHIC) if applicable (e.g., from EU/EEA countries) for recognition of home country insurance.",
+      "itemType": "REQUIRED_DOCUMENT"
+    },
+    {
+      "itemKey": "OBTAIN_NON_STATUTORY_INSURANCE_CERTIFICATE",
+      "description": "Obtain a certificate from German statutory health insurance providers proving you are not required to take out German statutory health insurance (if home country insurance is recognized).",
+      "itemType": "REQUIRED_DOCUMENT"
+    },
+    {
+      "itemKey": "OBTAIN_GERMAN_COVERAGE_FOR_WORK",
+      "description": "If doing a paid internship or having a part-time job, you must obtain coverage with a German provider (home-country insurance is not sufficient).",
+      "itemType": "MANDATORY_REQUIREMENT"
+    },
+    {
+      "itemKey": "OBTAIN_GERMAN_INSURANCE_IF_HOME_NOT_RECOGNIZED",
+      "description": "If your current health insurance isn’t recognised in Germany, you must obtain health insurance coverage once you arrive in the country or when you apply for a visa.",
+      "itemType": "MANDATORY_REQUIREMENT"
+    },
+    {
+      "itemKey": "CAREFULLY_CHECK_PRIVATE_INSURANCE_SERVICES",
+      "description": "Carefully check the services offered by private health insurance providers to ensure adequate coverage.",
+      "itemType": "ACTION_ITEM"
+    },
+    {
+      "itemKey": "CHECK_STUDIERENDENWERK_SERVICE_PACKAGES",
+      "description": "Refer to your local Studierendenwerk to see if service packages for international students (including health insurance) are available.",
+      "itemType": "ACTION_ITEM"
+    },
+    {
+      "itemKey": "REGISTER_FOR_DAAD_INSURANCE_IF_ELIGIBLE",
+      "description": "If eligible for DAAD combined health, accident and personal liability insurance, register via the DAAD portal.",
+      "itemType": "ACTION_ITEM"
+    }
+  ],
+  "extractedMilestones": [],
+  "extractedChecklistItems": [],
+  "metadata": {
+    "filePath": "/home/damian/Desktop/cloud/immigration-service/documents IN - DE/Healthcare and Health Insurance - DAAD.html",
+    "fileSize": 353366,
+    "processedAt": "2025-09-08T23:35:34.921886",
+    "textLength": 10400,
+    "fileExtension": ".html"
+  }
+}
